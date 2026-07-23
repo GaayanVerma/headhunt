@@ -125,3 +125,32 @@ def test_person_model_to_json():
     json_str = person.to_json()
     assert isinstance(json_str, str)
     assert "Test User" in json_str
+
+
+@pytest.mark.unit
+def test_experience_employment_type_field():
+    """Experience carries LinkedIn's own employment-type label when present,
+    and defaults to None when the profile HTML doesn't expose it."""
+    from linkedin_scraper.models import Experience
+
+    tagged = Experience(position_title="Intern", institution_name="Acme", employment_type="Internship")
+    assert tagged.employment_type == "Internship"
+
+    untagged = Experience(position_title="Engineer", institution_name="Acme")
+    assert untagged.employment_type is None
+
+
+@pytest.mark.unit
+def test_person_model_skills_field():
+    """Person carries a structured skills list from the LinkedIn Skills section."""
+    from linkedin_scraper.models import Person
+
+    person = Person(
+        linkedin_url="https://linkedin.com/in/test",
+        name="Test User",
+        skills=["Python", "Playwright"],
+    )
+    assert person.skills == ["Python", "Playwright"]
+
+    default_person = Person(linkedin_url="https://linkedin.com/in/test2")
+    assert default_person.skills == []

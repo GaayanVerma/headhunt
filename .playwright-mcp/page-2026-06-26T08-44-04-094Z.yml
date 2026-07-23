@@ -1,0 +1,361 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 9 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "9"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e93]:
+        - toolbar [ref=e94]:
+          - generic [ref=e98]:
+            - link "Gaayan Verma" [ref=e99] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/gaayan-verma/
+              - generic "Gaayan Verma" [ref=e100]:
+                - figure [ref=e101]
+                - generic [ref=e102]:
+                  - paragraph [ref=e103]: Gaayan Verma
+                  - paragraph [ref=e105]: AI Backend Engineer | Cisco Certified DevNet Associate
+            - generic [ref=e106]:
+              - button "More" [ref=e108] [cursor=pointer]
+              - link "Message" [ref=e112] [cursor=pointer]:
+                - /url: /messaging/compose/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8&recipient=ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8&screenContext=NON_SELF_PROFILE_VIEW&interop=msgOverlay
+                - generic [ref=e115]: Message
+        - main [ref=e116]:
+          - generic [ref=e118]:
+            - region "Primary content" [ref=e119]:
+              - generic [ref=e126]:
+                - generic [ref=e127]:
+                  - button [ref=e130] [cursor=pointer]:
+                    - figure [ref=e131]:
+                      - img "Cover photo" [ref=e132]
+                  - link "Profile photo" [ref=e133] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/
+                    - generic "Profile photo" [ref=e134]:
+                      - figure [ref=e135]
+                  - generic [ref=e136]:
+                    - link [ref=e138] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                    - link "Manage notifications about Gaayan Verma" [ref=e140] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                - generic [ref=e143]:
+                  - generic [ref=e144]:
+                    - generic [ref=e146]:
+                      - generic [ref=e147]:
+                        - link "Gaayan Verma" [ref=e150] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/
+                          - heading "Gaayan Verma" [level=2] [ref=e153]
+                        - paragraph [ref=e155]: He/Him
+                        - paragraph [ref=e156]: · 1st
+                      - paragraph [ref=e157]: AI Backend Engineer | Cisco Certified DevNet Associate
+                      - generic [ref=e158]:
+                        - paragraph [ref=e159]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e160]: ·
+                        - paragraph [ref=e161]:
+                          - link "Contact info" [ref=e162] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/gaayan-verma/overlay/contact-info/
+                    - button "Cisco" [ref=e165] [cursor=pointer]:
+                      - generic [ref=e166]:
+                        - figure [ref=e167]
+                        - paragraph [ref=e171]: Cisco
+                  - link "500+ connections" [ref=e173] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/search/results/people/?origin=MEMBER_PROFILE_CANNED_SEARCH&connectionOf=["ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8"]&network=["F","S"]
+                    - paragraph [ref=e174]: 500+ connections
+                  - link:
+                    - /url: https://www.linkedin.com/search/results/people/?origin=MEMBER_PROFILE_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8%22%5D
+                  - generic [ref=e175]:
+                    - link [ref=e176] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/search/results/people/?origin=MEMBER_PROFILE_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8%22%5D
+                      - figure [ref=e177]
+                      - figure [ref=e178]
+                    - generic [ref=e179]:
+                      - link:
+                        - /url: https://www.linkedin.com/search/results/people/?origin=MEMBER_PROFILE_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8%22%5D
+                      - paragraph [ref=e180]:
+                        - link:
+                          - /url: https://www.linkedin.com/search/results/people/?origin=MEMBER_PROFILE_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8%22%5D
+                        - link "Anuj, Fahad and 1 other mutual connection" [ref=e181] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/search/results/people/?origin=MEMBER_PROFILE_CANNED_SEARCH&network=%5B%22F%22%5D&connectionOf=%5B%22ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8%22%5D
+                          - strong [ref=e182]: Anuj
+                          - text: ","
+                          - strong [ref=e183]: Fahad
+                          - text: and 1 other mutual connection
+                  - generic [ref=e187]:
+                    - link "Message" [ref=e189] [cursor=pointer]:
+                      - /url: /messaging/compose/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8&recipient=ACoAABLRLQYBN4AKan8wc-AH6au3X614Kp8Xc-8&screenContext=NON_SELF_PROFILE_VIEW&interop=msgOverlay
+                      - generic [ref=e192]: Message
+                    - button "More" [ref=e194] [cursor=pointer]
+            - complementary "Aside" [ref=e280]:
+              - generic [ref=e282]:
+                - iframe [ref=e285]:
+                  
+                - generic [ref=e288]:
+                  - heading "Explore Premium profiles" [level=2] [ref=e290]
+                  - generic [ref=e292]:
+                    - generic [ref=e294]:
+                      - generic [ref=e296]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/sonu-ratre-97431a2a1/
+                        - generic [ref=e297]:
+                          - link [ref=e298] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/sonu-ratre-97431a2a1/
+                            - figure [ref=e299]
+                          - generic [ref=e300]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/sonu-ratre-97431a2a1/
+                            - generic [ref=e301]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/sonu-ratre-97431a2a1/
+                              - generic [ref=e302]:
+                                - link:
+                                  - /url: https://www.linkedin.com/in/sonu-ratre-97431a2a1/
+                                - paragraph [ref=e303]:
+                                  - link:
+                                    - /url: https://www.linkedin.com/in/sonu-ratre-97431a2a1/
+                                  - link "Sonu Ratre Premium" [ref=e304] [cursor=pointer]:
+                                    - /url: https://www.linkedin.com/in/sonu-ratre-97431a2a1/
+                                    - text: Sonu Ratre
+                                    - img "Premium" [ref=e305]
+                              - paragraph [ref=e307]: · 3rd+
+                            - paragraph [ref=e309]: Cyber Security Specialist @ Google | Cyber Security, IT Support
+                      - link "Invite Sonu Ratre to connect" [ref=e316] [cursor=pointer]:
+                        - /url: /preload/custom-invite/?vanityName=sonu-ratre-97431a2a1
+                        - generic [ref=e320]: Connect
+                    - generic [ref=e322]:
+                      - generic [ref=e324]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/naeem-ansari-30a130304/
+                        - generic [ref=e325]:
+                          - link [ref=e326] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/naeem-ansari-30a130304/
+                            - figure [ref=e327]
+                          - generic [ref=e328]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/naeem-ansari-30a130304/
+                            - generic [ref=e329]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/naeem-ansari-30a130304/
+                              - generic [ref=e330]:
+                                - link:
+                                  - /url: https://www.linkedin.com/in/naeem-ansari-30a130304/
+                                - paragraph [ref=e331]:
+                                  - link:
+                                    - /url: https://www.linkedin.com/in/naeem-ansari-30a130304/
+                                  - link "Naeem Ansari Premium" [ref=e332] [cursor=pointer]:
+                                    - /url: https://www.linkedin.com/in/naeem-ansari-30a130304/
+                                    - text: Naeem Ansari
+                                    - img "Premium" [ref=e333]
+                              - paragraph [ref=e335]: · 3rd+
+                            - paragraph [ref=e337]: Microsoft Excel / Data Cleaning / PDF Conversion / at Self Employed
+                      - link "Invite Naeem Ansari to connect" [ref=e344] [cursor=pointer]:
+                        - /url: /preload/custom-invite/?vanityName=naeem-ansari-30a130304
+                        - generic [ref=e348]: Connect
+                    - generic [ref=e350]:
+                      - generic [ref=e352]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/tejas-shelar/
+                        - generic [ref=e353]:
+                          - link [ref=e354] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/tejas-shelar/
+                            - figure [ref=e355]
+                          - generic [ref=e356]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/tejas-shelar/
+                            - generic [ref=e357]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/tejas-shelar/
+                              - generic [ref=e358]:
+                                - link:
+                                  - /url: https://www.linkedin.com/in/tejas-shelar/
+                                - paragraph [ref=e359]:
+                                  - link:
+                                    - /url: https://www.linkedin.com/in/tejas-shelar/
+                                  - link "Tejas Shelar Premium" [ref=e360] [cursor=pointer]:
+                                    - /url: https://www.linkedin.com/in/tejas-shelar/
+                                    - text: Tejas Shelar
+                                    - img "Premium" [ref=e361]
+                              - paragraph [ref=e363]: · 3rd+
+                            - paragraph [ref=e365]: L2 Support Engineer @ 5paisa | SQL | Python | Java
+                      - link "Invite Tejas Shelar to connect" [ref=e372] [cursor=pointer]:
+                        - /url: /preload/custom-invite/?vanityName=tejas-shelar
+                        - generic [ref=e376]: Connect
+                    - generic [ref=e378]:
+                      - generic [ref=e380]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/abhishek-maurya-273402av/
+                        - generic [ref=e381]:
+                          - link [ref=e382] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/abhishek-maurya-273402av/
+                            - figure [ref=e383]
+                          - generic [ref=e384]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/abhishek-maurya-273402av/
+                            - generic [ref=e385]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/abhishek-maurya-273402av/
+                              - generic [ref=e386]:
+                                - link:
+                                  - /url: https://www.linkedin.com/in/abhishek-maurya-273402av/
+                                - paragraph [ref=e387]:
+                                  - link:
+                                    - /url: https://www.linkedin.com/in/abhishek-maurya-273402av/
+                                  - link "Abhishek Maurya Premium" [ref=e388] [cursor=pointer]:
+                                    - /url: https://www.linkedin.com/in/abhishek-maurya-273402av/
+                                    - text: Abhishek Maurya
+                                    - img "Premium" [ref=e389]
+                              - paragraph [ref=e391]: · 3rd+
+                            - paragraph [ref=e393]: Data Analyst @ Fresher | Analyzing Data with AI
+                      - link "Invite Abhishek Maurya to connect" [ref=e400] [cursor=pointer]:
+                        - /url: /preload/custom-invite/?vanityName=abhishek-maurya-273402av
+                        - generic [ref=e404]: Connect
+            - generic "Footer" [ref=e405]:
+              - generic [ref=e408]:
+                - generic [ref=e409]:
+                  - navigation [ref=e410]:
+                    - link "About" [ref=e411] [cursor=pointer]:
+                      - /url: https://about.linkedin.com/
+                      - paragraph [ref=e412]: About
+                    - link "Accessibility" [ref=e413] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/accessibility/
+                      - paragraph [ref=e414]: Accessibility
+                    - link "Talent Solutions" [ref=e415] [cursor=pointer]:
+                      - /url: https://business.linkedin.com/talent-solutions?trk=flagship_nav&veh=li-footer-lts-control&src=li-footer
+                      - paragraph [ref=e416]: Talent Solutions
+                    - link "Community Guidelines" [ref=e417] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/legal/professional-community-policies/
+                      - paragraph [ref=e418]: Community Guidelines
+                    - link "Careers" [ref=e419] [cursor=pointer]:
+                      - /url: https://careers.linkedin.com/
+                      - paragraph [ref=e420]: Careers
+                    - link "Marketing Solutions" [ref=e421] [cursor=pointer]:
+                      - /url: https://business.linkedin.com/advertise?trk=n_nav_lms_f&src=li-footer
+                      - paragraph [ref=e422]: Marketing Solutions
+                    - button "Privacy & Terms" [ref=e423] [cursor=pointer]:
+                      - paragraph [ref=e425]: Privacy & Terms
+                    - link "Ad Choices" [ref=e427] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/help/linkedin/answer/62931/
+                      - paragraph [ref=e428]: Ad Choices
+                    - link "Advertising" [ref=e429] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/ad/start/?trk=n_nav_ads_rr
+                      - paragraph [ref=e430]: Advertising
+                    - link "Sales Solutions" [ref=e431] [cursor=pointer]:
+                      - /url: https://business.linkedin.com/sales-solutions?trk=flagship_nav&veh=li-footer-lss-control&src=li-footer
+                      - paragraph [ref=e432]: Sales Solutions
+                    - link "Mobile" [ref=e433] [cursor=pointer]:
+                      - /url: https://mobile.linkedin.com/
+                      - paragraph [ref=e434]: Mobile
+                    - link "Small Business" [ref=e435] [cursor=pointer]:
+                      - /url: https://business.linkedin.com/grow?src=li-footer
+                      - paragraph [ref=e436]: Small Business
+                    - link "Safety Center" [ref=e437] [cursor=pointer]:
+                      - /url: https://safety.linkedin.com/
+                      - paragraph [ref=e438]: Safety Center
+                  - paragraph [ref=e440]: LinkedIn Corporation © 2026
+                - generic [ref=e441]:
+                  - list [ref=e442]:
+                    - listitem [ref=e443]:
+                      - generic [ref=e446]:
+                        - link "Questions?" [ref=e447] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/help/linkedin/
+                          - paragraph [ref=e448]: Questions?
+                        - paragraph [ref=e449]: Visit our Help Center.
+                    - listitem [ref=e450]:
+                      - generic [ref=e453]:
+                        - link "Manage your account and privacy" [ref=e454] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/mypreferences/d/
+                          - paragraph [ref=e455]: Manage your account and privacy
+                        - paragraph [ref=e456]: Go to your Settings.
+                    - listitem [ref=e457]:
+                      - generic [ref=e460]:
+                        - link "Recommendation transparency" [ref=e461] [cursor=pointer]:
+                          - /url: https://www.linkedin.com/help/linkedin/answer/a1339724/
+                          - paragraph [ref=e462]: Recommendation transparency
+                        - paragraph [ref=e463]: Learn more about Recommended Content.
+                  - generic [ref=e465]:
+                    - paragraph [ref=e467]: Select language
+                    - combobox "Select language" [ref=e469] [cursor=pointer]:
+                      - option "العربية (Arabic)"
+                      - option "বাংলা (Bangla)"
+                      - option "Čeština (Czech)"
+                      - option "Dansk (Danish)"
+                      - option "Deutsch (German)"
+                      - option "Ελληνικά (Greek)"
+                      - option "English (English)" [selected]
+                      - option "Español (Spanish)"
+                      - option "فارسی (Persian)"
+                      - option "Suomi (Finnish)"
+                      - option "Français (French)"
+                      - option "हिंदी (Hindi)"
+                      - option "Magyar (Hungarian)"
+                      - option "Bahasa Indonesia (Indonesian)"
+                      - option "Italiano (Italian)"
+                      - option "עברית (Hebrew)"
+                      - option "日本語 (Japanese)"
+                      - option "한국어 (Korean)"
+                      - option "मराठी (Marathi)"
+                      - option "Bahasa Malaysia (Malay)"
+                      - option "Nederlands (Dutch)"
+                      - option "Norsk (Norwegian)"
+                      - option "ਪੰਜਾਬੀ (Punjabi)"
+                      - option "Polski (Polish)"
+                      - option "Português (Portuguese)"
+                      - option "Română (Romanian)"
+                      - option "Русский (Russian)"
+                      - option "Svenska (Swedish)"
+                      - option "తెలుగు (Telugu)"
+                      - option "ภาษาไทย (Thai)"
+                      - option "Tagalog (Tagalog)"
+                      - option "Türkçe (Turkish)"
+                      - option "Українська (Ukrainian)"
+                      - option "Tiếng Việt (Vietnamese)"
+                      - option "简体中文 (Chinese (Simplified))"
+                      - option "正體中文 (Chinese (Traditional))"

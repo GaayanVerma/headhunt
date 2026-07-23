@@ -1,0 +1,349 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e92]:
+        - toolbar [ref=e93]
+        - main [ref=e107]:
+          - generic [ref=e112]:
+            - region "Primary content" [ref=e113]:
+              - generic [ref=e116]:
+                - list [ref=e119]:
+                  - listitem [ref=e121]:
+                    - generic [ref=e122]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/syed-moula/
+                      - generic [ref=e123]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/syed-moula/
+                        - generic [ref=e124]:
+                          - link [ref=e125] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/syed-moula/
+                            - figure [ref=e126]
+                          - generic [ref=e127]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/syed-moula/
+                            - paragraph [ref=e128]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/syed-moula/
+                              - link "Syed Moula" [ref=e129] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/syed-moula/
+                              - generic [ref=e130]: • 3rd+
+                            - paragraph [ref=e132]: AI Engineer | Deep Learning Engineer
+                            - paragraph [ref=e134]: Bengaluru, Karnataka, India
+                  - listitem [ref=e140]:
+                    - generic [ref=e141]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/nimesh-agrawal13/
+                      - generic [ref=e142]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/nimesh-agrawal13/
+                        - generic [ref=e143]:
+                          - link [ref=e144] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/nimesh-agrawal13/
+                            - figure [ref=e145]
+                          - generic [ref=e146]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/nimesh-agrawal13/
+                            - paragraph [ref=e147]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/nimesh-agrawal13/
+                              - link "Nimesh Agrawal Verified" [ref=e148] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/nimesh-agrawal13/
+                                - text: Nimesh Agrawal
+                                - img "Verified" [ref=e149]
+                              - generic [ref=e151]: • 3rd+
+                            - paragraph [ref=e153]: Deep Learning Engineer | IIT Delhi’23 | NIT Surat’19
+                            - paragraph [ref=e155]: Bengaluru, Karnataka, India
+                  - generic [ref=e166]:
+                    - paragraph [ref=e168]: Easily find people who are actively hiring
+                    - paragraph [ref=e169]: Search more efficiently with advanced search filters
+                    - link "Try Premium for ₹0" [ref=e170] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=OfFkBUzlSwSeG2ew8obsbw%3D%3D&isSS=false&upsellSlotId=ADVANCED_PEOPLE_SEARCH_FILTER_INLINE_RESULT
+                      - generic [ref=e172]: Try Premium for ₹0
+                    - paragraph [ref=e173]: 1-month free trial. Easy to cancel. We’ll remind you 7 days before your trial ends.
+                  - listitem [ref=e175]:
+                    - generic [ref=e176]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e177]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e178]:
+                          - link "LinkedIn Member Aspiring AI/ML Engineer | Machine Learning | Python | Deep Learning Bengaluru, Karnataka, India" [ref=e179] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e180]
+                            - generic [ref=e181]:
+                              - paragraph [ref=e182]: LinkedIn Member
+                              - paragraph [ref=e186]: Aspiring AI/ML Engineer | Machine Learning | Python | Deep Learning
+                              - paragraph [ref=e188]: Bengaluru, Karnataka, India
+                          - generic [ref=e189]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e190]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e191] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e194]: View
+                  - listitem [ref=e200]:
+                    - generic [ref=e201]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e202]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e203]:
+                          - link "LinkedIn Member AI/ML Engineer → Generative AI Engineer → Agentic AI Engineer Bengaluru, Karnataka, India" [ref=e204] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e205]
+                            - generic [ref=e206]:
+                              - paragraph [ref=e207]: LinkedIn Member
+                              - paragraph [ref=e209]: AI/ML Engineer → Generative AI Engineer → Agentic AI Engineer
+                              - paragraph [ref=e211]: Bengaluru, Karnataka, India
+                          - generic [ref=e212]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e213]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e214] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e217]: View
+                  - listitem [ref=e223]:
+                    - generic [ref=e224]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e225]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e226]:
+                          - link "LinkedIn Member Aspiring AI Engineer | Data Science Student | Python • ML • Deep Learning Greater Bengaluru Area" [ref=e227] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e228]
+                            - generic [ref=e229]:
+                              - paragraph [ref=e230]: LinkedIn Member
+                              - paragraph [ref=e232]: Aspiring AI Engineer | Data Science Student | Python • ML • Deep Learning
+                              - paragraph [ref=e234]: Greater Bengaluru Area
+                          - generic [ref=e235]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e236]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e237] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e240]: View
+                  - listitem [ref=e246]:
+                    - generic [ref=e247]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e248]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e249]:
+                          - link "LinkedIn Member Ai Engineer Specializing in Machine Learning| NLP|Deep Learning |GenAi Bengaluru, Karnataka, India" [ref=e250] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e251]
+                            - generic [ref=e252]:
+                              - paragraph [ref=e253]: LinkedIn Member
+                              - paragraph [ref=e255]: Ai Engineer Specializing in Machine Learning| NLP|Deep Learning |GenAi
+                              - paragraph [ref=e257]: Bengaluru, Karnataka, India
+                          - generic [ref=e258]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e259]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e260] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e263]: View
+                  - listitem [ref=e269]:
+                    - generic [ref=e270]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e271]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e272]:
+                          - link "LinkedIn Member AI Engineer | Computer Vision | Medical Imaging | Deep Learning | IIITDM Kancheepuram Bengaluru, Karnataka, India" [ref=e273] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e274]
+                            - generic [ref=e275]:
+                              - paragraph [ref=e276]: LinkedIn Member
+                              - paragraph [ref=e278]: AI Engineer | Computer Vision | Medical Imaging | Deep Learning | IIITDM Kancheepuram
+                              - paragraph [ref=e280]: Bengaluru, Karnataka, India
+                          - generic [ref=e281]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e282]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e283] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e286]: View
+                  - listitem [ref=e292]:
+                    - generic [ref=e293]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/anupama-p-r-3ab039312/
+                      - generic [ref=e294]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/anupama-p-r-3ab039312/
+                        - generic [ref=e295]:
+                          - link [ref=e296] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/anupama-p-r-3ab039312/
+                            - figure [ref=e297]
+                          - generic [ref=e298]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/anupama-p-r-3ab039312/
+                            - paragraph [ref=e299]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/anupama-p-r-3ab039312/
+                              - link "Anupama P R" [ref=e300] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/anupama-p-r-3ab039312/
+                              - generic [ref=e301]: • 3rd+
+                            - paragraph [ref=e303]: B.E in AI and Machine Learning | Aspiring AI Engineer | Proficient in Python, Java & Deep Learning | Passionate about Innovative Tech Solutions
+                            - paragraph [ref=e305]: Bengaluru, Karnataka, India
+                  - listitem [ref=e311]:
+                    - generic [ref=e312]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e313]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e314]:
+                          - link "LinkedIn Member AI/ML Engineer | Generative AI | RAG Systems | Time-Series Forecasting | Deep Learning | Computer Vision | NLP | Conversational AI | Enterprise AI Solutions Bengaluru, Karnataka, India" [ref=e315] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e316]
+                            - generic [ref=e317]:
+                              - paragraph [ref=e318]: LinkedIn Member
+                              - paragraph [ref=e320]: AI/ML Engineer | Generative AI | RAG Systems | Time-Series Forecasting | Deep Learning | Computer Vision | NLP | Conversational AI | Enterprise AI Solutions
+                              - paragraph [ref=e322]: Bengaluru, Karnataka, India
+                          - generic [ref=e323]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e324]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e325] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e328]: View
+                  - listitem [ref=e334]:
+                    - generic [ref=e335]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e336]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e337]:
+                          - link "LinkedIn Member Computer Vision & Deep Learning Engineer Bengaluru, Karnataka, India" [ref=e338] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e339]
+                            - generic [ref=e340]:
+                              - paragraph [ref=e341]: LinkedIn Member
+                              - paragraph [ref=e343]: Computer Vision & Deep Learning Engineer
+                              - paragraph [ref=e345]: Bengaluru, Karnataka, India
+                          - generic [ref=e346]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e347]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e348] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e351]: View
+                - generic [ref=e358]:
+                  - generic [ref=e359]:
+                    - paragraph [ref=e360]: Are these results helpful?
+                    - paragraph [ref=e361]: Your feedback helps us improve search results
+                  - generic [ref=e362]:
+                    - button "Are these results helpful? Yes, these search results are helpful" [ref=e363] [cursor=pointer]
+                    - button "Are these results helpful? No, these search results are not helpful" [ref=e366] [cursor=pointer]
+                - generic [ref=e370]:
+                  - list [ref=e371]:
+                    - listitem [ref=e372]:
+                      - button "Page 1" [ref=e373] [cursor=pointer]:
+                        - generic [ref=e374]: "1"
+                    - listitem [ref=e375]:
+                      - button "Page 2" [ref=e376] [cursor=pointer]:
+                        - generic [ref=e377]: "2"
+                    - listitem [ref=e378]:
+                      - button "Page 3" [ref=e379] [cursor=pointer]:
+                        - generic [ref=e380]: "3"
+                    - listitem [ref=e381]:
+                      - button "Page 4" [ref=e382] [cursor=pointer]:
+                        - generic [ref=e383]: "4"
+                    - listitem [ref=e384]:
+                      - button "Page 5" [ref=e385] [cursor=pointer]:
+                        - generic [ref=e386]: "5"
+                    - listitem [ref=e387]:
+                      - button "Page 6" [ref=e388] [cursor=pointer]:
+                        - generic [ref=e389]: "6"
+                    - listitem [ref=e390]:
+                      - button "Page 7" [ref=e391] [cursor=pointer]:
+                        - generic [ref=e392]: "7"
+                    - listitem [ref=e393]:
+                      - button "Page 8" [ref=e394] [cursor=pointer]:
+                        - generic [ref=e395]: "8"
+                    - listitem [ref=e396]:
+                      - button "Page 9" [ref=e397] [cursor=pointer]:
+                        - generic [ref=e398]: "9"
+                    - listitem [ref=e399]:
+                      - button "Page 10" [ref=e400] [cursor=pointer]:
+                        - generic [ref=e401]: "10"
+                  - button "Next" [ref=e402] [cursor=pointer]:
+                    - generic [ref=e405]: Next
+            - complementary "Aside" [ref=e406]

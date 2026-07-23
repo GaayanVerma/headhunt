@@ -1,0 +1,495 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - main [ref=e94]:
+        - generic [ref=e96]:
+          - complementary "Sidebar" [ref=e97]:
+            - generic [ref=e100]:
+              - generic [ref=e104]:
+                - link [ref=e105] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                  - generic [ref=e106]:
+                    - figure [ref=e108]
+                    - figure [ref=e110]
+                - generic [ref=e111]:
+                  - link "Mrigesh Singh -- Morena, Madhya Pradesh" [ref=e112] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                    - generic [ref=e113]:
+                      - paragraph [ref=e116]: Mrigesh Singh
+                      - paragraph [ref=e118]: "--"
+                      - paragraph [ref=e119]: Morena, Madhya Pradesh
+                  - link "Shree Ji IT Solutions" [ref=e120] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                    - generic [ref=e121]:
+                      - figure [ref=e122]
+                      - paragraph [ref=e123]: Shree Ji IT Solutions
+              - link "Unlock exclusive tools and conversations with industry leaders Try Premium for ₹0" [ref=e128] [cursor=pointer]:
+                - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_homepage_identity_upsell%3ANav%3AIn-Product&referenceId=cPWkNh70SL%2Bqgtgtp40vjA%3D%3D&isSS=true&upsellSlotId=IDENTITY_MODULE
+                - generic [ref=e129]:
+                  - paragraph [ref=e130]: Unlock exclusive tools and conversations with industry leaders
+                  - paragraph [ref=e135]: Try Premium for ₹0
+              - menu [ref=e138]:
+                - link "Connections 12 Grow your network" [ref=e140] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/mynetwork/invite-connect/connections/
+                  - generic "Connections 12 Grow your network" [ref=e141]:
+                    - generic [ref=e142]:
+                      - paragraph [ref=e143]: Connections
+                      - paragraph [ref=e144]: Grow your network
+                    - paragraph [ref=e145]: "12"
+              - menu [ref=e148]:
+                - link "Saved items" [ref=e149] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/my-items/saved-posts/
+                  - paragraph [ref=e152]: Saved items
+                - link "Groups" [ref=e153] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/groups/
+                  - paragraph [ref=e156]: Groups
+                - link "Newsletters" [ref=e157] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/mynetwork/network-manager/newsletters/
+                  - paragraph [ref=e160]: Newsletters
+                - link "Events" [ref=e161] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/events/
+                  - paragraph [ref=e164]: Events
+          - region "Primary content" [ref=e165]:
+            - list [ref=e166]:
+              - generic [ref=e169]:
+                - generic [ref=e170]:
+                  - link [ref=e172] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                    - figure [ref=e173]
+                  - button "Start a post" [ref=e175] [cursor=pointer]:
+                    - generic "Start a post" [ref=e176]:
+                      - generic [ref=e178]:
+                        - paragraph [ref=e179]: Start a post
+                        - generic:
+                          - paragraph
+                - generic [ref=e180]:
+                  - button "Video" [ref=e181] [cursor=pointer]:
+                    - paragraph [ref=e184]: Video
+                  - button "Photo" [ref=e185] [cursor=pointer]:
+                    - paragraph [ref=e188]: Photo
+                  - link "Write article" [ref=e189] [cursor=pointer]:
+                    - /url: /article/new/
+                    - paragraph [ref=e192]: Write article
+              - listitem [ref=e197]:
+                - generic [ref=e199]:
+                  - heading "Feed post" [level=2]:
+                    - generic [ref=e200]: Feed post
+                  - generic [ref=e201]:
+                    - generic [ref=e202]:
+                      - link [ref=e203] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/fahad-haque-697895194/
+                        - figure [ref=e204]
+                      - paragraph [ref=e206]:
+                        - generic [ref=e207]:
+                          - link "Fahad Haque" [ref=e208] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/fahad-haque-697895194/
+                            - strong [ref=e209]: Fahad Haque
+                          - text: likes this
+                    - button "Open control menu for post by P Garima" [ref=e210] [cursor=pointer]
+                    - button "Hide post by P Garima" [ref=e213] [cursor=pointer]
+                  - generic [ref=e216]:
+                    - link [ref=e217] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/in/p-garima/
+                      - figure [ref=e218]
+                    - generic [ref=e220]:
+                      - link "P Garima 2nd" [ref=e223] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/p-garima/
+                        - generic "P Garima 2nd" [ref=e225]:
+                          - paragraph [ref=e228]: P Garima
+                          - paragraph [ref=e230]: • 2nd
+                      - paragraph [ref=e232]: Underwriter | Insurance Professional | Insurance Business Placement
+                      - paragraph [ref=e234]:
+                        - generic [ref=e235]: 1w •
+                      - link:
+                        - /url: https://www.linkedin.com/in/p-garima/
+                    - button "Follow P Garima" [ref=e240] [cursor=pointer]:
+                      - generic [ref=e244]: Follow
+                  - paragraph [ref=e245]:
+                    - generic [ref=e246]:
+                      - text: "\"Growing together, winning together, and always keeping the vibe unmatched. Love my team! 🙌✨"
+                      - link "#OnsurityLife" [ref=e247] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23onsuritylife&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e249]: "#OnsurityLife"
+                      - link "#Teamwork" [ref=e250] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23teamwork&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e252]: "#Teamwork"
+                      - link "#WorkplaceCulture" [ref=e253] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23workplaceculture&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e255]: "#WorkplaceCulture"
+                      - text: "\""
+                      - link "Onsurity" [ref=e256] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/onsurity/
+                        - strong [ref=e258]: Onsurity
+                  - link [ref=e260] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/
+                    - figure [ref=e261]:
+                      - img "View image" [ref=e262]
+                  - generic [ref=e263]:
+                    - link "Fahad Haque and 127 others reacted" [ref=e264] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e270]:
+                        - generic [ref=e271]:
+                          - generic [ref=e272]: Fahad Haque and 127 others reacted
+                          - generic [ref=e273]: Fahad Haque and 127 others
+                    - link "4 reposts" [ref=e275] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e276]:
+                        - generic [ref=e277]: 4 reposts
+                        - generic [ref=e278]: 4 reposts
+                  - generic [ref=e279]:
+                    - generic [ref=e280]:
+                      - 'button "Reaction button state: no reaction" [ref=e283] [cursor=pointer]':
+                        - generic [ref=e286]: Like
+                      - button "Open reactions menu"
+                    - button "Comment" [ref=e287] [cursor=pointer]:
+                      - generic [ref=e291]: Comment
+                    - button "Repost" [ref=e292] [cursor=pointer]:
+                      - generic [ref=e296]: Repost
+                    - link "Send" [ref=e297] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - generic [ref=e301]: Send
+              - listitem [ref=e306]:
+                - generic [ref=e308]:
+                  - heading "Feed post" [level=2]:
+                    - generic [ref=e309]: Feed post
+                  - generic [ref=e310]:
+                    - link [ref=e311] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/company/scalerofficial/posts/
+                      - figure [ref=e312]
+                    - generic [ref=e314]:
+                      - link "Scaler" [ref=e317] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/scalerofficial/posts/
+                        - paragraph [ref=e322]: Scaler
+                      - paragraph [ref=e324]: 308,431 followers
+                      - paragraph [ref=e326]: Promoted
+                      - link:
+                        - /url: https://www.linkedin.com/company/scalerofficial/posts/
+                    - button "Open control menu for post by Scaler" [ref=e327] [cursor=pointer]
+                  - paragraph [ref=e330]:
+                    - generic [ref=e331]: Want to become a pro at building top-notch apps for production? Register for this Scaler Masterclass and learn the nuances of using Docker & Kubernetes, LIVE with an expert.
+                  - generic [ref=e332]:
+                    - link [ref=e334] [cursor=pointer]:
+                      - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                      - figure [ref=e335]:
+                        - img "View Sponsored Content" [ref=e336]
+                    - link:
+                      - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                    - generic [ref=e337]:
+                      - link "🚀 Master Docker & Kubernetes — Live Hands-On Masterclass! scaler.com" [ref=e338] [cursor=pointer]:
+                        - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                        - generic [ref=e339]:
+                          - paragraph [ref=e341]:
+                            - generic [ref=e342]:
+                              - generic [ref=e343]: 🚀 Master Docker & Kubernetes — Live Hands-On Masterclass!
+                              - text: 🚀 Master Docker & Kubernetes — Live Hands-On Masterclass!
+                          - paragraph [ref=e345]: scaler.com
+                      - link "Register" [ref=e346] [cursor=pointer]:
+                        - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                        - generic [ref=e348]: Register
+                  - generic [ref=e349]:
+                    - link "270 reactions" [ref=e350] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e356]:
+                        - generic [ref=e357]:
+                          - generic [ref=e358]: 270 reactions
+                          - text: "270"
+                    - generic [ref=e359]:
+                      - button "2 comments" [ref=e360] [cursor=pointer]:
+                        - paragraph [ref=e361]:
+                          - generic [ref=e362]: 2 comments
+                          - generic [ref=e363]: 2 comments
+                      - paragraph [ref=e364]: •
+                      - link "4 reposts" [ref=e365] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/
+                        - paragraph [ref=e366]:
+                          - generic [ref=e367]: 4 reposts
+                          - generic [ref=e368]: 4 reposts
+                  - generic [ref=e369]:
+                    - generic [ref=e370]:
+                      - 'button "Reaction button state: no reaction" [ref=e373] [cursor=pointer]':
+                        - generic [ref=e376]: Like
+                      - button "Open reactions menu"
+                    - button "Comment" [ref=e377] [cursor=pointer]:
+                      - generic [ref=e381]: Comment
+                    - button "Repost" [ref=e382] [cursor=pointer]:
+                      - generic [ref=e386]: Repost
+                    - link "Send" [ref=e387] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - generic [ref=e391]: Send
+              - listitem [ref=e396]:
+                - generic [ref=e398]:
+                  - heading "Feed post" [level=2]:
+                    - generic [ref=e399]: Feed post
+                  - generic [ref=e400]:
+                    - generic [ref=e401]:
+                      - link [ref=e402] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/nithinjv/
+                        - figure [ref=e403]
+                      - paragraph [ref=e405]:
+                        - generic [ref=e406]:
+                          - link "Nithin Jayaraman Venkateshan" [ref=e407] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/nithinjv/
+                            - strong [ref=e408]: Nithin Jayaraman Venkateshan
+                          - text: likes this
+                    - button "Open control menu for post by Kanishk Awadhiya" [ref=e409] [cursor=pointer]
+                    - button "Hide post by Kanishk Awadhiya" [ref=e412] [cursor=pointer]
+                  - generic [ref=e415]:
+                    - link [ref=e416] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/in/kanishk-awadhiya-9a1a9b61/
+                      - figure [ref=e417]
+                    - generic [ref=e419]:
+                      - link "Kanishk Awadhiya Verified Profile 2nd" [ref=e422] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/kanishk-awadhiya-9a1a9b61/
+                        - generic "Kanishk Awadhiya Verified Profile 2nd" [ref=e424]:
+                          - paragraph [ref=e427]: Kanishk Awadhiya
+                          - paragraph [ref=e429]:
+                            - generic [ref=e430]: • 2nd
+                      - paragraph [ref=e434]: Quant Researcher @ Stealth Startup || MS Research @ IIT Delhi
+                      - paragraph [ref=e436]:
+                        - generic [ref=e437]: 1w • Edited •
+                      - link:
+                        - /url: https://www.linkedin.com/in/kanishk-awadhiya-9a1a9b61/
+                    - button "Follow Kanishk Awadhiya" [ref=e442] [cursor=pointer]:
+                      - generic [ref=e446]: Follow
+                  - paragraph [ref=e447]:
+                    - generic [ref=e448]:
+                      - text: Career Update!
+                      - text: → Starting at a new position as Quant Researcher at a startup
+                      - text: → Solo Author papers in Top ML conference
+                      - text: → 9 DGPA at IIT Delhi
+                      - text: From being an Automobile Engineer 🚗
+                      - text: to AI Researcher 💻
+                      - text: to Quant Researcher 📈
+                      - text: "- Life sometimes gives you the Roller Coaster 🎢 ride."
+                      - text: Keep going, Keep Grinding!
+                      - link "#QuantResearch" [ref=e450] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23quantresearch&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e452]: "#QuantResearch"
+                      - link "#MachineLearning" [ref=e453] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23machinelearning&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e455]: "#MachineLearning"
+                      - link "#Job" [ref=e456] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23job&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e458]: "#Job"
+                      - link "#Startup" [ref=e459] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23startup&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e461]: "#Startup"
+                      - link "#Placed" [ref=e462] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23placed&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e464]: "#Placed"
+                      - link "#Finance" [ref=e465] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23finance&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e467]: "#Finance"
+                  - generic [ref=e468]:
+                    - link [ref=e469] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - figure [ref=e470]:
+                        - img "View celebration image" [ref=e471]
+                    - link "Starting a new position" [ref=e472] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/feed/update/urn:li:activity:7472501270776422400/
+                      - paragraph [ref=e473]: Starting a new position
+                  - generic [ref=e474]:
+                    - link "Nithin Jayaraman Venkateshan and 318 others reacted" [ref=e475] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e481]:
+                        - generic [ref=e482]:
+                          - generic [ref=e483]: Nithin Jayaraman Venkateshan and 318 others reacted
+                          - generic [ref=e484]: Nithin Jayaraman Venkateshan and 318 others
+                    - button "55 comments" [ref=e486] [cursor=pointer]:
+                      - paragraph [ref=e487]:
+                        - generic [ref=e488]: 55 comments
+                        - generic [ref=e489]: 55 comments
+                  - generic [ref=e490]:
+                    - generic [ref=e491]:
+                      - 'button "Reaction button state: no reaction" [ref=e494] [cursor=pointer]':
+                        - generic [ref=e497]: Like
+                      - button "Open reactions menu"
+                    - button "Comment" [ref=e498] [cursor=pointer]:
+                      - generic [ref=e502]: Comment
+                    - button "Repost" [ref=e503] [cursor=pointer]:
+                      - generic [ref=e507]: Repost
+                    - link "Send" [ref=e508] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - generic [ref=e512]: Send
+              - progressbar "In progress" [ref=e516]
+          - complementary "Aside" [ref=e517]:
+            - generic [ref=e518]:
+              - generic [ref=e519]:
+                - generic [ref=e523]:
+                  - generic [ref=e524]:
+                    - paragraph [ref=e525]: LinkedIn News
+                    - button "Info tooltip" [ref=e526] [cursor=pointer]
+                  - paragraph [ref=e529]: Top stories
+                  - generic [ref=e530]:
+                    - link "Starmer resigns as prime minister 1h ago • 83,030 readers" [ref=e532] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/starmer-resigns-as-prime-minister-7372420/
+                      - generic [ref=e534]:
+                        - paragraph [ref=e536]: Starmer resigns as prime minister
+                        - generic [ref=e537]:
+                          - paragraph [ref=e538]: 1h ago
+                          - paragraph [ref=e539]: •
+                          - paragraph [ref=e540]: 83,030 readers
+                    - link "CRED's Kunal Shah to head WhatsApp globally 1h ago • 24,430 readers" [ref=e542] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/creds-kunal-shah-to-head-whatsapp-globally-8278633/
+                      - generic [ref=e544]:
+                        - paragraph [ref=e546]: CRED's Kunal Shah to head WhatsApp globally
+                        - generic [ref=e547]:
+                          - paragraph [ref=e548]: 1h ago
+                          - paragraph [ref=e549]: •
+                          - paragraph [ref=e550]: 24,430 readers
+                    - link "More firms hire independent consultants 9h ago • 983 readers" [ref=e552] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/more-firms-hire-independent-consultants-8285649/
+                      - generic [ref=e554]:
+                        - paragraph [ref=e556]: More firms hire independent consultants
+                        - generic [ref=e557]:
+                          - paragraph [ref=e558]: 9h ago
+                          - paragraph [ref=e559]: •
+                          - paragraph [ref=e560]: 983 readers
+                    - link "India emerges as Big Four bright spot amid slowdown 7h ago • 745 readers" [ref=e562] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/india-emerges-as-big-four-bright-spot-amid-slowdown-8279337/
+                      - generic [ref=e564]:
+                        - paragraph [ref=e566]: India emerges as Big Four bright spot amid slowdown
+                        - generic [ref=e567]:
+                          - paragraph [ref=e568]: 7h ago
+                          - paragraph [ref=e569]: •
+                          - paragraph [ref=e570]: 745 readers
+                    - link "Farmers consider options as monsoon loses momentum 9h ago • 522 readers" [ref=e572] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/farmers-consider-options-as-monsoon-loses-momentum-8287729/
+                      - generic [ref=e574]:
+                        - paragraph [ref=e576]: Farmers consider options as monsoon loses momentum
+                        - generic [ref=e577]:
+                          - paragraph [ref=e578]: 9h ago
+                          - paragraph [ref=e579]: •
+                          - paragraph [ref=e580]: 522 readers
+                    - button "Show more news" [ref=e581] [cursor=pointer]:
+                      - generic [ref=e584]: Show more news
+                - generic [ref=e587]:
+                  - paragraph [ref=e588]: Today’s puzzles
+                  - generic [ref=e589]:
+                    - link "Play Wend" [ref=e591] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/games/wend/
+                      - generic "Play Wend" [ref=e592]:
+                        - generic [ref=e593]:
+                          - figure [ref=e594]
+                          - generic [ref=e595]:
+                            - paragraph [ref=e596]:
+                              - strong [ref=e597]: Wend
+                              - text: "#14"
+                            - paragraph [ref=e598]: 1 connection played
+                    - link "Play Patches" [ref=e601] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/games/patches/
+                      - generic "Play Patches" [ref=e602]:
+                        - generic [ref=e603]:
+                          - figure [ref=e604]
+                          - generic [ref=e605]:
+                            - paragraph [ref=e606]:
+                              - strong [ref=e607]: Patches
+                              - text: "#97"
+                            - paragraph [ref=e608]: 1 connection played
+                    - link "Play Zip" [ref=e611] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/games/zip/
+                      - generic "Play Zip" [ref=e612]:
+                        - generic [ref=e613]:
+                          - figure [ref=e614]
+                          - generic [ref=e615]:
+                            - paragraph [ref=e616]:
+                              - strong [ref=e617]: Zip
+                              - text: "#462"
+                            - paragraph [ref=e618]: 1 connection played
+                    - link "Play MiniSudoku" [ref=e621] [cursor=pointer]:
+                      - /url: /games/mini-sudoku/
+                      - generic "Play MiniSudoku" [ref=e622]:
+                        - generic [ref=e623]:
+                          - figure [ref=e624]
+                          - generic [ref=e625]:
+                            - paragraph [ref=e626]:
+                              - strong [ref=e627]: Mini Sudoku
+                              - text: "#315"
+                            - paragraph [ref=e628]: The classic game, made mini
+                    - button "Show more" [ref=e631] [cursor=pointer]:
+                      - generic [ref=e634]: Show more
+              - generic [ref=e636]:
+                - iframe [ref=e639]:
+                  
+                - generic [ref=e640]:
+                  - generic [ref=e641]:
+                    - link "About" [ref=e642] [cursor=pointer]:
+                      - /url: https://about.linkedin.com/
+                      - paragraph [ref=e643]: About
+                    - link "Accessibility" [ref=e644] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/accessibility/
+                      - paragraph [ref=e645]: Accessibility
+                    - link "Help Center" [ref=e646] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/help/linkedin/
+                      - paragraph [ref=e647]: Help Center
+                    - button "Privacy & Terms" [ref=e648] [cursor=pointer]:
+                      - paragraph [ref=e650]: Privacy & Terms
+                    - link "Ad Choices" [ref=e652] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/help/linkedin/answer/62931/
+                      - paragraph [ref=e653]: Ad Choices
+                    - link "Advertising" [ref=e654] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/ad/start/?trk=n_nav_ads_rr
+                      - paragraph [ref=e655]: Advertising
+                    - button "Business Services" [ref=e656] [cursor=pointer]:
+                      - paragraph [ref=e658]: Business Services
+                    - link "Get the LinkedIn app" [ref=e660] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/mobile/
+                      - paragraph [ref=e661]: Get the LinkedIn app
+                    - link "More" [ref=e662] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e663]: More
+                  - paragraph [ref=e666]: LinkedIn Corporation © 2026

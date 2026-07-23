@@ -1,0 +1,376 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e92]:
+        - toolbar [ref=e93]
+        - main [ref=e107]:
+          - generic [ref=e112]:
+            - region "Primary content" [ref=e113]:
+              - generic [ref=e116]:
+                - list [ref=e119]:
+                  - listitem [ref=e121]:
+                    - generic [ref=e122]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/subhankar-sen-a62457190/
+                      - generic [ref=e123]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/subhankar-sen-a62457190/
+                        - generic [ref=e124]:
+                          - link [ref=e125] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/subhankar-sen-a62457190/
+                            - figure [ref=e126]
+                          - generic [ref=e127]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/subhankar-sen-a62457190/
+                            - paragraph [ref=e128]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/subhankar-sen-a62457190/
+                              - link "Subhankar Sen Verified" [ref=e129] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/subhankar-sen-a62457190/
+                                - text: Subhankar Sen
+                                - img "Verified" [ref=e130]
+                              - generic [ref=e132]: • 2nd
+                            - paragraph [ref=e134]: Machine Learning Engineer II @ Expedia Group
+                            - paragraph [ref=e136]: Bengaluru, Karnataka, India
+                        - generic [ref=e141]:
+                          - figure [ref=e142]
+                          - generic [ref=e143]:
+                            - paragraph [ref=e145]:
+                              - generic [ref=e146]:
+                                - link "Adithyaa Sunder" [ref=e147] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/in/adithyaa-sunder/
+                                  - strong [ref=e148]: Adithyaa Sunder
+                                - text: is a mutual connection
+                            - paragraph [ref=e150]:
+                              - generic [ref=e151]:
+                                - text: ·
+                                - link "12K followers" [ref=e152] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAACzquioBl8YIZjwlzObSsOKlU4Q0_NOszGg%22%5D
+                  - listitem [ref=e154]:
+                    - generic [ref=e155]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/nitinmukeshiitb/
+                      - generic [ref=e156]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/nitinmukeshiitb/
+                        - generic [ref=e157]:
+                          - link [ref=e158] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/nitinmukeshiitb/
+                            - figure [ref=e159]
+                          - generic [ref=e160]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/nitinmukeshiitb/
+                            - paragraph [ref=e161]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/nitinmukeshiitb/
+                              - link "Nitin Mukesh Verified" [ref=e162] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/nitinmukeshiitb/
+                                - text: Nitin Mukesh
+                                - img "Verified" [ref=e163]
+                              - generic [ref=e165]: • 3rd+
+                            - paragraph [ref=e167]: Data Scientist @ Flipkart | IIT Bombay | Machine Learning
+                            - paragraph [ref=e169]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e176]:
+                          - link "36K followers" [ref=e178] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAACM11E0BkUoNw0buQow293k1pubAP25BiS0%22%5D
+                  - generic [ref=e185]:
+                    - paragraph [ref=e187]: Easily find people who are actively hiring
+                    - paragraph [ref=e188]: Search more efficiently with advanced search filters
+                    - link "Try Premium for ₹0" [ref=e189] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=o%2Fb40X9RRsSeJGxHWnfnqg%3D%3D&isSS=false&upsellSlotId=ADVANCED_PEOPLE_SEARCH_FILTER_INLINE_RESULT
+                      - generic [ref=e191]: Try Premium for ₹0
+                    - paragraph [ref=e192]: 1-month free trial. Easy to cancel. We’ll remind you 7 days before your trial ends.
+                  - listitem [ref=e194]:
+                    - generic [ref=e195]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e196]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e197]:
+                          - link "LinkedIn Member Agentic AI engineer Cuddapah, Andhra Pradesh, India" [ref=e198] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e199]
+                            - generic [ref=e200]:
+                              - paragraph [ref=e201]: LinkedIn Member
+                              - paragraph [ref=e203]: Agentic AI engineer
+                              - paragraph [ref=e205]: Cuddapah, Andhra Pradesh, India
+                          - generic [ref=e206]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e207]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e208] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e211]: View
+                  - listitem [ref=e217]:
+                    - generic [ref=e218]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/thebigdatashow/
+                      - generic [ref=e219]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/thebigdatashow/
+                        - generic [ref=e220]:
+                          - link [ref=e221] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/thebigdatashow/
+                            - figure [ref=e222]
+                          - generic [ref=e223]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/thebigdatashow/
+                            - paragraph [ref=e224]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/thebigdatashow/
+                              - link "Ankur Ranjan Verified" [ref=e225] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/thebigdatashow/
+                                - text: Ankur Ranjan
+                                - img "Verified" [ref=e226]
+                              - generic [ref=e228]: • 3rd+
+                            - paragraph [ref=e230]: Senior Machine Learning Engineer @ Razorpay
+                            - paragraph [ref=e232]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e239]:
+                          - link "54K followers" [ref=e241] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAACRB4_MB5ieJocKQE3TVb9AZcCHTcknOimg%22%5D
+                  - listitem [ref=e243]:
+                    - generic [ref=e244]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e245]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e246]:
+                          - link "LinkedIn Member Machine Learning Engineer | Python | Scikit-learn | Model Building | EDA Bengaluru, Karnataka, India" [ref=e247] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e248]
+                            - generic [ref=e249]:
+                              - paragraph [ref=e250]: LinkedIn Member
+                              - paragraph [ref=e252]: Machine Learning Engineer | Python | Scikit-learn | Model Building | EDA
+                              - paragraph [ref=e254]: Bengaluru, Karnataka, India
+                          - generic [ref=e255]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e256]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e257] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e260]: View
+                  - listitem [ref=e266]:
+                    - generic [ref=e267]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/kshitijkarthick/
+                      - generic [ref=e268]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/kshitijkarthick/
+                        - generic [ref=e269]:
+                          - link [ref=e270] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/kshitijkarthick/
+                            - figure [ref=e271]
+                          - generic [ref=e272]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/kshitijkarthick/
+                            - paragraph [ref=e273]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/kshitijkarthick/
+                              - link "Kshitij Karthick Verified" [ref=e274] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/kshitijkarthick/
+                                - text: Kshitij Karthick
+                                - img "Verified" [ref=e275]
+                              - generic [ref=e277]: • 3rd+
+                            - paragraph [ref=e279]: Lead Machine Learning Engineer
+                            - paragraph [ref=e281]: Bengaluru, Karnataka, India
+                  - listitem [ref=e287]:
+                    - generic [ref=e288]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e289]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e290]:
+                          - link "LinkedIn Member Artificial intelligence and machine learning engineer Bengaluru, Karnataka, India" [ref=e291] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e292]
+                            - generic [ref=e293]:
+                              - paragraph [ref=e294]: LinkedIn Member
+                              - paragraph [ref=e296]: Artificial intelligence and machine learning engineer
+                              - paragraph [ref=e298]: Bengaluru, Karnataka, India
+                          - generic [ref=e299]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e300]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e301] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e304]: View
+                  - listitem [ref=e310]:
+                    - generic [ref=e311]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e312]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e313]:
+                          - link "LinkedIn Member Machine learning | AI | Deep learning Bengaluru, Karnataka, India" [ref=e314] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e315]
+                            - generic [ref=e316]:
+                              - paragraph [ref=e317]: LinkedIn Member
+                              - paragraph [ref=e319]: Machine learning | AI | Deep learning
+                              - paragraph [ref=e321]: Bengaluru, Karnataka, India
+                          - generic [ref=e322]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e323]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e324] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e327]: View
+                  - listitem [ref=e333]:
+                    - generic [ref=e334]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e335]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e336]:
+                          - link "LinkedIn Member Machine Learning Engineer Bengaluru, Karnataka, India" [ref=e337] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e338]
+                            - generic [ref=e339]:
+                              - paragraph [ref=e340]: LinkedIn Member
+                              - paragraph [ref=e342]: Machine Learning Engineer
+                              - paragraph [ref=e344]: Bengaluru, Karnataka, India
+                          - generic [ref=e345]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e346]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e347] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e350]: View
+                  - listitem [ref=e356]:
+                    - generic [ref=e357]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/manishmazumder/
+                      - generic [ref=e358]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/manishmazumder/
+                        - generic [ref=e359]:
+                          - link [ref=e360] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/manishmazumder/
+                            - figure [ref=e361]
+                          - generic [ref=e362]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/manishmazumder/
+                            - paragraph [ref=e363]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/manishmazumder/
+                              - link "Manish Mazumder Verified" [ref=e364] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/manishmazumder/
+                                - text: Manish Mazumder
+                                - img "Verified" [ref=e365]
+                              - generic [ref=e367]: • 3rd+
+                            - paragraph [ref=e369]: ML Research Engineer • IIT Kanpur CSE • LinkedIn Top Voice 2024 • NLP, LLMs, GenAI, Agentic AI, Machine Learning
+                            - paragraph [ref=e371]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e378]:
+                          - link "70K followers" [ref=e380] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAACSuFsMBOazTIsYXLRIeGQi1y0x70tcnwOM%22%5D
+                - generic [ref=e383]:
+                  - generic [ref=e384]:
+                    - paragraph [ref=e385]: Are these results helpful?
+                    - paragraph [ref=e386]: Your feedback helps us improve search results
+                  - generic [ref=e387]:
+                    - button "Are these results helpful? Yes, these search results are helpful" [ref=e388] [cursor=pointer]
+                    - button "Are these results helpful? No, these search results are not helpful" [ref=e391] [cursor=pointer]
+                - generic [ref=e395]:
+                  - list [ref=e396]:
+                    - listitem [ref=e397]:
+                      - button "Page 1" [ref=e398] [cursor=pointer]:
+                        - generic [ref=e399]: "1"
+                    - listitem [ref=e400]:
+                      - button "Page 2" [ref=e401] [cursor=pointer]:
+                        - generic [ref=e402]: "2"
+                    - listitem [ref=e403]:
+                      - button "Page 3" [ref=e404] [cursor=pointer]:
+                        - generic [ref=e405]: "3"
+                    - listitem [ref=e406]:
+                      - button "Page 4" [ref=e407] [cursor=pointer]:
+                        - generic [ref=e408]: "4"
+                    - listitem [ref=e409]:
+                      - button "Page 5" [ref=e410] [cursor=pointer]:
+                        - generic [ref=e411]: "5"
+                    - listitem [ref=e412]:
+                      - button "Page 6" [ref=e413] [cursor=pointer]:
+                        - generic [ref=e414]: "6"
+                    - listitem [ref=e415]:
+                      - button "Page 7" [ref=e416] [cursor=pointer]:
+                        - generic [ref=e417]: "7"
+                    - listitem [ref=e418]:
+                      - button "Page 8" [ref=e419] [cursor=pointer]:
+                        - generic [ref=e420]: "8"
+                    - listitem [ref=e421]:
+                      - button "Page 9" [ref=e422] [cursor=pointer]:
+                        - generic [ref=e423]: "9"
+                    - listitem [ref=e424]:
+                      - button "Page 10" [ref=e425] [cursor=pointer]:
+                        - generic [ref=e426]: "10"
+                  - button "Next" [ref=e427] [cursor=pointer]:
+                    - generic [ref=e430]: Next
+            - complementary "Aside" [ref=e431]

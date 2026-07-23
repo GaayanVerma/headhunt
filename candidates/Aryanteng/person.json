@@ -1,0 +1,73 @@
+{
+  "linkedin_url": "https://www.linkedin.com/in/aryanteng/",
+  "name": "Aryan Teng",
+  "location": "New Delhi, Delhi, India",
+  "about": "I build things end to end \u2014 product problem to architecture to interface and back again.\n\nMy background is in computer science and biosciences, which is an unusual combination, \nbut it has made me comfortable working across domains and moving between layers of a system that most engineers stay on one side of.\n\nI've worked across climate tech, fintech, and AI surveillance infrastructure. \n\nThe domain changes; the approach doesn't.\n\u2026 more",
+  "open_to_work": true,
+  "experiences": [
+    {
+      "position_title": "Software Development Engineer \u2013 I",
+      "institution_name": "Awiros",
+      "linkedin_url": "https://www.linkedin.com/company/13254446/",
+      "from_date": "Jun 2024",
+      "to_date": "Present",
+      "duration": "2 yrs 2 mos",
+      "location": "Gurugram, Haryana, India",
+      "description": null,
+      "employment_type": "Full-time"
+    },
+    {
+      "position_title": "Software Engineer",
+      "institution_name": "Tortoise",
+      "linkedin_url": "https://www.linkedin.com/company/14602317/",
+      "from_date": "Apr 2024",
+      "to_date": "Jun 2024",
+      "duration": "3 mos",
+      "location": "Gurugram, Haryana, India",
+      "description": null,
+      "employment_type": "Internship"
+    },
+    {
+      "position_title": "Greater London, England, United Kingdom",
+      "institution_name": "Frontend Engineer",
+      "linkedin_url": "https://www.linkedin.com/company/18256862/",
+      "from_date": "Aug 2022",
+      "to_date": "May 2024",
+      "duration": "1 yr 10 mos",
+      "location": null,
+      "description": null,
+      "employment_type": null
+    },
+    {
+      "position_title": "Founding Engineer",
+      "institution_name": "Enveave",
+      "linkedin_url": "https://www.linkedin.com/company/82593466/",
+      "from_date": "May 2022",
+      "to_date": "Apr 2024",
+      "duration": "2 yrs",
+      "location": "New Delhi, Delhi, India",
+      "description": null,
+      "employment_type": "Full-time"
+    }
+  ],
+  "educations": [
+    {
+      "institution_name": "Indraprastha Institute of Information Technology, DelhiBachelor of Technology - BTech, Computer ScienceAug 2020 \u2013 Apr 2024",
+      "degree": null,
+      "linkedin_url": "https://www.linkedin.com/school/362624/",
+      "from_date": "Indraprastha Institute of Information Technology, DelhiBachelor of Technology",
+      "to_date": "BTech, Computer Science",
+      "description": null
+    }
+  ],
+  "interests": [],
+  "accomplishments": [],
+  "contacts": [
+    {
+      "type": "linkedin",
+      "value": "https://www.linkedin.com/in/aryanteng/",
+      "label": null
+    }
+  ],
+  "skills": []
+}

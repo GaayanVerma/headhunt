@@ -1,0 +1,276 @@
+{
+  "candidates": {
+    "id": "gen_random_uuid()",
+    "org_id": "<org_id>",
+    "name": "Shivam Chhirolya",
+    "headline": "Founding AI Engineer at Contrails.AI | IISc M.Tech AI (2nd Rank) | Computer Vision & LLM Systems",
+    "location": "Bangalore, India",
+    "summary": "IISc-trained AI engineer (M.Tech, 2nd rank cohort) with ~4 years spanning Qualcomm R&D, LLM product at Prezent.AI, and a current founding engineering role at Contrails.AI. Builds production AI systems — deepfake detection, autonomous agents, multimodal moderation — with quantified outcomes and a pending US patent. Rare blend of research depth and startup execution speed.",
+    "narrative": "Shivam Chhirolya is a high-caliber AI engineer with approximately four years of professional experience spanning computer vision R&D at Qualcomm, LLM product work at Prezent.AI, and a current founding engineering role at Contrails.AI. He holds an M.Tech in Artificial Intelligence from IISc Bangalore — graduating 2nd in his cohort — backed by a 99.60th percentile GATE score and selection into the Reliance Foundation's top-40 national scholarship, signals of exceptional raw ability. His career arc shows deliberate progression from deep CV and hardware simulation work at a Fortune 500 to increasingly autonomous, ownership-heavy AI engineering. At Contrails.AI he is building deepfake detection infrastructure and agentic intelligence systems from scratch for high-trust clients including India's PMO, MIB, and Reliance Industries — a zero-safety-net founding environment. He ships with hard metrics: 95%+ deepfake detection accuracy on a self-curated 100K video dataset, autonomous agent expansion from 31 to 1,400+ Telegram channels tracing 27K+ network events, and a pending US patent for compression artifact reduction. Published at BMVC'22, his research credentials reinforce the technical depth behind his execution. The combination of foundational research, production MLOps fluency, and willingness to take founding-level risk makes Shivam a rare profile.",
+    "photo_url": null,
+    "resume_filename": "Shivam_Chhirolya_Resume_2026.pdf",
+    "resume_url": null,
+    "resume_key": null,
+    "total_years_experience": 4.0,
+    "raw_text": "M.Tech in Artificial Intelligence from IISc Bangalore (2nd Rank, CGPA 8.30/10). Founding AI Engineer at Contrails.AI building deepfake detection and agentic AI systems for Government of India and Reliance Industries. Previously Sr. ML Engineer at Prezent.AI and Computer Vision & ML Engineer at Qualcomm R&D. US Patent pending. Published at BMVC'22. 99.60th percentile GATE 2020. Reliance Foundation Scholar (Top 40 nationwide)."
+  },
+
+  "candidate_education": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "school": "Indian Institute of Science (IISc)",
+      "degree": "M.Tech",
+      "field": "Artificial Intelligence",
+      "year": "2022"
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "school": "Jabalpur Engineering College",
+      "degree": "B.Tech",
+      "field": "Electronics and Communication Engineering",
+      "year": "2019"
+    }
+  ],
+
+  "candidate_experiences": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "title": "Intern",
+      "company": "BrahMos Aerospace (DRDO)",
+      "start_date": "Jun 2017",
+      "end_date": "Jul 2017",
+      "description": "Six-week internship at BrahMos Aerospace (DRDO), Delhi. No technical detail provided in resume.",
+      "context": "Defence / Aerospace",
+      "tag_kind": null,
+      "tag_label": null,
+      "note": "Undergraduate internship; mentioned under Academic Accomplishments."
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "title": "Intern, Multimedia Team",
+      "company": "Qualcomm",
+      "start_date": "May 2021",
+      "end_date": "Jul 2021",
+      "description": "Designed Deep Learning based post-processing algorithms reducing video compression artifacts from HEVC decoder by 6%. Used Inception blocks to reduce learnable parameters by 2x.",
+      "context": "Fortune 500 · R&D",
+      "tag_kind": "function",
+      "tag_label": "Internship",
+      "note": "Foundation for later full-time offer and US patent submission."
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 2,
+      "title": "Computer Vision & ML Engineer",
+      "company": "Qualcomm R&D",
+      "start_date": "Jul 2022",
+      "end_date": "Jan 2025",
+      "description": "Developed novel hybrid Keypoints Detector combining classical CV and CNNs, improving Inlier Ratio by 20% and Repeatability by 40% with only 5K learnable parameters — led to published research paper. Explored Stable Diffusion with ControlNets for depth-to-image generation. Implemented C++ end-to-end software simulator for classical CV algorithms for Qualcomm Premium Tier chips with 100% accuracy. Designed CNN Inception/GoogLeNet-based InLoop filter reducing HEVC compression artifacts by 10%; resulted in US patent submission (under review).",
+      "context": "Fortune 500 · Public",
+      "tag_kind": "transition",
+      "tag_label": "Big Co R&D",
+      "note": "1 US patent filed · 1 internal research pub (Qbuzz'23)"
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 3,
+      "title": "Sr. Machine Learning Engineer",
+      "company": "Prezent.AI",
+      "start_date": "Jan 2025",
+      "end_date": "Feb 2026",
+      "description": "Integrated AI Agents with contextual intelligence using LLMs to automate PowerPoint generation from user prompts via web scraping, summarization, RAG, and vector DB — achieving 95% content accuracy. Worked on AlphaEvolve coding agent for Aspose pptx code generation. Fine-tuned Cross Encoder Qwen3B LLM for reranking. Utilized Anthropic Claude models via AWS/S3 and optimized inference pipelines. Built Gradio testing interfaces and deployed FastAPI LLM-powered APIs.",
+      "context": "Startup · Remote",
+      "tag_kind": "pivot",
+      "tag_label": "CV → LLM/Agents",
+      "note": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 4,
+      "title": "Founding AI Engineer",
+      "company": "Contrails.AI",
+      "start_date": "Mar 2026",
+      "end_date": null,
+      "description": "Architected 3-branch VLM deepfake detection framework from scratch and curated a 100K+ real-world video dataset; fine-tuned CLIP ViT-L/14 to 95%+ accuracy across 25+ generators. Built production-grade multimodal moderation systems using Gemini 2.5 Flash and Qwen2.5-VL for Government of India agencies (PMO, MIB) and Reliance Industries brand protection workflows. Designed autonomous LangGraph-based AI agents scaling from 31 seed channels to 1,400+ Telegram communities, tracing 27K+ network events for enforcement intelligence reports. MLOps: AWS, FastAPI, Docker, TensorRT, CI/CD, DDP, GPU inference optimization.",
+      "context": "Early-Stage Startup",
+      "tag_kind": "transition",
+      "tag_label": "Founding Engineer",
+      "note": "Govt of India (PMO, MIB) + Reliance Industries clients from day one"
+    }
+  ],
+
+  "candidate_skill_groups": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "label": "Programming Languages",
+      "skills": ["Python", "C++"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "label": "ML / DL Frameworks",
+      "skills": ["PyTorch", "Scikit-Learn", "LangChain", "LlamaIndex", "LoRA", "TensorRT"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 2,
+      "label": "LLM / VLM / Foundation Models",
+      "skills": ["CLIP ViT-L/14", "Gemini 2.5 Flash", "Qwen2.5-VL", "Anthropic Claude", "LangGraph", "RAG", "Vector DB"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 3,
+      "label": "MLOps & Infrastructure",
+      "skills": ["AWS", "Docker", "FastAPI", "CI/CD", "Distributed Training (DDP)", "Git", "Gradio", "GPU Inference Optimization"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 4,
+      "label": "Computer Vision",
+      "skills": ["Classical CV", "CNNs", "Stable Diffusion", "ControlNet", "HEVC", "Keypoint Detection", "Inception/GoogLeNet"]
+    }
+  ],
+
+  "candidate_projects": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "name": "Low-Light Video Enhancement via Cross-Frame Attention",
+      "kind": "Research",
+      "summary": "Novel Transformer-based framework for low-light video enhancement using cross-frame attention; achieved 30% SSIM improvement and 300% ST-RRED reduction. Introduced dilated cross-attention for large motion handling (3× improvement). Created custom dataset with 200+ synthetic and real low-light video sequences. Published at BMVC'22.",
+      "tech": ["PyTorch", "Transformers", "Cross-Frame Attention", "Dilated Attention"],
+      "href": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "name": "Deepfake Detection — 3-Branch VLM Framework",
+      "kind": "Production",
+      "summary": "Architected a 3-branch Vision-Language Model framework for deepfake detection from scratch at Contrails.AI. Curated 100K+ real-world video dataset and fine-tuned CLIP ViT-L/14 to 95%+ accuracy across 25+ deepfake generators. Deployed in production for Government of India (PMO, MIB) and Reliance Industries.",
+      "tech": ["CLIP ViT-L/14", "VLM", "PyTorch", "AWS", "TensorRT", "FastAPI"],
+      "href": null
+    }
+  ],
+
+  "candidate_external_sources": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "category": "LinkedIn",
+      "label": "Shivam Chhirolya",
+      "href": "https://www.linkedin.com/in/Shivam-Chhirolya",
+      "subtitle": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "category": "Research",
+      "label": "Low-Light Video Enhancement by Learning on Static Videos with Cross-Frame Attention",
+      "href": "https://bmvc2022.mpi-inf.mpg.de",
+      "subtitle": "BMVC 2022 · London"
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 2,
+      "category": "Patent",
+      "label": "Deep Learning Based InLoop Filter to Reduce Video Compression Artifacts",
+      "href": "https://patents.google.com",
+      "subtitle": "US Patent · Under Review · Dec 2024"
+    }
+  ],
+
+  "evaluations": {
+    "id": "gen_random_uuid()",
+    "org_id": "<org_id>",
+    "role_id": "<role_id>",
+    "candidate_id": "<candidate_id>",
+    "overall_score": 85,
+    "recommendation": "strong_match",
+    "decision": null,
+    "model": "claude-sonnet-4-6"
+  },
+
+  "evaluation_readiness": [
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "ownership",
+      "score": 82,
+      "summary": "Founding engineer building 0→1 systems for government and enterprise clients from day one",
+      "evidence": [
+        "Title is 'Founding AI Engineer' at Contrails.AI — clear first-hire, 0→1 signal",
+        "Architected complete deepfake detection VLM framework from scratch including curating a 100K+ dataset",
+        "Designed autonomous LangGraph agents end-to-end, scaling from 31 to 1,400+ Telegram channels without supervision",
+        "Drove US patent submission at Qualcomm independently — CNN InLoop filter for HEVC artifact reduction",
+        "Implemented C++ end-to-end software simulator solo for Qualcomm Premium Tier chip validation at 100% accuracy",
+        "Published novel research as primary contributor at BMVC'22 from self-driven master's thesis work"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "ambition",
+      "score": 88,
+      "summary": "Elite academic pedigree, competitive national selections, and deliberate big-co-to-startup arc",
+      "evidence": [
+        "99.60th percentile in GATE 2020 — top competitive engineering entrance exam in India",
+        "Selected for ISRO Scientist B exam — highly competitive central government research role",
+        "Top 40 nationwide Reliance Foundation Scholar 2020 — prestige merit-based national scholarship",
+        "Chose IISc Bangalore (India's premier research institution) for M.Tech over industry alternatives",
+        "Left Qualcomm (Fortune 500, stable tenure) to join early-stage startup Contrails.AI as founding engineer",
+        "Recognized by Isha Ambani at UNGA 2024 and featured on Times Square billboard — unusually high external visibility for an engineer"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "execution",
+      "score": 84,
+      "summary": "Consistently ships with hard quantified metrics across research, R&D, and production environments",
+      "evidence": [
+        "95%+ deepfake detection accuracy across 25+ generators on a self-curated 100K real-world video dataset",
+        "Autonomous agent scaled Telegram monitoring from 31 seed channels to 1,400+ communities, tracing 27K+ network events",
+        "Improved Inlier Ratio 20% and Repeatability 40% at Qualcomm with only 5K learnable parameters — research published",
+        "Reduced HEVC compression artifacts by 10% via novel InLoop filter — US patent filing resulted",
+        "Achieved 30% SSIM improvement and 300% ST-RRED reduction in master's thesis low-light video work",
+        "95% content accuracy on LLM-powered PowerPoint generation system at Prezent.AI"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "learnability",
+      "score": 86,
+      "summary": "Rapid domain and stack transitions from classical CV to LLMs to agentic AI within 4 years",
+      "evidence": [
+        "B.Tech in ECE → M.Tech in AI at IISc: deliberate domain pivot into machine learning from hardware background",
+        "At Qualcomm: moved from classical CV and C++ hardware simulation to Stable Diffusion and generative models",
+        "Prezent.AI: fully pivoted from computer vision to LLM agents, RAG pipelines, and vector databases",
+        "Contrails.AI: adopted cutting-edge frontier models (Gemini 2.5 Flash, Qwen2.5-VL, LangGraph) within months of release",
+        "Fine-tuned CLIP, Qwen3B cross-encoder, and multimodal VLMs across multiple projects — broad model adaptation range",
+        "Spans hardware-level C++ simulation, peer-reviewed research, and production MLOps — unusually wide technical altitude"
+      ]
+    }
+  ]
+}

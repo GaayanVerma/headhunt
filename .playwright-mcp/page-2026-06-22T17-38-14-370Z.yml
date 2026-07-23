@@ -1,0 +1,527 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - main [ref=e94]:
+        - generic [ref=e96]:
+          - complementary "Sidebar" [ref=e97]:
+            - generic [ref=e100]:
+              - generic [ref=e104]:
+                - link [ref=e105] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                  - generic [ref=e106]:
+                    - figure [ref=e108]
+                    - figure [ref=e110]
+                - generic [ref=e111]:
+                  - link "Mrigesh Singh -- Morena, Madhya Pradesh" [ref=e112] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                    - generic [ref=e113]:
+                      - paragraph [ref=e116]: Mrigesh Singh
+                      - paragraph [ref=e118]: "--"
+                      - paragraph [ref=e119]: Morena, Madhya Pradesh
+                  - link "Shree Ji IT Solutions" [ref=e120] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                    - generic [ref=e121]:
+                      - figure [ref=e122]
+                      - paragraph [ref=e123]: Shree Ji IT Solutions
+              - link "Unlock exclusive tools and conversations with industry leaders Try Premium for ₹0" [ref=e128] [cursor=pointer]:
+                - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_homepage_identity_upsell%3ANav%3AIn-Product&referenceId=%2BDBnU1qWQGamT7GzTFa%2F%2Bw%3D%3D&isSS=true&upsellSlotId=IDENTITY_MODULE
+                - generic [ref=e129]:
+                  - paragraph [ref=e130]: Unlock exclusive tools and conversations with industry leaders
+                  - paragraph [ref=e135]: Try Premium for ₹0
+              - menu [ref=e138]:
+                - link "Connections 12 Grow your network" [ref=e140] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/mynetwork/invite-connect/connections/
+                  - generic "Connections 12 Grow your network" [ref=e141]:
+                    - generic [ref=e142]:
+                      - paragraph [ref=e143]: Connections
+                      - paragraph [ref=e144]: Grow your network
+                    - paragraph [ref=e145]: "12"
+              - menu [ref=e148]:
+                - link "Saved items" [ref=e149] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/my-items/saved-posts/
+                  - paragraph [ref=e152]: Saved items
+                - link "Groups" [ref=e153] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/groups/
+                  - paragraph [ref=e156]: Groups
+                - link "Newsletters" [ref=e157] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/mynetwork/network-manager/newsletters/
+                  - paragraph [ref=e160]: Newsletters
+                - link "Events" [ref=e161] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/events/
+                  - paragraph [ref=e164]: Events
+          - region "Primary content" [ref=e165]:
+            - list [ref=e166]:
+              - generic [ref=e169]:
+                - generic [ref=e170]:
+                  - link [ref=e172] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/mrigesh-singh-8779782b5/
+                    - figure [ref=e173]
+                  - button "Start a post" [ref=e175] [cursor=pointer]:
+                    - generic "Start a post" [ref=e176]:
+                      - generic [ref=e178]:
+                        - paragraph [ref=e179]: Start a post
+                        - generic:
+                          - paragraph
+                - generic [ref=e180]:
+                  - button "Video" [ref=e181] [cursor=pointer]:
+                    - paragraph [ref=e184]: Video
+                  - button "Photo" [ref=e185] [cursor=pointer]:
+                    - paragraph [ref=e188]: Photo
+                  - link "Write article" [ref=e189] [cursor=pointer]:
+                    - /url: /article/new/
+                    - paragraph [ref=e192]: Write article
+              - listitem [ref=e197]:
+                - generic [ref=e199]:
+                  - heading "Feed post" [level=2]:
+                    - generic [ref=e200]: Feed post
+                  - generic [ref=e201]:
+                    - paragraph [ref=e204]: Suggested
+                    - button "Open control menu for post by NISHAD SHIKALKAR" [ref=e205] [cursor=pointer]
+                    - button "Hide post by NISHAD SHIKALKAR" [ref=e208] [cursor=pointer]
+                  - generic [ref=e211]:
+                    - link [ref=e212] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/in/nishad-shikalkar-b49526307/
+                      - figure [ref=e213]
+                    - generic [ref=e215]:
+                      - link "NISHAD SHIKALKAR Verified Profile 3rd+" [ref=e218] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/nishad-shikalkar-b49526307/
+                        - generic "NISHAD SHIKALKAR Verified Profile 3rd+" [ref=e220]:
+                          - paragraph [ref=e223]: NISHAD SHIKALKAR
+                          - paragraph [ref=e225]:
+                            - generic [ref=e226]: • 3rd+
+                      - paragraph [ref=e230]: HR Executive | HR Operations & Documentation | Employee Engagement | Recruitment Support
+                      - paragraph [ref=e232]:
+                        - generic [ref=e233]: 2d •
+                      - link:
+                        - /url: https://www.linkedin.com/in/nishad-shikalkar-b49526307/
+                    - button "Follow NISHAD SHIKALKAR" [ref=e238] [cursor=pointer]:
+                      - generic [ref=e242]: Follow
+                  - paragraph [ref=e243]:
+                    - generic [ref=e244]:
+                      - text: "🚨 Important Update: New EPFO Withdrawal Rules Simplified! 🚨"
+                      - text: As HR professionals, ensuring our workforce is well-informed about their financial security and benefits is a top priority. The Employees' Provident Fund Organisation (EPFO) has updated and streamlined the rules for PF withdrawals, making it much easier for employees to access funds during crucial life
+                      - link "stages.To" [ref=e245] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/safety/go/?url=http%3A%2F%2Fstages%2ETo&urlhash=V32X&mt=MsR46PpCxFlixpY1cisqH8YUu3scAmLaAujmDdsG__ZHZjMGpBtVM61hoTi0qMRRWnej3NxZz5vB2BtxVgQOLR4zUJ3Wq_KpdzLQ-eM-8bcifPro6e2uV5HihP8&isSdui=true
+                        - strong [ref=e247]: stages.To
+                      - text: make things simpler for your team, here is a quick look at the latest guidelines based on different categories, eligibility, and withdrawal frequencies as shown in
+                      - text: 🏢 Category I - Essential Social Security Needs
+                      - text: "Illness (Self & Family): Withdraw up to 100% of the Eligible Member Balance after completing 12 months of service."
+                      - text: "Frequency: Max 3 times every financial year."
+                      - text: "Education (Self & Family): Withdraw up to 100% of the Eligible Member Balance after completing 12 months of service."
+                      - text: "Frequency: Max 10 times during membership."
+                      - text: "Marriage (Self & Family): Withdraw up to 100% of the Eligible Member Balance after completing 12 months of service. Frequency: Max 5 times during membership."
+                      - text: 🏠 Category II - Housing Related Needs
+                      - text: "Purpose: Purchase of flat/house/site construction, repayment of home loans, or alterations/improvements."
+                      - text: "Limit & Eligibility: Up to 100% of the Eligible Member Balance after completing **12 months of service."
+                      - text: "Frequency: Max 5 times during the membership (will be counted afresh)."
+                      - text: 🌟 Category III - Special Circumstances
+                      - text: Purpose:Special circumstances (without assigning any specific reasons).
+                      - text: Limit & Eligibility:.Up to 100% of the Eligible Member Balance after completing 12 months of service.
+                      - text: Frequency:Max 2 times every financial year.
+                      - text: These updates bring massive flexibility and faster financial relief for employees during times of urgent need. Let’s make sure our teams and payroll operations are fully aligned with these updated rules!
+                      - link "#HRCompliance" [ref=e248] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23hrcompliance&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e250]: "#HRCompliance"
+                      - link "#EPFO" [ref=e251] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23epfo&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e253]: "#EPFO"
+                      - link "#PFRules" [ref=e254] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23pfrules&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e256]: "#PFRules"
+                      - link "#EmployeeBenefits" [ref=e257] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23employeebenefits&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e259]: "#EmployeeBenefits"
+                      - link "#PayrollManagement" [ref=e260] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23payrollmanagement&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e262]: "#PayrollManagement"
+                      - link "#IndianLaborLaw" [ref=e263] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23indianlaborlaw&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e265]: "#IndianLaborLaw"
+                      - link "#HRCommunity" [ref=e266] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23hrcommunity&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e268]: "#HRCommunity"
+                      - link "#HumanResources" [ref=e269] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23humanresources&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e271]: "#HumanResources"
+                      - link "#EmployeeEngagement" [ref=e272] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23employeeengagement&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e274]: "#EmployeeEngagement"
+                      - link "#FinancialWellness" [ref=e275] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23financialwellness&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e277]: "#FinancialWellness"
+                      - link "#HRUpdates" [ref=e278] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23hrupdates&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e280]: "#HRUpdates"
+                      - link "#LinkedInForHR" [ref=e281] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23linkedinforhr&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e283]: "#LinkedInForHR"
+                      - link "#TrendingHR" [ref=e284] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23trendinghr&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e286]: "#TrendingHR"
+                  - generic [ref=e287]:
+                    - link [ref=e288] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - figure [ref=e289]:
+                        - img "View image" [ref=e290]
+                    - button "This image has content credentials." [ref=e291] [cursor=pointer]:
+                      - figure [ref=e293]
+                  - generic [ref=e294]:
+                    - link "250 reactions" [ref=e295] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e301]:
+                        - generic [ref=e302]:
+                          - generic [ref=e303]: 250 reactions
+                          - text: "250"
+                    - generic [ref=e304]:
+                      - button "3 comments" [ref=e305] [cursor=pointer]:
+                        - paragraph [ref=e306]:
+                          - generic [ref=e307]: 3 comments
+                          - generic [ref=e308]: 3 comments
+                      - paragraph [ref=e309]: •
+                      - link "24 reposts" [ref=e310] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/
+                        - paragraph [ref=e311]:
+                          - generic [ref=e312]: 24 reposts
+                          - generic [ref=e313]: 24 reposts
+                  - generic [ref=e314]:
+                    - generic [ref=e315]:
+                      - 'button "Reaction button state: no reaction" [ref=e318] [cursor=pointer]':
+                        - generic [ref=e321]: Like
+                      - button "Open reactions menu"
+                    - button "Comment" [ref=e322] [cursor=pointer]:
+                      - generic [ref=e326]: Comment
+                    - button "Repost" [ref=e327] [cursor=pointer]:
+                      - generic [ref=e331]: Repost
+                    - link "Send" [ref=e332] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - generic [ref=e336]: Send
+              - listitem [ref=e341]:
+                - generic [ref=e343]:
+                  - heading "Feed post" [level=2]:
+                    - generic [ref=e344]: Feed post
+                  - generic [ref=e345]:
+                    - link [ref=e346] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/company/scalerofficial/posts/
+                      - figure [ref=e347]
+                    - generic [ref=e349]:
+                      - link "Scaler" [ref=e352] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/company/scalerofficial/posts/
+                        - paragraph [ref=e357]: Scaler
+                      - paragraph [ref=e359]: 308,432 followers
+                      - paragraph [ref=e361]: Promoted
+                      - link:
+                        - /url: https://www.linkedin.com/company/scalerofficial/posts/
+                    - button "Open control menu for post by Scaler" [ref=e362] [cursor=pointer]
+                  - paragraph [ref=e365]:
+                    - generic [ref=e366]: Want to become a pro at building top-notch apps for production? Register for this Scaler Masterclass and learn the nuances of using Docker & Kubernetes, LIVE with an expert.
+                  - generic [ref=e367]:
+                    - link [ref=e369] [cursor=pointer]:
+                      - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                      - figure [ref=e370]:
+                        - img "View Sponsored Content" [ref=e371]
+                    - link:
+                      - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                    - generic [ref=e372]:
+                      - link "🚀 Master Docker & Kubernetes — Live Hands-On Masterclass! scaler.com" [ref=e373] [cursor=pointer]:
+                        - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                        - generic [ref=e374]:
+                          - paragraph [ref=e376]:
+                            - generic [ref=e377]:
+                              - generic [ref=e378]: 🚀 Master Docker & Kubernetes — Live Hands-On Masterclass!
+                              - text: 🚀 Master Docker & Kubernetes — Live Hands-On Masterclass!
+                          - paragraph [ref=e380]: scaler.com
+                      - link "Register" [ref=e381] [cursor=pointer]:
+                        - /url: https://www.scaler.com/event/docker---kubernetes-fundamentals-for-ai-platform-engineers--2026--7b/?utm_source=ads&utm_medium=linkedin&utm_campaign=perf_scaler_livemasterclass_ads_linkedin_job-titles-pred_india_age25-54-v3&utm_content=job-titles-pred&utm_term=devops_livemasterclass-20260623-e4408-c1_static_light-brown_docker-and-kubernetes_none_without-instructor_bjul2026_square&li_fat_id=20346e3a-5013-43fb-ab85-d1ecf5b2e5be
+                        - generic [ref=e383]: Register
+                  - generic [ref=e384]:
+                    - link "270 reactions" [ref=e385] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e391]:
+                        - generic [ref=e392]:
+                          - generic [ref=e393]: 270 reactions
+                          - text: "270"
+                    - generic [ref=e394]:
+                      - button "2 comments" [ref=e395] [cursor=pointer]:
+                        - paragraph [ref=e396]:
+                          - generic [ref=e397]: 2 comments
+                          - generic [ref=e398]: 2 comments
+                      - paragraph [ref=e399]: •
+                      - link "5 reposts" [ref=e400] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/
+                        - paragraph [ref=e401]:
+                          - generic [ref=e402]: 5 reposts
+                          - generic [ref=e403]: 5 reposts
+                  - generic [ref=e404]:
+                    - generic [ref=e405]:
+                      - 'button "Reaction button state: no reaction" [ref=e408] [cursor=pointer]':
+                        - generic [ref=e411]: Like
+                      - button "Open reactions menu"
+                    - button "Comment" [ref=e412] [cursor=pointer]:
+                      - generic [ref=e416]: Comment
+                    - button "Repost" [ref=e417] [cursor=pointer]:
+                      - generic [ref=e421]: Repost
+                    - link "Send" [ref=e422] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - generic [ref=e426]: Send
+              - listitem [ref=e431]:
+                - generic [ref=e433]:
+                  - heading "Feed post" [level=2]:
+                    - generic [ref=e434]: Feed post
+                  - generic [ref=e435]:
+                    - paragraph [ref=e438]: Suggested
+                    - button "Open control menu for post by Sameena Fnu" [ref=e439] [cursor=pointer]
+                    - button "Hide post by Sameena Fnu" [ref=e442] [cursor=pointer]
+                  - generic [ref=e445]:
+                    - link [ref=e446] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/in/sameena-fnu-427b3413a/
+                      - figure [ref=e447]
+                    - generic [ref=e449]:
+                      - link "Sameena Fnu, Open to work Premium Profile 3rd+" [ref=e452] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/sameena-fnu-427b3413a/
+                        - generic "Sameena Fnu, Open to work Premium Profile 3rd+" [ref=e454]:
+                          - paragraph [ref=e457]: Sameena Fnu
+                          - paragraph [ref=e459]:
+                            - generic [ref=e460]: • 3rd+
+                      - paragraph [ref=e464]: AI Specialist | Business Analyst | Scrum Master | Program Management | Telecom | Data Analyst Banking | Healthcare | Retail
+                      - paragraph [ref=e466]:
+                        - generic [ref=e467]: 1h •
+                      - link:
+                        - /url: https://www.linkedin.com/in/sameena-fnu-427b3413a/
+                    - button "Follow Sameena Fnu" [ref=e472] [cursor=pointer]:
+                      - generic [ref=e476]: Follow
+                  - paragraph [ref=e477]:
+                    - generic [ref=e478]:
+                      - text: One thing I’ve learned as a Business Analyst is that our role goes far beyond documenting requirements. We bridge the gap between business goals and technical solutions, turning complex ideas into clear, actionable outcomes.
+                      - text: From understanding requirement types and crafting user stories to prioritization, stakeholder management, Agile practices, traceability, and UAT, these fundamentals form the foundation of every successful BA. Mastering these core concepts has helped me deliver value, collaborate effectively, and ensure solutions truly meet business needs.
+                      - text: Strong Business Analysts don’t just gather requirements—they solve problems and drive outcomes.
+                      - link "#BusinessAnalyst" [ref=e480] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23businessanalyst&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e482]: "#BusinessAnalyst"
+                      - link "#BusinessAnalysis" [ref=e483] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23businessanalysis&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e485]: "#BusinessAnalysis"
+                      - link "#Agile" [ref=e486] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23agile&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e488]: "#Agile"
+                      - link "#ProductManagement" [ref=e489] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23productmanagement&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e491]: "#ProductManagement"
+                      - link "#BACommunity" [ref=e492] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23bacommunity&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e494]: "#BACommunity"
+                      - link "#RequirementsEngineering" [ref=e495] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23requirementsengineering&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e497]: "#RequirementsEngineering"
+                      - link "#AI" [ref=e498] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23ai&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e500]: "#AI"
+                      - link "#ArtificialIntelligence" [ref=e501] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23artificialintelligence&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e503]: "#ArtificialIntelligence"
+                      - link "#fnu_Sameena" [ref=e504] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23fnu_sameena&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e506]: "#fnu_Sameena"
+                      - link "#Agile" [ref=e507] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23agile&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e509]: "#Agile"
+                      - link "#ScrumMaster" [ref=e510] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/search/results/all/?keywords=%23scrummaster&origin=HASH_TAG_FROM_FEED
+                        - strong [ref=e512]: "#ScrumMaster"
+                  - link [ref=e514] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/
+                    - figure [ref=e515]:
+                      - img "View image" [ref=e516]
+                  - generic [ref=e517]:
+                    - generic [ref=e518]:
+                      - 'button "Reaction button state: no reaction" [ref=e521] [cursor=pointer]':
+                        - generic [ref=e524]: Like
+                      - button "Open reactions menu"
+                    - button "Comment" [ref=e525] [cursor=pointer]:
+                      - generic [ref=e529]: Comment
+                    - button "Repost" [ref=e530] [cursor=pointer]:
+                      - generic [ref=e534]: Repost
+                    - link "Send" [ref=e535] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - generic [ref=e539]: Send
+              - progressbar "In progress" [ref=e543]
+          - complementary "Aside" [ref=e544]:
+            - generic [ref=e545]:
+              - generic [ref=e546]:
+                - generic [ref=e550]:
+                  - generic [ref=e551]:
+                    - paragraph [ref=e552]: LinkedIn News
+                    - button "Info tooltip" [ref=e553] [cursor=pointer]
+                  - paragraph [ref=e556]: Top stories
+                  - generic [ref=e557]:
+                    - link "Starmer resigns as prime minister 2h ago • 82,887 readers" [ref=e559] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/starmer-resigns-as-prime-minister-7372420/
+                      - generic [ref=e561]:
+                        - paragraph [ref=e563]: Starmer resigns as prime minister
+                        - generic [ref=e564]:
+                          - paragraph [ref=e565]: 2h ago
+                          - paragraph [ref=e566]: •
+                          - paragraph [ref=e567]: 82,887 readers
+                    - link "CRED's Kunal Shah to head WhatsApp globally 1h ago • 24,296 readers" [ref=e569] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/creds-kunal-shah-to-head-whatsapp-globally-8278633/
+                      - generic [ref=e571]:
+                        - paragraph [ref=e573]: CRED's Kunal Shah to head WhatsApp globally
+                        - generic [ref=e574]:
+                          - paragraph [ref=e575]: 1h ago
+                          - paragraph [ref=e576]: •
+                          - paragraph [ref=e577]: 24,296 readers
+                    - link "More firms hire independent consultants 9h ago • 990 readers" [ref=e579] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/more-firms-hire-independent-consultants-8285649/
+                      - generic [ref=e581]:
+                        - paragraph [ref=e583]: More firms hire independent consultants
+                        - generic [ref=e584]:
+                          - paragraph [ref=e585]: 9h ago
+                          - paragraph [ref=e586]: •
+                          - paragraph [ref=e587]: 990 readers
+                    - link "India emerges as Big Four bright spot amid slowdown 7h ago • 760 readers" [ref=e589] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/india-emerges-as-big-four-bright-spot-amid-slowdown-8279337/
+                      - generic [ref=e591]:
+                        - paragraph [ref=e593]: India emerges as Big Four bright spot amid slowdown
+                        - generic [ref=e594]:
+                          - paragraph [ref=e595]: 7h ago
+                          - paragraph [ref=e596]: •
+                          - paragraph [ref=e597]: 760 readers
+                    - link "Farmers consider options as monsoon loses momentum 9h ago • 489 readers" [ref=e599] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/news/story/farmers-consider-options-as-monsoon-loses-momentum-8287729/
+                      - generic [ref=e601]:
+                        - paragraph [ref=e603]: Farmers consider options as monsoon loses momentum
+                        - generic [ref=e604]:
+                          - paragraph [ref=e605]: 9h ago
+                          - paragraph [ref=e606]: •
+                          - paragraph [ref=e607]: 489 readers
+                    - button "Show more news" [ref=e608] [cursor=pointer]:
+                      - generic [ref=e611]: Show more news
+                - generic [ref=e614]:
+                  - paragraph [ref=e615]: Today’s puzzles
+                  - generic [ref=e616]:
+                    - link "Play Wend" [ref=e618] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/games/wend/
+                      - generic "Play Wend" [ref=e619]:
+                        - generic [ref=e620]:
+                          - figure [ref=e621]
+                          - generic [ref=e622]:
+                            - paragraph [ref=e623]:
+                              - strong [ref=e624]: Wend
+                              - text: "#14"
+                            - paragraph [ref=e625]: 1 connection played
+                    - link "Play Patches" [ref=e628] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/games/patches/
+                      - generic "Play Patches" [ref=e629]:
+                        - generic [ref=e630]:
+                          - figure [ref=e631]
+                          - generic [ref=e632]:
+                            - paragraph [ref=e633]:
+                              - strong [ref=e634]: Patches
+                              - text: "#97"
+                            - paragraph [ref=e635]: 1 connection played
+                    - link "Play Zip" [ref=e638] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/games/zip/
+                      - generic "Play Zip" [ref=e639]:
+                        - generic [ref=e640]:
+                          - figure [ref=e641]
+                          - generic [ref=e642]:
+                            - paragraph [ref=e643]:
+                              - strong [ref=e644]: Zip
+                              - text: "#462"
+                            - paragraph [ref=e645]: 1 connection played
+                    - link "Play MiniSudoku" [ref=e648] [cursor=pointer]:
+                      - /url: /games/mini-sudoku/
+                      - generic "Play MiniSudoku" [ref=e649]:
+                        - generic [ref=e650]:
+                          - figure [ref=e651]
+                          - generic [ref=e652]:
+                            - paragraph [ref=e653]:
+                              - strong [ref=e654]: Mini Sudoku
+                              - text: "#315"
+                            - paragraph [ref=e655]: The classic game, made mini
+                    - button "Show more" [ref=e658] [cursor=pointer]:
+                      - generic [ref=e661]: Show more
+              - generic [ref=e663]:
+                - iframe [ref=e666]:
+                  
+                - generic [ref=e667]:
+                  - generic [ref=e668]:
+                    - link "About" [ref=e669] [cursor=pointer]:
+                      - /url: https://about.linkedin.com/
+                      - paragraph [ref=e670]: About
+                    - link "Accessibility" [ref=e671] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/accessibility/
+                      - paragraph [ref=e672]: Accessibility
+                    - link "Help Center" [ref=e673] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/help/linkedin/
+                      - paragraph [ref=e674]: Help Center
+                    - button "Privacy & Terms" [ref=e675] [cursor=pointer]:
+                      - paragraph [ref=e677]: Privacy & Terms
+                    - link "Ad Choices" [ref=e679] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/help/linkedin/answer/62931/
+                      - paragraph [ref=e680]: Ad Choices
+                    - link "Advertising" [ref=e681] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/ad/start/?trk=n_nav_ads_rr
+                      - paragraph [ref=e682]: Advertising
+                    - button "Business Services" [ref=e683] [cursor=pointer]:
+                      - paragraph [ref=e685]: Business Services
+                    - link "Get the LinkedIn app" [ref=e687] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/mobile/
+                      - paragraph [ref=e688]: Get the LinkedIn app
+                    - link "More" [ref=e689] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/
+                      - paragraph [ref=e690]: More
+                  - paragraph [ref=e693]: LinkedIn Corporation © 2026

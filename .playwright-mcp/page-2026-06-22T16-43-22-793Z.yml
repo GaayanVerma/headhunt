@@ -1,0 +1,368 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e92]:
+        - toolbar [ref=e93]
+        - main [ref=e107]:
+          - generic [ref=e112]:
+            - region "Primary content" [ref=e113]:
+              - generic [ref=e116]:
+                - list [ref=e119]:
+                  - listitem [ref=e121]:
+                    - generic [ref=e122]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e123]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e124]:
+                          - link "LinkedIn Member Applied AI Engineer @ Microsoft Bengaluru, Karnataka, India" [ref=e125] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e126]
+                            - generic [ref=e127]:
+                              - paragraph [ref=e128]: LinkedIn Member
+                              - paragraph [ref=e130]: Applied AI Engineer @ Microsoft
+                              - paragraph [ref=e132]: Bengaluru, Karnataka, India
+                          - generic [ref=e133]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e134]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e135] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e138]: View
+                  - listitem [ref=e144]:
+                    - generic [ref=e145]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/piyush-aneja-a29a221a9/
+                      - generic [ref=e146]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/piyush-aneja-a29a221a9/
+                        - generic [ref=e147]:
+                          - link [ref=e148] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/piyush-aneja-a29a221a9/
+                            - figure [ref=e149]
+                          - generic [ref=e150]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/piyush-aneja-a29a221a9/
+                            - paragraph [ref=e151]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/piyush-aneja-a29a221a9/
+                              - link "Piyush Aneja Verified" [ref=e152] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/piyush-aneja-a29a221a9/
+                                - text: Piyush Aneja
+                                - img "Verified" [ref=e153]
+                              - generic [ref=e155]: • 3rd+
+                            - paragraph [ref=e157]: Applied AI Engineer @Zscaler | Ex-IBM
+                            - paragraph [ref=e159]: Bengaluru, Karnataka, India
+                  - generic [ref=e170]:
+                    - paragraph [ref=e172]: Easily find people who are actively hiring
+                    - paragraph [ref=e173]: Search more efficiently with advanced search filters
+                    - link "Try Premium for ₹0" [ref=e174] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=5PfwVkIRTs%2BCH3bDsVgyIg%3D%3D&isSS=false&upsellSlotId=ADVANCED_PEOPLE_SEARCH_FILTER_INLINE_RESULT
+                      - generic [ref=e176]: Try Premium for ₹0
+                    - paragraph [ref=e177]: 1-month free trial. Easy to cancel. We’ll remind you 7 days before your trial ends.
+                  - listitem [ref=e179]:
+                    - generic [ref=e180]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/hardik-jain/
+                      - generic [ref=e181]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/hardik-jain/
+                        - generic [ref=e182]:
+                          - link [ref=e183] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/hardik-jain/
+                            - figure [ref=e184]
+                          - generic [ref=e185]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/hardik-jain/
+                            - paragraph [ref=e186]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/hardik-jain/
+                              - link "Hardik Jain Premium" [ref=e187] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/hardik-jain/
+                                - text: Hardik Jain
+                                - img "Premium" [ref=e188]
+                              - generic [ref=e190]: • 3rd+
+                            - paragraph [ref=e192]: Applied AI Research Engineer @ Google Cloud | Former Apple
+                            - paragraph [ref=e194]: Bengaluru, Karnataka, India
+                  - listitem [ref=e200]:
+                    - generic [ref=e201]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/pratikkejriwal/
+                      - generic [ref=e202]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/pratikkejriwal/
+                        - generic [ref=e203]:
+                          - link [ref=e204] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/pratikkejriwal/
+                            - figure [ref=e205]
+                          - generic [ref=e206]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/pratikkejriwal/
+                            - paragraph [ref=e207]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/pratikkejriwal/
+                              - link "Pratik Kejriwal Premium" [ref=e208] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/pratikkejriwal/
+                                - text: Pratik Kejriwal
+                                - img "Premium" [ref=e209]
+                              - generic [ref=e211]: • 3rd+
+                            - paragraph [ref=e213]: Applied AI Engineer @ Oracle Cloud | 7+ years shipping AI at scale
+                            - paragraph [ref=e215]: Bengaluru, Karnataka, India
+                  - listitem [ref=e221]:
+                    - generic [ref=e222]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/nilanjana-sarkar1/
+                      - generic [ref=e223]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/nilanjana-sarkar1/
+                        - generic [ref=e224]:
+                          - link [ref=e225] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/nilanjana-sarkar1/
+                            - figure [ref=e226]
+                          - generic [ref=e227]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/nilanjana-sarkar1/
+                            - paragraph [ref=e228]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/nilanjana-sarkar1/
+                              - link "Nilanjana Sarkar Verified" [ref=e229] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/nilanjana-sarkar1/
+                                - text: Nilanjana Sarkar
+                                - img "Verified" [ref=e230]
+                              - generic [ref=e232]: • 3rd+
+                            - paragraph [ref=e234]: Applied AI Engineer @ Springworks | Scaling Workflows 10x with AI
+                            - paragraph [ref=e236]: Bengaluru, Karnataka, India
+                  - listitem [ref=e242]:
+                    - generic [ref=e243]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/kevinfranc/
+                      - generic [ref=e244]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/kevinfranc/
+                        - generic [ref=e245]:
+                          - link [ref=e246] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/kevinfranc/
+                            - figure [ref=e247]
+                          - generic [ref=e248]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/kevinfranc/
+                            - paragraph [ref=e249]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/kevinfranc/
+                              - link "Kevin Franc Verified" [ref=e250] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/kevinfranc/
+                                - text: Kevin Franc
+                                - img "Verified" [ref=e251]
+                              - generic [ref=e253]: • 3rd+
+                            - paragraph [ref=e255]: Applied AI Engineer
+                            - paragraph [ref=e257]: Bengaluru, Karnataka, India
+                  - listitem [ref=e263]:
+                    - generic [ref=e264]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/kohlivrinda/
+                      - generic [ref=e265]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/kohlivrinda/
+                        - generic [ref=e266]:
+                          - link [ref=e267] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/kohlivrinda/
+                            - figure [ref=e268]
+                          - generic [ref=e269]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/kohlivrinda/
+                            - paragraph [ref=e270]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/kohlivrinda/
+                              - link "Vrinda Kohli Verified" [ref=e271] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/kohlivrinda/
+                                - text: Vrinda Kohli
+                                - img "Verified" [ref=e272]
+                              - generic [ref=e274]: • 3rd+
+                            - paragraph [ref=e276]: Machine Learning Engineer | AI @ Maxim | (getting into) TrustworthyML
+                            - paragraph [ref=e278]: Bengaluru, Karnataka, India
+                  - listitem [ref=e284]:
+                    - generic [ref=e285]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/anasuya-chatterjee-b65009196/
+                      - generic [ref=e286]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/anasuya-chatterjee-b65009196/
+                        - generic [ref=e287]:
+                          - link [ref=e288] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/anasuya-chatterjee-b65009196/
+                            - figure [ref=e289]
+                          - generic [ref=e290]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/anasuya-chatterjee-b65009196/
+                            - paragraph [ref=e291]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/anasuya-chatterjee-b65009196/
+                              - link "Anasuya Chatterjee" [ref=e292] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/anasuya-chatterjee-b65009196/
+                              - generic [ref=e293]: • 3rd+
+                            - paragraph [ref=e295]: Applied AI/ML Research Engineer - PhiLabs R&D
+                            - paragraph [ref=e297]: Bengaluru, Karnataka, India
+                  - listitem [ref=e303]:
+                    - generic [ref=e304]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/mhussam-ai/
+                      - generic [ref=e305]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/mhussam-ai/
+                        - generic [ref=e306]:
+                          - link [ref=e307] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/mhussam-ai/
+                            - figure [ref=e308]
+                          - generic [ref=e309]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/mhussam-ai/
+                            - paragraph [ref=e310]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/mhussam-ai/
+                              - link "Mohammad Hussam Ul Islam Verified" [ref=e311] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/mhussam-ai/
+                                - text: Mohammad Hussam Ul Islam
+                                - img "Verified" [ref=e312]
+                              - generic [ref=e314]: • 2nd
+                            - paragraph [ref=e316]: Founding AI/ML Engineer @ CallLive.ai | Certified AI Expert
+                            - paragraph [ref=e318]: Bengaluru, Karnataka, India
+                        - generic [ref=e323]:
+                          - figure [ref=e324]
+                          - generic [ref=e325]:
+                            - paragraph [ref=e327]:
+                              - generic [ref=e328]:
+                                - link "Gaayan Verma" [ref=e329] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/in/gaayan-verma/
+                                  - strong [ref=e330]: Gaayan Verma
+                                - text: is a mutual connection
+                            - paragraph [ref=e332]:
+                              - generic [ref=e333]:
+                                - text: ·
+                                - link "10K followers" [ref=e334] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAADSHA4MBT0P70VU0-LdVPotDyIjwFhJ6mfg%22%5D
+                        - paragraph [ref=e335]:
+                          - link "View my portfolio" [ref=e336] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fgithub%2Ecom%2Fmhussam-ai&urlhash=jFmP&mt=SNvXk5LPILE-qFonuO8EQekb-gW9Wt2QjNQzYYVRf7aqAI2TA5dnVjemI3ycpBOaPj8-mBmanpjBcOpjCdUzAVtkUpyS&isSdui=true
+                  - listitem [ref=e338]:
+                    - generic [ref=e339]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/robosushie/
+                      - generic [ref=e340]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/robosushie/
+                        - generic [ref=e341]:
+                          - link [ref=e342] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/robosushie/
+                            - figure [ref=e343]
+                          - generic [ref=e344]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/robosushie/
+                            - paragraph [ref=e345]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/robosushie/
+                              - link "Sushant S Samuel Premium" [ref=e346] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/robosushie/
+                                - text: Sushant S Samuel
+                                - img "Premium" [ref=e347]
+                              - generic [ref=e349]: • 3rd+
+                            - paragraph [ref=e351]: Applied AI Engineer lumif.ai | Ex Cisco | XR Bootcamp Scholar
+                            - paragraph [ref=e353]: Bengaluru, Karnataka, India
+                - generic [ref=e360]:
+                  - generic [ref=e361]:
+                    - paragraph [ref=e362]: Are these results helpful?
+                    - paragraph [ref=e363]: Your feedback helps us improve search results
+                  - generic [ref=e364]:
+                    - button "Are these results helpful? Yes, these search results are helpful" [ref=e365] [cursor=pointer]
+                    - button "Are these results helpful? No, these search results are not helpful" [ref=e368] [cursor=pointer]
+                - generic [ref=e372]:
+                  - list [ref=e373]:
+                    - listitem [ref=e374]:
+                      - button "Page 1" [ref=e375] [cursor=pointer]:
+                        - generic [ref=e376]: "1"
+                    - listitem [ref=e377]:
+                      - button "Page 2" [ref=e378] [cursor=pointer]:
+                        - generic [ref=e379]: "2"
+                    - listitem [ref=e380]:
+                      - button "Page 3" [ref=e381] [cursor=pointer]:
+                        - generic [ref=e382]: "3"
+                    - listitem [ref=e383]:
+                      - button "Page 4" [ref=e384] [cursor=pointer]:
+                        - generic [ref=e385]: "4"
+                    - listitem [ref=e386]:
+                      - button "Page 5" [ref=e387] [cursor=pointer]:
+                        - generic [ref=e388]: "5"
+                    - listitem [ref=e389]:
+                      - button "Page 6" [ref=e390] [cursor=pointer]:
+                        - generic [ref=e391]: "6"
+                    - listitem [ref=e392]:
+                      - button "Page 7" [ref=e393] [cursor=pointer]:
+                        - generic [ref=e394]: "7"
+                    - listitem [ref=e395]:
+                      - button "Page 8" [ref=e396] [cursor=pointer]:
+                        - generic [ref=e397]: "8"
+                    - listitem [ref=e398]:
+                      - button "Page 9" [ref=e399] [cursor=pointer]:
+                        - generic [ref=e400]: "9"
+                    - listitem [ref=e401]:
+                      - button "Page 10" [ref=e402] [cursor=pointer]:
+                        - generic [ref=e403]: "10"
+                  - button "Next" [ref=e404] [cursor=pointer]:
+                    - generic [ref=e407]: Next
+            - complementary "Aside" [ref=e408]

@@ -1,0 +1,73 @@
+{
+  "linkedin_url": "https://www.linkedin.com/in/anirudh5harma/",
+  "name": "Anirudh Sharma",
+  "location": "Delhi, India",
+  "about": "Awesome! Congrats Diwank Singh Tomer Ishita Jindal Shubham Attri",
+  "open_to_work": true,
+  "experiences": [
+    {
+      "position_title": "Founding Engineer",
+      "institution_name": "Stealth AI Startup",
+      "linkedin_url": "https://www.linkedin.com/company/96670793/",
+      "from_date": "Apr 2026",
+      "to_date": "Present",
+      "duration": "4 mos",
+      "location": "AI Agents, Large Language Models (LLM) and +1 skill",
+      "description": null,
+      "employment_type": "Full-time"
+    },
+    {
+      "position_title": "Software Engineer",
+      "institution_name": "Konrad Group",
+      "linkedin_url": "https://www.linkedin.com/company/1693102/",
+      "from_date": "Jan 2025",
+      "to_date": "Apr 2026",
+      "duration": "1 yr 4 mos",
+      "location": "TypeScript and Go (Programming Language)",
+      "description": null,
+      "employment_type": "Full-time"
+    },
+    {
+      "position_title": "Software Development Engineer",
+      "institution_name": "Asteride",
+      "linkedin_url": "https://www.linkedin.com/company/14477555/",
+      "from_date": "Mar 2024",
+      "to_date": "Aug 2024",
+      "duration": "6 mos",
+      "location": "Recommendation Engine: Developed location based recommendation service to find all upcoming rides within a specified radius.",
+      "description": null,
+      "employment_type": "Internship"
+    },
+    {
+      "position_title": "MLH Fellow (prep)",
+      "institution_name": "MLH Fellowship",
+      "linkedin_url": "https://www.linkedin.com/school/71259910/",
+      "from_date": "Nov 2022",
+      "to_date": "",
+      "duration": "1 mo",
+      "location": "React.js, Open-Source Software and +1 skill",
+      "description": null,
+      "employment_type": "Part-time"
+    }
+  ],
+  "educations": [
+    {
+      "institution_name": "Delhi Technological University (Formerly DCE)Bachelor of Technology - BTech, Electrical and Computer Engineering2020 \u2013 2024",
+      "degree": null,
+      "linkedin_url": "https://www.linkedin.com/school/31053886/",
+      "from_date": "Delhi Technological University (Formerly DCE)Bachelor of Technology",
+      "to_date": "BTech, Electrical and Computer Engineering",
+      "description": null
+    }
+  ],
+  "interests": [],
+  "accomplishments": [],
+  "contacts": [
+    {
+      "type": "linkedin",
+      "value": "https://www.linkedin.com/in/anirudh5harma/",
+      "label": null
+    }
+  ],
+  "skills": []
+}

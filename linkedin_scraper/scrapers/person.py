@@ -65,9 +65,11 @@ class PersonScraper(BaseScraper):
             about = await self._get_about()
             await self.callback.on_progress("Got about section", 30)
 
-            # Scroll to load content
+            # Scroll to load lazy-rendered sections (Experience, Education use LazyColumn)
             await self.scroll_page_to_half()
-            await self.scroll_page_to_bottom(pause_time=0.5, max_scrolls=3)
+            await self.wait_and_focus(1.0)
+            await self.scroll_page_to_bottom(pause_time=1.0, max_scrolls=5)
+            await self.wait_and_focus(1.0)
 
             # Get experiences
             experiences = await self._get_experiences(linkedin_url)
@@ -84,6 +86,9 @@ class PersonScraper(BaseScraper):
                 f"Got {len(accomplishments)} accomplishments", 85
             )
 
+            skills = await self._get_skills(linkedin_url)
+            await self.callback.on_progress(f"Got {len(skills)} skills", 90)
+
             contacts = await self._get_contacts(linkedin_url)
             await self.callback.on_progress(f"Got {len(contacts)} contacts", 95)
 
@@ -97,6 +102,7 @@ class PersonScraper(BaseScraper):
                 educations=educations,
                 interests=interests,
                 accomplishments=accomplishments,
+                skills=skills,
                 contacts=contacts,
             )
 
@@ -112,10 +118,21 @@ class PersonScraper(BaseScraper):
     async def _get_name_and_location(self) -> tuple[str, Optional[str]]:
         """Extract name and location from profile."""
         try:
-            name = await self.safe_extract_text("h1", default="Unknown")
-            location = await self.safe_extract_text(
-                ".text-body-small.inline.t-black--light.break-words", default=""
-            )
+            # Name is in the first h2 in main that has no componentkey (section h2s have it)
+            name = await self.safe_extract_text("main h2:not([componentkey])", default="Unknown")
+
+            # Location: find the p element in the top card that looks like a location
+            location = await self.page.evaluate("""() => {
+                const topCard = document.querySelector('[componentkey$="Topcard"]');
+                if (!topCard) return null;
+                const ps = [...topCard.querySelectorAll('p')];
+                // Location typically has a comma and isn't a pronoun or degree indicator
+                for (const p of ps) {
+                    const t = p.textContent.trim();
+                    if (t.includes(',') && !t.includes('·') && t.length < 100) return t;
+                }
+                return null;
+            }""")
             return name, location if location else None
         except Exception as e:
             logger.warning(f"Error getting name/location: {e}")
@@ -124,32 +141,35 @@ class PersonScraper(BaseScraper):
     async def _check_open_to_work(self) -> bool:
         """Check if profile has open to work badge."""
         try:
-            # Look for open to work indicator
-            img_title = await self.get_attribute_safe(
-                ".pv-top-card-profile-picture img", "title", default=""
-            )
-            return "#OPEN_TO_WORK" in img_title.upper()
+            # Look for open to work ring/label in the top card
+            count = await self.page.locator(
+                '[aria-label*="open to work" i], [title*="open to work" i], '
+                'img[alt*="open to work" i]'
+            ).count()
+            return count > 0
         except:
             return False
 
     async def _get_about(self) -> Optional[str]:
         """Extract about section."""
         try:
-            # Find the profile card that contains "About"
-            profile_cards = await self.page.locator(
-                '[data-view-name="profile-card"]'
-            ).all()
+            # Find the About h2 and get the expandable text box near it
+            about_h2 = self.page.locator('h2[componentkey*="About"], h2:has-text("About")').first
+            if await about_h2.count() > 0:
+                # The expandable text box is a sibling or nearby element
+                section = about_h2.locator('xpath=ancestor::*[2]')
+                if await section.count() > 0:
+                    box = section.locator('[data-testid="expandable-text-box"]').first
+                    if await box.count() > 0:
+                        text = await box.inner_text()
+                        return text.strip() if text else None
 
-            for card in profile_cards:
-                card_text = await card.inner_text()
-                # Check if this card contains "About" heading
-                if card_text.strip().startswith("About"):
-                    # Get the span with aria-hidden to avoid duplication
-                    about_spans = await card.locator('span[aria-hidden="true"]').all()
-                    # Skip the first span (it's the "About" heading), get the content
-                    if len(about_spans) > 1:
-                        about_text = await about_spans[1].text_content()
-                        return about_text.strip() if about_text else None
+            # Fallback: first expandable-text-box in main (usually About)
+            boxes = await self.page.locator('main [data-testid="expandable-text-box"]').all()
+            for box in boxes:
+                text = await box.inner_text()
+                if text and len(text.strip()) > 20:
+                    return text.strip()
 
             return None
         except Exception as e:
@@ -161,25 +181,19 @@ class PersonScraper(BaseScraper):
         experiences = []
 
         try:
-            experience_heading = self.page.locator('h2:has-text("Experience")').first
-            
-            if await experience_heading.count() > 0:
-                experience_section = experience_heading.locator('xpath=ancestor::*[.//ul or .//ol][1]')
-                if await experience_section.count() == 0:
-                    experience_section = experience_heading.locator('xpath=ancestor::*[4]')
-                
-                if await experience_section.count() > 0:
-                    items = await experience_section.locator('ul > li, ol > li').all()
-                    
-                    for item in items:
-                        try:
-                            exp = await self._parse_main_page_experience(item)
-                            if exp:
-                                experiences.append(exp)
-                        except Exception as e:
-                            logger.debug(f"Error parsing experience from main page: {e}")
-                            continue
-            
+            # Use data-testid to find the experience section (stable across LinkedIn redesigns)
+            exp_section = self.page.locator('[data-testid*="ExperienceTopLevel"]').first
+            if await exp_section.count() > 0:
+                items = await exp_section.locator('[componentkey^="entity-collection-item"]').all()
+                for item in items:
+                    try:
+                        exp = await self._parse_main_page_experience(item)
+                        if exp:
+                            experiences.append(exp)
+                    except Exception as e:
+                        logger.debug(f"Error parsing experience from main page: {e}")
+                        continue
+
             if not experiences:
                 exp_url = urljoin(base_url, "details/experience")
                 await self.navigate_and_wait(exp_url)
@@ -188,17 +202,11 @@ class PersonScraper(BaseScraper):
                 await self.scroll_page_to_half()
                 await self.scroll_page_to_bottom(pause_time=0.5, max_scrolls=5)
 
-                items = []
-                main_element = self.page.locator('main')
-                if await main_element.count() > 0:
-                    list_items = await main_element.locator('list > listitem, ul > li').all()
-                    if list_items:
-                        items = list_items
-                
+                items = await self.page.locator(
+                    'main [componentkey^="entity-collection-item"]'
+                ).all()
                 if not items:
-                    old_list = self.page.locator(".pvs-list__container").first
-                    if await old_list.count() > 0:
-                        items = await old_list.locator(".pvs-list__paged-list-item").all()
+                    items = await self.page.locator('main ul > li, main ol > li').all()
 
                 for item in items:
                     try:
@@ -220,40 +228,88 @@ class PersonScraper(BaseScraper):
         return experiences
     
     async def _parse_main_page_experience(self, item) -> Optional[Experience]:
-        """Parse experience from main profile page list item with [logo_link, details_link] structure."""
+        """Parse experience from main profile page entity-collection-item."""
         try:
             links = await item.locator('a').all()
-            if len(links) < 2:
+            company_url = await links[0].get_attribute('href') if links else None
+
+            text = await item.inner_text()
+            lines = [l.strip() for l in text.splitlines() if l.strip()]
+            if len(lines) < 2:
                 return None
-            
-            company_url = await links[0].get_attribute('href')
-            detail_link = links[1]
-            
-            unique_texts = await self._extract_unique_texts_from_element(detail_link)
-            
-            if len(unique_texts) < 2:
-                return None
-            
-            position_title = unique_texts[0]
-            company_name = unique_texts[1]
-            work_times = unique_texts[2] if len(unique_texts) > 2 else ""
-            
-            from_date, to_date, duration = self._parse_work_times(work_times)
-            
-            return Experience(
-                position_title=position_title,
-                institution_name=company_name,
-                linkedin_url=company_url,
-                from_date=from_date,
-                to_date=to_date,
-                duration=duration,
-                location=None,
-                description=None,
+
+            # Detect grouped company card: line[1] starts with an employment type or duration
+            # (e.g. "Full-time · 4 yrs 11 mos") vs single-role where line[1] = "Company · Type"
+            employment_types = {"Full-time", "Part-time", "Contract", "Freelance", "Internship",
+                                "Seasonal", "Self-employed", "Apprenticeship"}
+            first_segment = lines[1].split("·")[0].strip() if len(lines) >= 2 else ""
+            is_grouped = first_segment in employment_types or (
+                len(lines) >= 2 and self._is_date_or_duration(lines[1]) and "·" not in lines[1]
             )
-            
+
+            if is_grouped:
+                # Grouped: company name is first line, roles follow
+                company_name = lines[0]
+                # Find first role title (line that's not duration/type)
+                role_line = next(
+                    (l for l in lines[2:] if not self._is_date_or_duration(l) and "·" not in l),
+                    None,
+                )
+                date_line = next((l for l in lines[2:] if self._is_date_or_duration(l)), "")
+                from_date, to_date, duration = self._parse_work_times(date_line)
+                employment_type = first_segment if first_segment in employment_types else None
+                return Experience(
+                    position_title=role_line or "",
+                    institution_name=company_name,
+                    linkedin_url=company_url,
+                    from_date=from_date,
+                    to_date=to_date,
+                    duration=duration,
+                    location=None,
+                    description=None,
+                    employment_type=employment_type,
+                )
+            else:
+                # Single role: title · company · dates · location
+                position_title = lines[0]
+                company_parts = lines[1].split("·")
+                company_name = company_parts[0].strip() if "·" in lines[1] else lines[1]
+                employment_type = (
+                    company_parts[1].strip()
+                    if len(company_parts) > 1 and company_parts[1].strip() in employment_types
+                    else None
+                )
+                date_line = next((l for l in lines[2:] if self._is_date_or_duration(l)), "")
+                location = next(
+                    (l for l in lines[2:] if not self._is_date_or_duration(l) and "·" not in l),
+                    None,
+                )
+                from_date, to_date, duration = self._parse_work_times(date_line)
+                return Experience(
+                    position_title=position_title,
+                    institution_name=company_name,
+                    linkedin_url=company_url,
+                    from_date=from_date,
+                    to_date=to_date,
+                    duration=duration,
+                    location=location,
+                    description=None,
+                    employment_type=employment_type,
+                )
+
         except Exception as e:
             logger.debug(f"Error parsing main page experience: {e}")
             return None
+
+    def _is_date_or_duration(self, text: str) -> bool:
+        """Check if text looks like a date range or duration."""
+        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        has_month = any(m in text for m in months)
+        has_year = any(c.isdigit() for c in text)
+        has_present = "Present" in text
+        has_duration = "yr" in text or "mo" in text
+        return (has_month and has_year) or has_present or has_duration
     
     async def _extract_unique_texts_from_element(self, element) -> list[str]:
         """Extract unique text content from nested elements, avoiding duplicates from parent/child overlap."""
@@ -276,109 +332,12 @@ class PersonScraper(BaseScraper):
         return unique_texts
 
     async def _parse_experience_item(self, item):
-        """Parse experience item. Returns Experience or list for nested positions."""
+        """Parse experience item from detail page using inner_text line parsing."""
         try:
-            links = await item.locator('a, link').all()
-            if len(links) >= 2:
-                company_url = await links[0].get_attribute('href')
-                detail_link = links[1]
-                
-                generics = await detail_link.locator('generic, span, div').all()
-                texts = []
-                for g in generics:
-                    text = await g.text_content()
-                    if text and text.strip() and len(text.strip()) < 200:
-                        texts.append(text.strip())
-                
-                unique_texts = list(dict.fromkeys(texts))
-                
-                if len(unique_texts) >= 2:
-                    position_title = unique_texts[0]
-                    company_name = unique_texts[1]
-                    work_times = unique_texts[2] if len(unique_texts) > 2 else ""
-                    location = unique_texts[3] if len(unique_texts) > 3 else ""
-                    
-                    from_date, to_date, duration = self._parse_work_times(work_times)
-                    
-                    return Experience(
-                        position_title=position_title,
-                        institution_name=company_name,
-                        linkedin_url=company_url,
-                        from_date=from_date,
-                        to_date=to_date,
-                        duration=duration,
-                        location=location,
-                        description=None,
-                    )
-            
-            entity = item.locator('div[data-view-name="profile-component-entity"]').first
-            if await entity.count() == 0:
-                return None
+            links = await item.locator('a').all()
+            company_url = await links[0].get_attribute('href') if links else None
 
-            children = await entity.locator("> *").all()
-            if len(children) < 2:
-                return None
-
-            company_link = children[0].locator("a").first
-            company_url = await company_link.get_attribute("href")
-
-            detail_container = children[1]
-            detail_children = await detail_container.locator("> *").all()
-
-            if len(detail_children) == 0:
-                return None
-
-            has_nested_positions = False
-            if len(detail_children) > 1:
-                nested_list = await detail_children[1].locator(".pvs-list__container").count()
-                has_nested_positions = nested_list > 0
-
-            if has_nested_positions:
-                return await self._parse_nested_experience(item, company_url, detail_children)
-            else:
-                first_detail = detail_children[0]
-                nested_elements = await first_detail.locator("> *").all()
-
-                if len(nested_elements) == 0:
-                    return None
-
-                span_container = nested_elements[0]
-                outer_spans = await span_container.locator("> *").all()
-
-                position_title = ""
-                company_name = ""
-                work_times = ""
-                location = ""
-
-                if len(outer_spans) >= 1:
-                    aria_span = outer_spans[0].locator('span[aria-hidden="true"]').first
-                    position_title = await aria_span.text_content()
-                if len(outer_spans) >= 2:
-                    aria_span = outer_spans[1].locator('span[aria-hidden="true"]').first
-                    company_name = await aria_span.text_content()
-                if len(outer_spans) >= 3:
-                    aria_span = outer_spans[2].locator('span[aria-hidden="true"]').first
-                    work_times = await aria_span.text_content()
-                if len(outer_spans) >= 4:
-                    aria_span = outer_spans[3].locator('span[aria-hidden="true"]').first
-                    location = await aria_span.text_content()
-
-                from_date, to_date, duration = self._parse_work_times(work_times)
-
-                description = ""
-                if len(detail_children) > 1:
-                    description = await detail_children[1].inner_text()
-
-                return Experience(
-                    position_title=position_title.strip(),
-                    institution_name=company_name.strip(),
-                    linkedin_url=company_url,
-                    from_date=from_date,
-                    to_date=to_date,
-                    duration=duration,
-                    location=location.strip(),
-                    description=description.strip() if description else None,
-                )
+            return await self._parse_main_page_experience(item)
 
         except Exception as e:
             logger.debug(f"Error parsing experience: {e}")
@@ -523,25 +482,19 @@ class PersonScraper(BaseScraper):
         educations = []
 
         try:
-            education_heading = self.page.locator('h2:has-text("Education")').first
-            
-            if await education_heading.count() > 0:
-                education_section = education_heading.locator('xpath=ancestor::*[.//ul or .//ol][1]')
-                if await education_section.count() == 0:
-                    education_section = education_heading.locator('xpath=ancestor::*[4]')
-                
-                if await education_section.count() > 0:
-                    items = await education_section.locator('ul > li, ol > li').all()
-                    
-                    for item in items:
-                        try:
-                            edu = await self._parse_main_page_education(item)
-                            if edu:
-                                educations.append(edu)
-                        except Exception as e:
-                            logger.debug(f"Error parsing education from main page: {e}")
-                            continue
-            
+            # Use data-testid to find the education section (stable across LinkedIn redesigns)
+            edu_section = self.page.locator('[data-testid*="EducationTopLevel"]').first
+            if await edu_section.count() > 0:
+                items = await edu_section.locator('[componentkey^="entity-collection-item"]').all()
+                for item in items:
+                    try:
+                        edu = await self._parse_main_page_education(item)
+                        if edu:
+                            educations.append(edu)
+                    except Exception as e:
+                        logger.debug(f"Error parsing education from main page: {e}")
+                        continue
+
             if not educations:
                 edu_url = urljoin(base_url, "details/education")
                 await self.navigate_and_wait(edu_url)
@@ -550,17 +503,11 @@ class PersonScraper(BaseScraper):
                 await self.scroll_page_to_half()
                 await self.scroll_page_to_bottom(pause_time=0.5, max_scrolls=5)
 
-                items = []
-                main_element = self.page.locator('main')
-                if await main_element.count() > 0:
-                    list_items = await main_element.locator('ul > li, ol > li').all()
-                    if list_items:
-                        items = list_items
-                
+                items = await self.page.locator(
+                    'main [componentkey^="entity-collection-item"]'
+                ).all()
                 if not items:
-                    old_list = self.page.locator(".pvs-list__container").first
-                    if await old_list.count() > 0:
-                        items = await old_list.locator(".pvs-list__paged-list-item").all()
+                    items = await self.page.locator('main ul > li, main ol > li').all()
 
                 for item in items:
                     try:
@@ -579,36 +526,28 @@ class PersonScraper(BaseScraper):
         return educations
     
     async def _parse_main_page_education(self, item) -> Optional[Education]:
-        """Parse education from main profile page list item with [logo_link, details_link] structure."""
+        """Parse education from main profile page entity-collection-item."""
         try:
             links = await item.locator('a').all()
-            if not links:
+            institution_url = await links[0].get_attribute('href') if links else None
+
+            text = await item.inner_text()
+            lines = [l.strip() for l in text.splitlines() if l.strip()]
+            if not lines:
                 return None
-            
-            institution_url = await links[0].get_attribute('href')
-            detail_link = links[1] if len(links) > 1 else links[0]
-            
-            unique_texts = await self._extract_unique_texts_from_element(detail_link)
-            
-            if not unique_texts:
-                return None
-            
-            institution_name = unique_texts[0]
+
+            institution_name = lines[0]
             degree = None
             times = ""
-            
-            if len(unique_texts) == 3:
-                degree = unique_texts[1]
-                times = unique_texts[2]
-            elif len(unique_texts) == 2:
-                second = unique_texts[1]
-                if " - " in second or any(c.isdigit() for c in second):
-                    times = second
-                else:
-                    degree = second
-            
+
+            for line in lines[1:]:
+                if self._is_date_or_duration(line) or ("–" in line and any(c.isdigit() for c in line)):
+                    times = line
+                elif not degree and not self._is_date_or_duration(line):
+                    degree = line
+
             from_date, to_date = self._parse_education_times(times)
-            
+
             return Education(
                 institution_name=institution_name,
                 degree=degree.strip() if degree else None,
@@ -617,7 +556,7 @@ class PersonScraper(BaseScraper):
                 to_date=to_date,
                 description=None,
             )
-            
+
         except Exception as e:
             logger.debug(f"Error parsing main page education: {e}")
             return None
@@ -740,17 +679,13 @@ class PersonScraper(BaseScraper):
             return None, None
 
         try:
-            # Split by " - " to get from and to dates
-            if " - " in times:
-                parts = times.split(" - ")
-                from_date = parts[0].strip()
-                to_date = parts[1].strip() if len(parts) > 1 else ""
-            else:
-                # Single year
-                from_date = times.strip()
-                to_date = times.strip()
-
-            return from_date, to_date
+            # Handle both regular hyphen and en-dash separators
+            for sep in [" – ", " - ", "–", "-"]:
+                if sep in times:
+                    parts = times.split(sep, 1)
+                    return parts[0].strip(), parts[1].strip()
+            # Single year
+            return times.strip(), times.strip()
         except Exception as e:
             logger.debug(f"Error parsing education times '{times}': {e}")
             return None, None
@@ -821,7 +756,7 @@ class PersonScraper(BaseScraper):
                         await self.wait_and_focus(0.8)
 
                         tabpanel = self.page.locator('[role="tabpanel"], tabpanel').first
-                        list_items = await tabpanel.locator("listitem, li, .pvs-list__paged-list-item").all()
+                        list_items = await tabpanel.locator("li, [data-view-name*='interest'], .pvs-list__paged-list-item, [componentkey]").all()
 
                         for item in list_items:
                             try:
@@ -878,6 +813,63 @@ class PersonScraper(BaseScraper):
         else:
             return tab_lower
 
+    async def _get_skills(self, base_url: str) -> list[str]:
+        """Extract the Skills section via its details page, following the
+        same navigate-to-details-page pattern as _get_accomplishments."""
+        skills: list[str] = []
+
+        try:
+            section_url = urljoin(base_url, "details/skills/")
+            await self.navigate_and_wait(section_url)
+            await self.page.wait_for_selector("main", timeout=10000)
+            await self.wait_and_focus(1)
+
+            nothing_to_see = await self.page.locator(
+                'text="Nothing to see for now"'
+            ).count()
+            if nothing_to_see > 0:
+                return skills
+
+            items = await self.page.locator(
+                'main [componentkey^="entity-collection-item"]'
+            ).all()
+            if not items:
+                items = await self.page.locator('main li, main [data-view-name], main [componentkey]').all()
+            if not items:
+                return skills
+            items = [i for i in items if await i.text_content() and (await i.text_content()).strip()]
+
+            seen = set()
+            for item in items:
+                try:
+                    entity = item.locator(
+                        'div[data-view-name="profile-component-entity"]'
+                    ).first
+                    if await entity.count() > 0:
+                        span = entity.locator('span[aria-hidden="true"]').first
+                    else:
+                        span = item.locator('span[aria-hidden="true"]').first
+
+                    if await span.count() == 0:
+                        continue
+                    name = await span.text_content()
+                    if not name:
+                        continue
+                    name = name.strip()
+                    if not name or len(name) > 200:
+                        continue
+                    if name not in seen:
+                        seen.add(name)
+                        skills.append(name)
+                except Exception as e:
+                    logger.debug(f"Error parsing skill item: {e}")
+                    continue
+
+        except Exception as e:
+            logger.debug(f"Error getting skills: {e}")
+
+        return skills
+
     async def _get_accomplishments(self, base_url: str) -> list[Accomplishment]:
         accomplishments = []
 
@@ -905,15 +897,15 @@ class PersonScraper(BaseScraper):
                 if nothing_to_see > 0:
                     continue
 
-                main_list = self.page.locator(
-                    ".pvs-list__container, main ul, main ol"
-                ).first
-                if await main_list.count() == 0:
-                    continue
-
-                items = await main_list.locator(".pvs-list__paged-list-item").all()
+                items = await self.page.locator(
+                    'main [componentkey^="entity-collection-item"]'
+                ).all()
                 if not items:
-                    items = await main_list.locator("> li").all()
+                    items = await self.page.locator('main li, main [data-view-name], main [componentkey]').all()
+                if not items:
+                    continue
+                # Filter out empty/nav elements
+                items = [i for i in items if await i.text_content() and (await i.text_content()).strip()]
 
                 seen_titles = set()
                 for item in items:
@@ -1025,74 +1017,100 @@ class PersonScraper(BaseScraper):
         contacts = []
 
         try:
-            contact_url = urljoin(base_url, "overlay/contact-info/")
-            await self.navigate_and_wait(contact_url)
+            # Navigate to the base profile first, then click the contact info link
+            # (direct overlay URL navigation doesn't always open the modal in LinkedIn's SPA)
+            await self.navigate_and_wait(base_url)
+            await self.page.wait_for_selector("main", timeout=10000)
             await self.wait_and_focus(1)
 
-            dialog = self.page.locator('dialog, [role="dialog"]').first
-            if await dialog.count() == 0:
-                logger.warning("Contact info dialog not found")
+            contact_link = self.page.locator('a[href*="overlay/contact-info"]').first
+            if await contact_link.count() > 0:
+                await contact_link.click()
+                logger.debug("Clicked contact info link")
+            else:
+                # Fallback: navigate directly
+                contact_url = urljoin(base_url, "overlay/contact-info/")
+                await self.page.goto(contact_url, wait_until="domcontentloaded")
+                logger.debug("Navigated directly to contact-info overlay URL")
+
+            await self.wait_and_focus(2)
+
+            # Try multiple selectors — LinkedIn has used different modal patterns over time
+            dialog = None
+            for selector in [
+                '[data-test-modal]',
+                '.artdeco-modal',
+                'dialog',
+                '[role="dialog"]',
+                '[aria-label*="contact" i]',
+            ]:
+                loc = self.page.locator(selector).first
+                try:
+                    await loc.wait_for(state="visible", timeout=3000)
+                    dialog = loc
+                    logger.debug(f"Contact dialog found with selector: {selector}")
+                    break
+                except Exception:
+                    continue
+
+            if dialog is None:
+                all_dialogs = await self.page.locator('[role="dialog"], dialog, .artdeco-modal').all()
+                logger.warning(
+                    f"Contact info dialog not found on {self.page.url} "
+                    f"(tried 5 selectors, found {len(all_dialogs)} dialog-like elements on page)"
+                )
                 return contacts
 
-            contact_sections = await dialog.locator('h3').all()
-            
-            for section_heading in contact_sections:
+            # LinkedIn renders each contact section as a div[componentkey] containing
+            # an SVG icon + a div with two <p> tags: first is the label, second is the value.
+            section_divs = await dialog.locator('div[componentkey]').all()
+            logger.debug(f"Found {len(section_divs)} contact section divs")
+            seen = set()
+
+            for section in section_divs:
                 try:
-                    heading_text = await section_heading.text_content()
-                    if not heading_text:
+                    paragraphs = await section.locator('> div > p, p').all()
+                    if len(paragraphs) < 2:
                         continue
-                    heading_text = heading_text.strip().lower()
-                    
-                    section_container = section_heading.locator('xpath=ancestor::*[1]')
-                    if await section_container.count() == 0:
-                        continue
-                    
-                    contact_type = self._map_contact_heading_to_type(heading_text)
+
+                    label_text = (await paragraphs[0].text_content() or "").strip()
+                    contact_type = self._map_contact_heading_to_type(label_text)
                     if not contact_type:
                         continue
-                    
-                    links = await section_container.locator('a').all()
-                    for link in links:
-                        href = await link.get_attribute('href')
-                        text = await link.text_content()
-                        if href and text:
-                            text = text.strip()
-                            label = None
-                            sibling_text = await section_container.locator('span, generic').all()
-                            for sib in sibling_text:
-                                sib_text = await sib.text_content()
-                                if sib_text and sib_text.strip().startswith('(') and sib_text.strip().endswith(')'):
-                                    label = sib_text.strip()[1:-1]
-                                    break
-                            
-                            if contact_type == "linkedin":
-                                contacts.append(Contact(type=contact_type, value=href, label=label))
-                            elif contact_type == "email" and "mailto:" in href:
-                                contacts.append(Contact(type=contact_type, value=href.replace("mailto:", ""), label=label))
-                            else:
-                                contacts.append(Contact(type=contact_type, value=text, label=label))
-                    
-                    if contact_type == "birthday" and not links:
-                        birthday_text = await section_container.text_content()
-                        if birthday_text:
-                            birthday_value = birthday_text.replace(heading_text, "").replace("Birthday", "").strip()
-                            if birthday_value:
-                                contacts.append(Contact(type="birthday", value=birthday_value))
-                    
-                    if contact_type == "phone" and not links:
-                        phone_text = await section_container.text_content()
-                        if phone_text:
-                            phone_value = phone_text.replace(heading_text, "").replace("Phone", "").strip()
-                            if phone_value:
-                                contacts.append(Contact(type="phone", value=phone_value))
-                    
-                    if contact_type == "address" and not links:
-                        address_text = await section_container.text_content()
-                        if address_text:
-                            address_value = address_text.replace(heading_text, "").replace("Address", "").strip()
-                            if address_value:
-                                contacts.append(Contact(type="address", value=address_value))
-                                
+
+                    # Check for a link in the value paragraph
+                    link = paragraphs[1].locator('a').first
+                    if await link.count() > 0:
+                        href = await link.get_attribute('href') or ""
+                        link_text = (await link.text_content() or "").strip()
+                        # Strip LinkedIn safety redirect wrapper
+                        if "/safety/go/" in href and "url=" in href:
+                            from urllib.parse import urlparse, parse_qs, unquote
+                            parsed = urlparse(href)
+                            qs = parse_qs(parsed.query)
+                            href = unquote(qs.get("url", [link_text])[0])
+                        if contact_type == "email" and href.startswith("mailto:"):
+                            href = href[len("mailto:"):]
+                        value = href if href else link_text
+
+                        # Extract label in parentheses e.g. "(Portfolio)"
+                        label = None
+                        value_text = (await paragraphs[1].text_content() or "").strip()
+                        if "(" in value_text and value_text.endswith(")"):
+                            label = value_text[value_text.rfind("(") + 1:-1]
+
+                        key = (contact_type, value)
+                        if key not in seen:
+                            seen.add(key)
+                            contacts.append(Contact(type=contact_type, value=value, label=label))
+                    else:
+                        # Plain text value (phone, birthday, address, connected-since)
+                        value = (await paragraphs[1].text_content() or "").strip()
+                        key = (contact_type, value)
+                        if value and key not in seen:
+                            seen.add(key)
+                            contacts.append(Contact(type=contact_type, value=value))
+
                 except Exception as e:
                     logger.debug(f"Error parsing contact section: {e}")
                     continue
@@ -1119,4 +1137,6 @@ class PersonScraper(BaseScraper):
             return "birthday"
         elif "address" in heading:
             return "address"
+        elif "connected" in heading:
+            return "connected_since"
         return None

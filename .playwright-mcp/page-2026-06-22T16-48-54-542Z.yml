@@ -1,0 +1,433 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e92]:
+        - toolbar [ref=e93]
+        - main [ref=e107]:
+          - generic [ref=e112]:
+            - region "Primary content" [ref=e113]:
+              - generic [ref=e116]:
+                - list [ref=e119]:
+                  - listitem [ref=e121]:
+                    - generic [ref=e122]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/bhavyasinghal11/
+                      - generic [ref=e123]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/bhavyasinghal11/
+                        - generic [ref=e124]:
+                          - link [ref=e125] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/bhavyasinghal11/
+                            - figure [ref=e126]
+                          - generic [ref=e127]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/bhavyasinghal11/
+                            - paragraph [ref=e128]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/bhavyasinghal11/
+                              - link "Bhavya Singhal Verified" [ref=e129] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/bhavyasinghal11/
+                                - text: Bhavya Singhal
+                                - img "Verified" [ref=e130]
+                              - generic [ref=e132]: • 2nd
+                            - paragraph [ref=e134]: Generative AI | Agentic AI | Developer (SDE-II) @ SAP Labs | Ex- Deloitte
+                            - paragraph [ref=e136]: Bengaluru, Karnataka, India
+                        - generic [ref=e141]:
+                          - figure [ref=e142]
+                          - paragraph [ref=e144]:
+                            - generic [ref=e145]:
+                              - link "Saumya Roy" [ref=e146] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/saumya-roy-sr/
+                                - strong [ref=e147]: Saumya Roy
+                              - text: is a mutual connection
+                  - listitem [ref=e149]:
+                    - generic [ref=e150]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/vinayn456/
+                      - generic [ref=e151]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/vinayn456/
+                        - generic [ref=e152]:
+                          - link [ref=e153] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/vinayn456/
+                            - figure [ref=e154]
+                          - generic [ref=e155]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/vinayn456/
+                            - paragraph [ref=e156]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/vinayn456/
+                              - link "Vinay Kumar N" [ref=e157] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/vinayn456/
+                              - generic [ref=e158]: • 2nd
+                            - paragraph [ref=e160]: Integration Developer | Workato Certified | Mulesoft Certified | AI Enthusiast
+                            - paragraph [ref=e162]: Bengaluru, Karnataka, India
+                        - generic [ref=e167]:
+                          - figure [ref=e168]
+                          - generic [ref=e169]:
+                            - paragraph [ref=e171]:
+                              - generic [ref=e172]:
+                                - link "Gaurav Sharma" [ref=e173] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/in/gauravsharmaqb/
+                                  - strong [ref=e174]: Gaurav Sharma
+                                - text: is a mutual connection
+                            - paragraph [ref=e176]:
+                              - generic [ref=e177]:
+                                - text: ·
+                                - link "5K followers" [ref=e178] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAABvuvFQBvTrsPe-78U0ip7wwrc0tRzgUmvI%22%5D
+                  - generic [ref=e185]:
+                    - paragraph [ref=e187]: Easily find people who are actively hiring
+                    - paragraph [ref=e188]: Search more efficiently with advanced search filters
+                    - link "Try Premium for ₹0" [ref=e189] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=%2FEMdRQkhSBCdd2EtWBsoWg%3D%3D&isSS=false&upsellSlotId=ADVANCED_PEOPLE_SEARCH_FILTER_INLINE_RESULT
+                      - generic [ref=e191]: Try Premium for ₹0
+                    - paragraph [ref=e192]: 1-month free trial. Easy to cancel. We’ll remind you 7 days before your trial ends.
+                  - listitem [ref=e194]:
+                    - generic [ref=e195]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/mhussam-ai/
+                      - generic [ref=e196]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/mhussam-ai/
+                        - generic [ref=e197]:
+                          - link [ref=e198] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/mhussam-ai/
+                            - figure [ref=e199]
+                          - generic [ref=e200]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/mhussam-ai/
+                            - paragraph [ref=e201]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/mhussam-ai/
+                              - link "Mohammad Hussam Ul Islam Verified" [ref=e202] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/mhussam-ai/
+                                - text: Mohammad Hussam Ul Islam
+                                - img "Verified" [ref=e203]
+                              - generic [ref=e205]: • 2nd
+                            - paragraph [ref=e207]: Founding AI/ML Engineer @ CallLive.ai | Certified AI Expert
+                            - paragraph [ref=e209]: Bengaluru, Karnataka, India
+                        - generic [ref=e214]:
+                          - figure [ref=e215]
+                          - generic [ref=e216]:
+                            - paragraph [ref=e218]:
+                              - generic [ref=e219]:
+                                - link "Gaayan Verma" [ref=e220] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/in/gaayan-verma/
+                                  - strong [ref=e221]: Gaayan Verma
+                                - text: is a mutual connection
+                            - paragraph [ref=e223]:
+                              - generic [ref=e224]:
+                                - text: ·
+                                - link "10K followers" [ref=e225] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAADSHA4MBT0P70VU0-LdVPotDyIjwFhJ6mfg%22%5D
+                        - paragraph [ref=e226]:
+                          - link "View my portfolio" [ref=e227] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fgithub%2Ecom%2Fmhussam-ai&urlhash=jFmP&mt=rvsy41uHmaTZ14sq5SLMNTG6PptWcfXAzsBbVZfLI2h-rxfonw7yE9TuPKpppQSnZyx7zae3Hy9VO_6rgPZKBQs5ms5a&isSdui=true
+                  - listitem [ref=e229]:
+                    - generic [ref=e230]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/suvikramduvvuru/
+                      - generic [ref=e231]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/suvikramduvvuru/
+                        - generic [ref=e232]:
+                          - link [ref=e233] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/suvikramduvvuru/
+                            - figure [ref=e234]
+                          - generic [ref=e235]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/suvikramduvvuru/
+                            - paragraph [ref=e236]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/suvikramduvvuru/
+                              - link "Suvikram D. Verified" [ref=e237] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/suvikramduvvuru/
+                                - text: Suvikram D.
+                                - img "Verified" [ref=e238]
+                              - generic [ref=e240]: • 2nd
+                            - paragraph [ref=e242]: Salesforce Techno-Functional Consultant| Devops Consultant| AI & Agentforce| Certified Application & Data Architect
+                            - paragraph [ref=e244]: Bengaluru, Karnataka, India
+                        - generic [ref=e249]:
+                          - figure [ref=e250]
+                          - paragraph [ref=e252]:
+                            - generic [ref=e253]:
+                              - link "Gaurav Sharma" [ref=e254] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/gauravsharmaqb/
+                                - strong [ref=e255]: Gaurav Sharma
+                              - text: is a mutual connection
+                  - listitem [ref=e257]:
+                    - generic [ref=e258]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/satyapratheek-tata/
+                      - generic [ref=e259]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/satyapratheek-tata/
+                        - generic [ref=e260]:
+                          - link [ref=e261] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/satyapratheek-tata/
+                            - figure [ref=e262]
+                          - generic [ref=e263]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/satyapratheek-tata/
+                            - paragraph [ref=e264]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/satyapratheek-tata/
+                              - link "Satya Pratheek T. Verified" [ref=e265] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/satyapratheek-tata/
+                                - text: Satya Pratheek T.
+                                - img "Verified" [ref=e266]
+                              - generic [ref=e268]: • 2nd
+                            - paragraph [ref=e270]: Quantum Engineer | EDHEC | NISER
+                            - paragraph [ref=e272]: Bengaluru, Karnataka, India
+                        - generic [ref=e277]:
+                          - figure [ref=e278]
+                          - figure [ref=e279]
+                          - paragraph [ref=e281]:
+                            - generic [ref=e282]:
+                              - link "Saumya Roy" [ref=e283] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/saumya-roy-sr/
+                                - strong [ref=e284]: Saumya Roy
+                              - text: "&"
+                              - link "Nithin Jayaraman Venkateshan" [ref=e285] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/nithinjv/
+                                - strong [ref=e286]: Nithin Jayaraman Venkateshan
+                              - text: are mutual connections
+                  - listitem [ref=e288]:
+                    - generic [ref=e289]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/archit-gupta-23ab7b1a3/
+                      - generic [ref=e290]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/archit-gupta-23ab7b1a3/
+                        - generic [ref=e291]:
+                          - link [ref=e292] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/archit-gupta-23ab7b1a3/
+                            - figure [ref=e293]
+                          - generic [ref=e294]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/archit-gupta-23ab7b1a3/
+                            - paragraph [ref=e295]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/archit-gupta-23ab7b1a3/
+                              - link "Archit Gupta Premium" [ref=e296] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/archit-gupta-23ab7b1a3/
+                                - text: Archit Gupta
+                                - img "Premium" [ref=e297]
+                              - generic [ref=e299]: • 2nd
+                            - paragraph [ref=e301]: AI Engineer at LTM | Ex - Coforge | Toddle
+                            - paragraph [ref=e303]: Greater Bengaluru Area
+                        - generic [ref=e308]:
+                          - figure [ref=e309]
+                          - paragraph [ref=e311]:
+                            - generic [ref=e312]:
+                              - link "Gaayan Verma" [ref=e313] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/gaayan-verma/
+                                - strong [ref=e314]: Gaayan Verma
+                              - text: is a mutual connection
+                  - listitem [ref=e316]:
+                    - generic [ref=e317]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/souvikroy5/
+                      - generic [ref=e318]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/souvikroy5/
+                        - generic [ref=e319]:
+                          - link [ref=e320] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/souvikroy5/
+                            - figure [ref=e321]
+                          - generic [ref=e322]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/souvikroy5/
+                            - paragraph [ref=e323]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/souvikroy5/
+                              - link "Souvik Roy Verified" [ref=e324] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/souvikroy5/
+                                - text: Souvik Roy
+                                - img "Verified" [ref=e325]
+                              - generic [ref=e327]: • 3rd+
+                            - paragraph [ref=e329]: Agentic Engineering @ Standard Chartered | IIT Gandhinagar
+                            - paragraph [ref=e331]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e338]:
+                          - link "11K followers" [ref=e340] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAAB7h2uABY1JeTj5hHnDDA9D_SGTViV4bXSc%22%5D
+                  - listitem [ref=e342]:
+                    - generic [ref=e343]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/msn-full-stack-developer/
+                      - generic [ref=e344]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/msn-full-stack-developer/
+                        - generic [ref=e345]:
+                          - link [ref=e346] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/msn-full-stack-developer/
+                            - figure [ref=e347]
+                          - generic [ref=e348]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/msn-full-stack-developer/
+                            - paragraph [ref=e349]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/msn-full-stack-developer/
+                              - link "Manjunatha Swamy Nayaka H S Verified" [ref=e350] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/msn-full-stack-developer/
+                                - text: Manjunatha Swamy Nayaka H S
+                                - img "Verified" [ref=e351]
+                              - generic [ref=e353]: • 2nd
+                            - paragraph [ref=e355]: Software Engineer || Full Stack Developer + AI || MERN Stack Specialist
+                            - paragraph [ref=e357]: Bengaluru, Karnataka, India
+                        - generic [ref=e362]:
+                          - figure [ref=e363]
+                          - paragraph [ref=e365]:
+                            - generic [ref=e366]:
+                              - link "Gaayan Verma" [ref=e367] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/gaayan-verma/
+                                - strong [ref=e368]: Gaayan Verma
+                              - text: is a mutual connection
+                  - listitem [ref=e370]:
+                    - generic [ref=e371]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e372]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e373]:
+                          - link "LinkedIn Member Junior AI Developer @ Ephanti Bengaluru, Karnataka, India" [ref=e374] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e375]
+                            - generic [ref=e376]:
+                              - paragraph [ref=e377]: LinkedIn Member
+                              - paragraph [ref=e379]: Junior AI Developer @ Ephanti
+                              - paragraph [ref=e381]: Bengaluru, Karnataka, India
+                          - generic [ref=e382]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e383]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e384] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e387]: View
+                  - listitem [ref=e393]:
+                    - generic [ref=e394]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/preeti8/
+                      - generic [ref=e395]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/preeti8/
+                        - generic [ref=e396]:
+                          - link [ref=e397] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/preeti8/
+                            - figure [ref=e398]
+                          - generic [ref=e399]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/preeti8/
+                            - paragraph [ref=e400]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/preeti8/
+                              - link "Preeti Moolani Premium" [ref=e401] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/preeti8/
+                                - text: Preeti Moolani
+                                - img "Premium" [ref=e402]
+                              - generic [ref=e404]: • 3rd+
+                            - paragraph [ref=e406]: AI & Data @EY
+                            - paragraph [ref=e408]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e415]:
+                          - link "32K followers" [ref=e417] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAAElgb7QB2S95T2kHptaCY1qMavMEgEhTAvM%22%5D
+                - generic [ref=e420]:
+                  - generic [ref=e421]:
+                    - paragraph [ref=e422]: Are these results helpful?
+                    - paragraph [ref=e423]: Your feedback helps us improve search results
+                  - generic [ref=e424]:
+                    - button "Are these results helpful? Yes, these search results are helpful" [ref=e425] [cursor=pointer]
+                    - button "Are these results helpful? No, these search results are not helpful" [ref=e428] [cursor=pointer]
+                - generic [ref=e432]:
+                  - list [ref=e433]:
+                    - listitem [ref=e434]:
+                      - button "Page 1" [ref=e435] [cursor=pointer]:
+                        - generic [ref=e436]: "1"
+                    - listitem [ref=e437]:
+                      - button "Page 2" [ref=e438] [cursor=pointer]:
+                        - generic [ref=e439]: "2"
+                    - listitem [ref=e440]:
+                      - button "Page 3" [ref=e441] [cursor=pointer]:
+                        - generic [ref=e442]: "3"
+                    - listitem [ref=e443]:
+                      - button "Page 4" [ref=e444] [cursor=pointer]:
+                        - generic [ref=e445]: "4"
+                    - listitem [ref=e446]:
+                      - button "Page 5" [ref=e447] [cursor=pointer]:
+                        - generic [ref=e448]: "5"
+                    - listitem [ref=e449]:
+                      - button "Page 6" [ref=e450] [cursor=pointer]:
+                        - generic [ref=e451]: "6"
+                    - listitem [ref=e452]:
+                      - button "Page 7" [ref=e453] [cursor=pointer]:
+                        - generic [ref=e454]: "7"
+                    - listitem [ref=e455]:
+                      - button "Page 8" [ref=e456] [cursor=pointer]:
+                        - generic [ref=e457]: "8"
+                    - listitem [ref=e458]:
+                      - button "Page 9" [ref=e459] [cursor=pointer]:
+                        - generic [ref=e460]: "9"
+                    - listitem [ref=e461]:
+                      - button "Page 10" [ref=e462] [cursor=pointer]:
+                        - generic [ref=e463]: "10"
+                  - button "Next" [ref=e464] [cursor=pointer]:
+                    - generic [ref=e467]: Next
+            - complementary "Aside" [ref=e468]

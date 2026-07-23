@@ -1,0 +1,383 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e92]:
+        - toolbar [ref=e93]
+        - main [ref=e107]:
+          - generic [ref=e112]:
+            - region "Primary content" [ref=e113]:
+              - generic [ref=e116]:
+                - list [ref=e119]:
+                  - listitem [ref=e121]:
+                    - generic [ref=e122]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/chakravarthi-moyili/
+                      - generic [ref=e123]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/chakravarthi-moyili/
+                        - generic [ref=e124]:
+                          - link [ref=e125] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/chakravarthi-moyili/
+                            - figure [ref=e126]
+                          - generic [ref=e127]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/chakravarthi-moyili/
+                            - paragraph [ref=e128]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/chakravarthi-moyili/
+                              - link "Chakravarthi Moyili" [ref=e129] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/chakravarthi-moyili/
+                              - generic [ref=e130]: • 2nd
+                            - paragraph [ref=e132]: AI/ML Engineer | Multi-Agent Systems & LangGraph · GenAI Applications · LLM Orchestration | Python · LangChain · FastAPI · OpenAI · Gemini · FFMPEG
+                            - paragraph [ref=e134]: Bengaluru, Karnataka, India
+                        - generic [ref=e139]:
+                          - figure [ref=e140]
+                          - generic [ref=e141]:
+                            - paragraph [ref=e143]:
+                              - generic [ref=e144]:
+                                - link "Gaurav Sharma" [ref=e145] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/in/gauravsharmaqb/
+                                  - strong [ref=e146]: Gaurav Sharma
+                                - text: is a mutual connection
+                            - paragraph [ref=e148]:
+                              - generic [ref=e149]:
+                                - text: ·
+                                - link "976 followers" [ref=e150] [cursor=pointer]:
+                                  - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAAEy3MmUBioFXiTqQazgpa7ZlF_mu_Qe2xVU%22%5D
+                  - listitem [ref=e152]:
+                    - generic [ref=e153]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/nikisha-bongale-463a34253/
+                      - generic [ref=e154]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/nikisha-bongale-463a34253/
+                        - generic [ref=e155]:
+                          - link [ref=e156] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/nikisha-bongale-463a34253/
+                            - figure [ref=e157]
+                          - generic [ref=e158]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/nikisha-bongale-463a34253/
+                            - paragraph [ref=e159]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/nikisha-bongale-463a34253/
+                              - link "Nikisha Bongale Verified" [ref=e160] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/nikisha-bongale-463a34253/
+                                - text: Nikisha Bongale
+                                - img "Verified" [ref=e161]
+                              - generic [ref=e163]: • 3rd+
+                            - paragraph [ref=e165]: Software Engineer ll - AI | ML | GCP | LLM
+                            - paragraph [ref=e167]: Bengaluru, Karnataka, India
+                  - generic [ref=e178]:
+                    - paragraph [ref=e180]: Easily find people who are actively hiring
+                    - paragraph [ref=e181]: Search more efficiently with advanced search filters
+                    - link "Try Premium for ₹0" [ref=e182] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=SMoTrLkxSkqxHf8zgR5XRw%3D%3D&isSS=false&upsellSlotId=ADVANCED_PEOPLE_SEARCH_FILTER_INLINE_RESULT
+                      - generic [ref=e184]: Try Premium for ₹0
+                    - paragraph [ref=e185]: 1-month free trial. Easy to cancel. We’ll remind you 7 days before your trial ends.
+                  - listitem [ref=e187]:
+                    - generic [ref=e188]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/prakul-virdi-86800a202/
+                      - generic [ref=e189]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/prakul-virdi-86800a202/
+                        - generic [ref=e190]:
+                          - link [ref=e191] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/prakul-virdi-86800a202/
+                            - figure [ref=e192]
+                          - generic [ref=e193]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/prakul-virdi-86800a202/
+                            - paragraph [ref=e194]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/prakul-virdi-86800a202/
+                              - link "Prakul Virdi Verified" [ref=e195] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/prakul-virdi-86800a202/
+                                - text: Prakul Virdi
+                                - img "Verified" [ref=e196]
+                              - generic [ref=e198]: • 3rd+
+                            - paragraph [ref=e200]: AI Research Engineer | Shipping Speech & Language Systems (TTS, ASR, NLP) | LLaMA, Transformers | IIT Delhi
+                            - paragraph [ref=e202]: Greater Bengaluru Area
+                  - listitem [ref=e208]:
+                    - generic [ref=e209]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e210]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e211]:
+                          - link "LinkedIn Member AI/LLM Engineer | Building production LLM and RAG systems Bengaluru, Karnataka, India" [ref=e212] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e213]
+                            - generic [ref=e214]:
+                              - paragraph [ref=e215]: LinkedIn Member
+                              - paragraph [ref=e217]: AI/LLM Engineer | Building production LLM and RAG systems
+                              - paragraph [ref=e219]: Bengaluru, Karnataka, India
+                          - generic [ref=e220]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e221]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e222] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e225]: View
+                  - listitem [ref=e231]:
+                    - generic [ref=e232]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/preetham-m01/
+                      - generic [ref=e233]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/preetham-m01/
+                        - generic [ref=e234]:
+                          - link [ref=e235] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/preetham-m01/
+                            - figure [ref=e236]
+                          - generic [ref=e237]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/preetham-m01/
+                            - paragraph [ref=e238]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/preetham-m01/
+                              - link "Preetham M Verified" [ref=e239] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/preetham-m01/
+                                - text: Preetham M
+                                - img "Verified" [ref=e240]
+                              - generic [ref=e242]: • 3rd+
+                            - paragraph [ref=e244]: Software Engineer at Celonis
+                            - paragraph [ref=e246]: Bengaluru, Karnataka, India
+                  - listitem [ref=e252]:
+                    - generic [ref=e253]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/chirag-vaishnav-27444b199/
+                      - generic [ref=e254]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/chirag-vaishnav-27444b199/
+                        - generic [ref=e255]:
+                          - link [ref=e256] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/chirag-vaishnav-27444b199/
+                            - figure [ref=e257]
+                          - generic [ref=e258]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/chirag-vaishnav-27444b199/
+                            - paragraph [ref=e259]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/chirag-vaishnav-27444b199/
+                              - link "Chirag Vaishnav (Backend Engineer) Verified" [ref=e260] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/chirag-vaishnav-27444b199/
+                                - text: Chirag Vaishnav (Backend Engineer)
+                                - img "Verified" [ref=e261]
+                              - generic [ref=e263]: • 3rd+
+                            - paragraph [ref=e265]: Senior Backend Engineer | Java · Spring Boot · Kafka · Distributed Systems | Fintech @ Slice
+                            - paragraph [ref=e267]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e274]:
+                          - link "25K followers" [ref=e276] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAAC6Ej7gBju4-m1LR0-sov4boa9anjDMQ6ZY%22%5D
+                  - listitem [ref=e278]:
+                    - generic [ref=e279]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/abhinav-c-179699143/
+                      - generic [ref=e280]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/abhinav-c-179699143/
+                        - generic [ref=e281]:
+                          - link [ref=e282] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/abhinav-c-179699143/
+                            - figure [ref=e283]
+                          - generic [ref=e284]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/abhinav-c-179699143/
+                            - paragraph [ref=e285]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/abhinav-c-179699143/
+                              - link "Abhinav C" [ref=e286] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/abhinav-c-179699143/
+                              - generic [ref=e287]: • 2nd
+                            - paragraph [ref=e289]: Senior Design Engineer @Schneider Electric, Bengaluru | Design | C Programming | Transforming Concepts into Robust Solutions
+                            - paragraph [ref=e291]: Bengaluru, Karnataka, India
+                        - generic [ref=e296]:
+                          - figure [ref=e297]
+                          - paragraph [ref=e299]:
+                            - generic [ref=e300]:
+                              - link "Adithyaa Sunder" [ref=e301] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/adithyaa-sunder/
+                                - strong [ref=e302]: Adithyaa Sunder
+                              - text: is a mutual connection
+                  - listitem [ref=e304]:
+                    - generic [ref=e305]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/zaid-ali-vnit/
+                      - generic [ref=e306]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/zaid-ali-vnit/
+                        - generic [ref=e307]:
+                          - link [ref=e308] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/zaid-ali-vnit/
+                            - figure [ref=e309]
+                          - generic [ref=e310]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/zaid-ali-vnit/
+                            - paragraph [ref=e311]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/zaid-ali-vnit/
+                              - link "Zaid Ali Verified" [ref=e312] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/zaid-ali-vnit/
+                                - text: Zaid Ali
+                                - img "Verified" [ref=e313]
+                              - generic [ref=e315]: • 3rd+
+                            - paragraph [ref=e317]: Software Engineer at Google | Ex - Goldman Sachs | NIT Nagpur CS’25
+                            - paragraph [ref=e319]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e326]:
+                          - link "10K followers" [ref=e328] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAADkN13wBuR29tSeL4y-jYgd7C7_IBFK_U5U%22%5D
+                  - listitem [ref=e330]:
+                    - generic [ref=e331]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/devr/
+                      - generic [ref=e332]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/devr/
+                        - generic [ref=e333]:
+                          - link [ref=e334] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/devr/
+                            - figure [ref=e335]
+                          - generic [ref=e336]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/devr/
+                            - paragraph [ref=e337]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/devr/
+                              - link "Dev Rajput Premium" [ref=e338] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/devr/
+                                - text: Dev Rajput
+                                - img "Premium" [ref=e339]
+                              - generic [ref=e341]: • 3rd+
+                            - paragraph [ref=e343]: SDE @ Microsoft | Building Kubernetes Solutions, LLM solutions
+                            - paragraph [ref=e345]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e350]:
+                          - link "Visit my website" [ref=e351] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/safety/go/?url=http%3A%2F%2Fresume%2Edevrajput%2Enet&urlhash=7duF&mt=d1WKXKlNvqvoKYPxQrP5a7l3HM2UKwS0MXNpcGZqeyhk7Hm0o_xHIWAvuc-cAYjQVKzY1kq3U_oBq5VdfRUmcEHwu5ne&isSdui=true
+                  - listitem [ref=e353]:
+                    - generic [ref=e354]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/nagabhushanbaddi/
+                      - generic [ref=e355]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/nagabhushanbaddi/
+                        - generic [ref=e356]:
+                          - link [ref=e357] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/nagabhushanbaddi/
+                            - figure [ref=e358]
+                          - generic [ref=e359]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/nagabhushanbaddi/
+                            - paragraph [ref=e360]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/nagabhushanbaddi/
+                              - link "Nagabhushan Baddi Verified" [ref=e361] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/nagabhushanbaddi/
+                                - text: Nagabhushan Baddi
+                                - img "Verified" [ref=e362]
+                              - generic [ref=e364]: • 3rd+
+                            - paragraph [ref=e366]: Engineering at Google | LLM Performance | x-Atlassian | x-Samsung | IIT Roorkee
+                            - paragraph [ref=e368]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e375]:
+                          - link "5K followers" [ref=e377] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAAAzJxGsBBqwdmuGCabU2wmd67xwllPiu7gY%22%5D
+                - generic [ref=e380]:
+                  - generic [ref=e381]:
+                    - paragraph [ref=e382]: Are these results helpful?
+                    - paragraph [ref=e383]: Your feedback helps us improve search results
+                  - generic [ref=e384]:
+                    - button "Are these results helpful? Yes, these search results are helpful" [ref=e385] [cursor=pointer]
+                    - button "Are these results helpful? No, these search results are not helpful" [ref=e388] [cursor=pointer]
+                - generic [ref=e392]:
+                  - list [ref=e393]:
+                    - listitem [ref=e394]:
+                      - button "Page 1" [ref=e395] [cursor=pointer]:
+                        - generic [ref=e396]: "1"
+                    - listitem [ref=e397]:
+                      - button "Page 2" [ref=e398] [cursor=pointer]:
+                        - generic [ref=e399]: "2"
+                    - listitem [ref=e400]:
+                      - button "Page 3" [ref=e401] [cursor=pointer]:
+                        - generic [ref=e402]: "3"
+                    - listitem [ref=e403]:
+                      - button "Page 4" [ref=e404] [cursor=pointer]:
+                        - generic [ref=e405]: "4"
+                    - listitem [ref=e406]:
+                      - button "Page 5" [ref=e407] [cursor=pointer]:
+                        - generic [ref=e408]: "5"
+                    - listitem [ref=e409]:
+                      - button "Page 6" [ref=e410] [cursor=pointer]:
+                        - generic [ref=e411]: "6"
+                    - listitem [ref=e412]:
+                      - button "Page 7" [ref=e413] [cursor=pointer]:
+                        - generic [ref=e414]: "7"
+                    - listitem [ref=e415]:
+                      - button "Page 8" [ref=e416] [cursor=pointer]:
+                        - generic [ref=e417]: "8"
+                    - listitem [ref=e418]:
+                      - button "Page 9" [ref=e419] [cursor=pointer]:
+                        - generic [ref=e420]: "9"
+                    - listitem [ref=e421]:
+                      - button "Page 10" [ref=e422] [cursor=pointer]:
+                        - generic [ref=e423]: "10"
+                  - button "Next" [ref=e424] [cursor=pointer]:
+                    - generic [ref=e427]: Next
+            - complementary "Aside" [ref=e428]

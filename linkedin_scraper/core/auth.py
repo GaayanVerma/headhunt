@@ -62,6 +62,30 @@ def load_credentials_from_env() -> Tuple[Optional[str], Optional[str]]:
     return email, password
 
 
+def load_github_token_from_env() -> Optional[str]:
+    """
+    Load a GitHub API token from .env, if present.
+
+    Returns:
+        Token string, or None if not configured (analyzer falls back to
+        unauthenticated REST access at reduced rate limits).
+    """
+    load_dotenv()
+    return os.getenv('GITHUB_TOKEN')
+
+
+def load_anthropic_key_from_env() -> Optional[str]:
+    """
+    Load an Anthropic API key from .env, if present.
+
+    Returns:
+        Key string, or None if not configured (GitHubAIAnalyzer's LLM-backed
+        stages - repo insight generation - must be skipped without one).
+    """
+    load_dotenv()
+    return os.getenv('ANTHROPIC_API_KEY')
+
+
 async def login_with_credentials(
     page: Page,
     email: Optional[str] = None,

@@ -1,0 +1,139 @@
+[
+  {
+    "name": "ARUN MATHUR",
+    "linkedin_url": "https://www.linkedin.com/in/arun88829",
+    "headline": "Full Stack Developer | MERN Stack Engineer | React.js, Next.js,Node.js, MongoDB,Postgresql | Computer Science Graduate from IIIT Manipur",
+    "location": "Faridabad, Haryana, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "full stack engineer react node mongodb (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 50,
+    "fit_indicators": [
+      "react typescript",
+      "node express",
+      "sql nosql",
+      "fullstack"
+    ]
+  },
+  {
+    "name": "Sahil Kumar",
+    "linkedin_url": "https://www.linkedin.com/in/sahil-kumar-178ba0235",
+    "headline": "Software Engineer | DTU'24 | Freelancer |  Full-Stack Developer | C++ | Javascript | Node.js | Express | React | MongoDB | PostgreSQL",
+    "location": "Gurugram, Haryana, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "javascript developer react node express (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 50,
+    "fit_indicators": [
+      "react typescript",
+      "node express",
+      "sql nosql",
+      "fullstack"
+    ]
+  },
+  {
+    "name": "Nikhil Panwar",
+    "linkedin_url": "https://www.linkedin.com/in/nikhil-panwar",
+    "headline": "DTU/DCE   Software Developer - Javascript | React JS | Redux l Node JS | Mongo DB | Express",
+    "location": "Delhi, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "javascript developer react node express (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 30,
+    "fit_indicators": [
+      "react typescript",
+      "node express"
+    ]
+  },
+  {
+    "name": "Yogesh Rathor",
+    "linkedin_url": "https://www.linkedin.com/in/yogeshrathor",
+    "headline": "Software Engineer | React.js, Node.js, Spring Boot | 3+ YOE | DTU \u201922",
+    "location": "New Delhi, Delhi, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "software engineer react node sql (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 30,
+    "fit_indicators": [
+      "react typescript",
+      "node express"
+    ]
+  },
+  {
+    "name": "Ravindra Mogre",
+    "linkedin_url": "https://www.linkedin.com/in/ravindramogre",
+    "headline": "Full Stack Developer @ Wylth\u00ae | IIT Roorkee\u201922 | Next.js | Node.js | Java",
+    "location": "Indore, Madhya Pradesh, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "full stack developer react node (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 25,
+    "fit_indicators": [
+      "node express",
+      "fullstack"
+    ]
+  },
+  {
+    "name": "Manav Chugh",
+    "linkedin_url": "https://www.linkedin.com/in/manav-chugh-522740138",
+    "headline": "SDE - II at HashedIn by Deloitte | React Js Frontend Developer",
+    "location": "Delhi, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "react developer typescript (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 15,
+    "fit_indicators": [
+      "react typescript"
+    ]
+  },
+  {
+    "name": "Raghavendra .",
+    "linkedin_url": "https://www.linkedin.com/in/raghavendra395",
+    "headline": "Frontend Developer  | TypeScript, React.js, JavaScript || IIT Dhanbad",
+    "location": "Karnataka, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "react developer typescript (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 15,
+    "fit_indicators": [
+      "react typescript"
+    ]
+  },
+  {
+    "name": "Rahul Gupta",
+    "linkedin_url": "https://www.linkedin.com/in/rahul-gupta-3798b9209",
+    "headline": "SDE 2 @ Expedia | NSIT\u201920 | Front end web developer | JavaScript | React | nextJs | TypeScript | angular",
+    "location": "Delhi, India",
+    "connection_degree": "3rd+",
+    "mutual_connections": null,
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "react developer typescript (IIT OR IIIT OR NSIT OR DTU OR BITS)",
+    "fit_score": 15,
+    "fit_indicators": [
+      "react typescript"
+    ]
+  }
+]

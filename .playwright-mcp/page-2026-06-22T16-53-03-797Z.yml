@@ -1,0 +1,350 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e92]:
+        - toolbar [ref=e93]
+        - main [ref=e107]:
+          - generic [ref=e112]:
+            - region "Primary content" [ref=e113]:
+              - generic [ref=e116]:
+                - list [ref=e119]:
+                  - listitem [ref=e121]:
+                    - generic [ref=e122]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/vaibhav-dubar-47a35921a/
+                      - generic [ref=e123]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/vaibhav-dubar-47a35921a/
+                        - generic [ref=e124]:
+                          - link [ref=e125] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/vaibhav-dubar-47a35921a/
+                            - figure [ref=e126]
+                          - generic [ref=e127]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/vaibhav-dubar-47a35921a/
+                            - paragraph [ref=e128]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/vaibhav-dubar-47a35921a/
+                              - link "Vaibhav Dubar Verified" [ref=e129] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/vaibhav-dubar-47a35921a/
+                                - text: Vaibhav Dubar
+                                - img "Verified" [ref=e130]
+                              - generic [ref=e132]: • 3rd+
+                            - paragraph [ref=e134]: Software Engineer @ Matters.AI | Ex-Hashedin
+                            - paragraph [ref=e136]: Bengaluru, Karnataka, India
+                  - listitem [ref=e142]:
+                    - generic [ref=e143]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/vishal-d-b42961134/
+                      - generic [ref=e144]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/vishal-d-b42961134/
+                        - generic [ref=e145]:
+                          - link [ref=e146] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/vishal-d-b42961134/
+                            - figure [ref=e147]
+                          - generic [ref=e148]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/vishal-d-b42961134/
+                            - paragraph [ref=e149]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/vishal-d-b42961134/
+                              - link "Vishal D." [ref=e150] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/vishal-d-b42961134/
+                              - generic [ref=e151]: • 3rd+
+                            - paragraph [ref=e153]: Bengaluru, Karnataka, India
+                  - generic [ref=e164]:
+                    - paragraph [ref=e166]: Easily find people who are actively hiring
+                    - paragraph [ref=e167]: Search more efficiently with advanced search filters
+                    - link "Try Premium for ₹0" [ref=e168] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=HEkL7gwrQz6xn6%2FOpUAZ2A%3D%3D&isSS=false&upsellSlotId=ADVANCED_PEOPLE_SEARCH_FILTER_INLINE_RESULT
+                      - generic [ref=e170]: Try Premium for ₹0
+                    - paragraph [ref=e171]: 1-month free trial. Easy to cancel. We’ll remind you 7 days before your trial ends.
+                  - listitem [ref=e173]:
+                    - generic [ref=e174]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/satyaanshu/
+                      - generic [ref=e175]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/satyaanshu/
+                        - generic [ref=e176]:
+                          - link [ref=e177] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/satyaanshu/
+                            - figure [ref=e178]
+                          - generic [ref=e179]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/satyaanshu/
+                            - paragraph [ref=e180]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/satyaanshu/
+                              - link "Satyaanshu . Verified" [ref=e181] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/satyaanshu/
+                                - text: Satyaanshu .
+                                - img "Verified" [ref=e182]
+                              - generic [ref=e184]: • 3rd+
+                            - paragraph [ref=e186]: Software Engineer at Nexthop.ai
+                            - paragraph [ref=e188]: Bengaluru, Karnataka, India
+                  - listitem [ref=e194]:
+                    - generic [ref=e195]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e196]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e197]:
+                          - link "LinkedIn Member Software Engineer - AI India" [ref=e198] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e199]
+                            - generic [ref=e200]:
+                              - paragraph [ref=e201]: LinkedIn Member
+                              - paragraph [ref=e203]: Software Engineer - AI
+                              - paragraph [ref=e205]: India
+                          - generic [ref=e206]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e207]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e208] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e211]: View
+                  - listitem [ref=e217]:
+                    - generic [ref=e218]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e219]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e220]:
+                          - link "LinkedIn Member Software Engineer at Saleslife.ai | Golang Developer | AI Bengaluru, Karnataka, India" [ref=e221] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e222]
+                            - generic [ref=e223]:
+                              - paragraph [ref=e224]: LinkedIn Member
+                              - paragraph [ref=e226]: Software Engineer at Saleslife.ai | Golang Developer | AI
+                              - paragraph [ref=e228]: Bengaluru, Karnataka, India
+                          - generic [ref=e229]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e230]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e231] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e234]: View
+                  - listitem [ref=e240]:
+                    - generic [ref=e241]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/guntha-rohith-355402182/
+                      - generic [ref=e242]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/guntha-rohith-355402182/
+                        - generic [ref=e243]:
+                          - link [ref=e244] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/guntha-rohith-355402182/
+                            - figure [ref=e245]
+                          - generic [ref=e246]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/guntha-rohith-355402182/
+                            - paragraph [ref=e247]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/guntha-rohith-355402182/
+                              - link "Guntha Rohith Verified" [ref=e248] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/guntha-rohith-355402182/
+                                - text: Guntha Rohith
+                                - img "Verified" [ref=e249]
+                              - generic [ref=e251]: • 3rd+
+                            - paragraph [ref=e253]: Software Engineer @Raven AI
+                            - paragraph [ref=e255]: Telangana, India
+                  - listitem [ref=e261]:
+                    - generic [ref=e262]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e263]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e264]:
+                          - link "LinkedIn Member AI Software Engineer Bengaluru, Karnataka, India" [ref=e265] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e266]
+                            - generic [ref=e267]:
+                              - paragraph [ref=e268]: LinkedIn Member
+                              - paragraph [ref=e270]: AI Software Engineer
+                              - paragraph [ref=e272]: Bengaluru, Karnataka, India
+                          - generic [ref=e273]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e274]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e275] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e278]: View
+                  - listitem [ref=e284]:
+                    - generic [ref=e285]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/sandesh-singhal-aa848718a/
+                      - generic [ref=e286]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/sandesh-singhal-aa848718a/
+                        - generic [ref=e287]:
+                          - link [ref=e288] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/sandesh-singhal-aa848718a/
+                            - figure [ref=e289]
+                          - generic [ref=e290]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/sandesh-singhal-aa848718a/
+                            - paragraph [ref=e291]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/sandesh-singhal-aa848718a/
+                              - link "Sandesh Singhal Verified" [ref=e292] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/sandesh-singhal-aa848718a/
+                                - text: Sandesh Singhal
+                                - img "Verified" [ref=e293]
+                              - generic [ref=e295]: • 3rd+
+                            - paragraph [ref=e297]: Software Engineer @Fibr AI
+                            - paragraph [ref=e299]: Bengaluru, Karnataka, India
+                  - listitem [ref=e305]:
+                    - generic [ref=e306]:
+                      - link:
+                        - /url: https://www.linkedin.com/
+                      - generic [ref=e307]:
+                        - link:
+                          - /url: https://www.linkedin.com/
+                        - generic [ref=e308]:
+                          - link "LinkedIn Member Software Engineer @Oppex AI Bengaluru, Karnataka, India" [ref=e309] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/
+                            - figure [ref=e310]
+                            - generic [ref=e311]:
+                              - paragraph [ref=e312]: LinkedIn Member
+                              - paragraph [ref=e314]: Software Engineer @Oppex AI
+                              - paragraph [ref=e316]: Bengaluru, Karnataka, India
+                          - generic [ref=e317]:
+                            - link:
+                              - /url: https://www.linkedin.com/
+                            - generic [ref=e318]:
+                              - link:
+                                - /url: https://www.linkedin.com/
+                              - link "View" [ref=e319] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/
+                                - generic [ref=e322]: View
+                  - listitem [ref=e328]:
+                    - generic [ref=e329]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/siddhartha-balusu-9a1b73111/
+                      - generic [ref=e330]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/siddhartha-balusu-9a1b73111/
+                        - generic [ref=e331]:
+                          - link [ref=e332] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/siddhartha-balusu-9a1b73111/
+                            - figure [ref=e333]
+                          - generic [ref=e334]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/siddhartha-balusu-9a1b73111/
+                            - paragraph [ref=e335]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/siddhartha-balusu-9a1b73111/
+                              - link "Siddhartha balusu Verified" [ref=e336] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/siddhartha-balusu-9a1b73111/
+                                - text: Siddhartha balusu
+                                - img "Verified" [ref=e337]
+                              - generic [ref=e339]: • 3rd+
+                            - paragraph [ref=e341]: Software Engineer at Nexthop AI
+                            - paragraph [ref=e343]: Bengaluru, Karnataka, India
+                - generic [ref=e350]:
+                  - generic [ref=e351]:
+                    - paragraph [ref=e352]: Are these results helpful?
+                    - paragraph [ref=e353]: Your feedback helps us improve search results
+                  - generic [ref=e354]:
+                    - button "Are these results helpful? Yes, these search results are helpful" [ref=e355] [cursor=pointer]
+                    - button "Are these results helpful? No, these search results are not helpful" [ref=e358] [cursor=pointer]
+                - generic [ref=e362]:
+                  - list [ref=e363]:
+                    - listitem [ref=e364]:
+                      - button "Page 1" [ref=e365] [cursor=pointer]:
+                        - generic [ref=e366]: "1"
+                    - listitem [ref=e367]:
+                      - button "Page 2" [ref=e368] [cursor=pointer]:
+                        - generic [ref=e369]: "2"
+                    - listitem [ref=e370]:
+                      - button "Page 3" [ref=e371] [cursor=pointer]:
+                        - generic [ref=e372]: "3"
+                    - listitem [ref=e373]:
+                      - button "Page 4" [ref=e374] [cursor=pointer]:
+                        - generic [ref=e375]: "4"
+                    - listitem [ref=e376]:
+                      - button "Page 5" [ref=e377] [cursor=pointer]:
+                        - generic [ref=e378]: "5"
+                    - listitem [ref=e379]:
+                      - button "Page 6" [ref=e380] [cursor=pointer]:
+                        - generic [ref=e381]: "6"
+                    - listitem [ref=e382]:
+                      - button "Page 7" [ref=e383] [cursor=pointer]:
+                        - generic [ref=e384]: "7"
+                    - listitem [ref=e385]:
+                      - button "Page 8" [ref=e386] [cursor=pointer]:
+                        - generic [ref=e387]: "8"
+                    - listitem [ref=e388]:
+                      - button "Page 9" [ref=e389] [cursor=pointer]:
+                        - generic [ref=e390]: "9"
+                    - listitem [ref=e391]:
+                      - button "Page 10" [ref=e392] [cursor=pointer]:
+                        - generic [ref=e393]: "10"
+                  - button "Next" [ref=e394] [cursor=pointer]:
+                    - generic [ref=e397]: Next
+            - complementary "Aside" [ref=e398]

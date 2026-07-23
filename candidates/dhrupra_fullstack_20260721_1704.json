@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Ashish Gupta",
+    "linkedin_url": "https://www.linkedin.com/in/ashish-gupta-6806b6310",
+    "headline": "Full Stack Developer | React.js |Tailwind CSS | Node.js| Express.js | MongoDB | Rest APIs|",
+    "location": "Faridabad, Haryana, India",
+    "connection_degree": "2nd",
+    "mutual_connections": "Ankit Madaan is a mutual connection",
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "node.js developer express",
+    "fit_score": 58,
+    "fit_indicators": [
+      "react typescript",
+      "node express",
+      "sql nosql",
+      "fullstack",
+      "html css",
+      "2nd connection"
+    ]
+  },
+  {
+    "name": "Dhruv Singh",
+    "linkedin_url": "https://www.linkedin.com/in/dhruv-singh-47859721a",
+    "headline": "Software Engineer @Samsung R&D | Full Stack Developer | C++ | C | C# |  .NET | React.js | Rest APIs | Java | Aws | Sql",
+    "location": "Gurugram, Haryana, India",
+    "connection_degree": "2nd",
+    "mutual_connections": "Ankit Madaan is a mutual connection",
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "software engineer react node sql",
+    "fit_score": 53,
+    "fit_indicators": [
+      "react typescript",
+      "node express",
+      "sql nosql",
+      "fullstack",
+      "2nd connection"
+    ]
+  },
+  {
+    "name": "TANUPRIYA SAXENA",
+    "linkedin_url": "https://www.linkedin.com/in/tanupriya-saxena-7934991bb",
+    "headline": "Ex-Software Engineer @ Persistent Systems | Full-Stack Developer with 2+ Years of Experience | Java, React.js, Node.js, Spring Boot",
+    "location": "Pune District, Maharashtra, India",
+    "connection_degree": "2nd",
+    "mutual_connections": "Ankit Madaan is a mutual connection",
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "full stack developer react node",
+    "fit_score": 48,
+    "fit_indicators": [
+      "react typescript",
+      "node express",
+      "fullstack",
+      "1-3 yoe signal",
+      "2nd connection"
+    ]
+  },
+  {
+    "name": "Jitendra Singh Chauhan",
+    "linkedin_url": "https://www.linkedin.com/in/jitendra-singh-chauhan-b496492a1",
+    "headline": "MERN Stack Developer | Node.js | React.js | Next.js | MongoDB | Express",
+    "location": "Noida, Uttar Pradesh, India",
+    "connection_degree": "2nd",
+    "mutual_connections": "Gaayan Verma is a mutual connection",
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "node.js developer express",
+    "fit_score": 43,
+    "fit_indicators": [
+      "react typescript",
+      "node express",
+      "sql nosql",
+      "2nd connection"
+    ]
+  },
+  {
+    "name": "Parth Marfatia",
+    "linkedin_url": "https://www.linkedin.com/in/parthmarfatia",
+    "headline": "Senior Software Developer | React | Node | Express | Next.js at Apptware",
+    "location": "Current: Senior Software Engineer at Apptware - \u2022 Led development of scalable full stack web applications using React, Next.js, Node.js, Express.js...",
+    "connection_degree": "2nd",
+    "mutual_connections": "Adithyaa Sunder is a mutual connection",
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "node.js developer express",
+    "fit_score": 43,
+    "fit_indicators": [
+      "react typescript",
+      "node express",
+      "fullstack",
+      "2nd connection"
+    ]
+  },
+  {
+    "name": "Divesh Rajput",
+    "linkedin_url": "https://www.linkedin.com/in/divesh-rajput",
+    "headline": "Software Engineer | Frontend Developer | React | Angular",
+    "location": "Gurugram, Haryana, India",
+    "connection_degree": "2nd",
+    "mutual_connections": "Ankit Madaan is a mutual connection",
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "frontend developer react typescript",
+    "fit_score": 18,
+    "fit_indicators": [
+      "react typescript",
+      "2nd connection"
+    ]
+  },
+  {
+    "name": "Simran Ahuja",
+    "linkedin_url": "https://www.linkedin.com/in/simran-ahuja-5222ab184",
+    "headline": "Senior Engineer at Nagarro | Frontend Developer | React Js | React Native | Angular 2+ | Redux | RxJs | Svelte | JavaScript | TypeScript",
+    "location": "Gurugram, Haryana, India",
+    "connection_degree": "2nd",
+    "mutual_connections": "Ankit Madaan is a mutual connection",
+    "followers": null,
+    "is_premium": false,
+    "is_verified": false,
+    "search_query": "frontend developer react typescript",
+    "fit_score": 18,
+    "fit_indicators": [
+      "react typescript",
+      "2nd connection"
+    ]
+  }
+]

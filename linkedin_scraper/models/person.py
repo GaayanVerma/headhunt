@@ -27,6 +27,9 @@ class Experience(BaseModel):
     duration: Optional[str] = None
     location: Optional[str] = None
     description: Optional[str] = None
+    employment_type: Optional[str] = None
+    """LinkedIn's own employment-type label (e.g. "Full-time", "Internship",
+    "Contract") when the profile's HTML exposes it. Never guessed."""
 
 
 class Education(BaseModel):
@@ -67,6 +70,7 @@ class Person(BaseModel):
     interests: List[Interest] = Field(default_factory=list)
     accomplishments: List[Accomplishment] = Field(default_factory=list)
     contacts: List[Contact] = Field(default_factory=list)
+    skills: List[str] = Field(default_factory=list)
 
     @field_validator("linkedin_url")
     @classmethod

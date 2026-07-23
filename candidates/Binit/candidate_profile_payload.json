@@ -1,0 +1,255 @@
+{
+  "candidates": {
+    "id": "gen_random_uuid()",
+    "org_id": "<org_id>",
+    "name": "Binit Singh",
+    "headline": "Software Development Engineer · BlueStone Jewellery",
+    "location": "New Delhi, India",
+    "summary": "SDE with 3+ years building scalable microservices and AI-powered products in production. M.Tech Gold Medalist from IIT BHU (10.00 CGPA). Delivered Rs. 30L SaaS savings, 24% revenue uplift, and 43% reduction in manual effort. Transitioning toward Applied AI.",
+    "narrative": "Backend engineer with three years of production experience building microservices, event-driven systems, and AI-powered tooling at BlueStone Jewellery. Engineered TrueCRM from scratch — an in-house retail CRM that replaced a paid SaaS product, saving Rs. 30L annually and driving a 24% increase in customer turnover. Added an AI call-analysis layer using Kafka and Gemini LLM, reducing post-call manual effort by 43%. Alongside full-time work, independently launched Manga Colorizer Pro — a monetized AI SaaS platform that scaled to 2,000+ users and 100+ paid subscribers — and built AARA, a fully on-device Android AI assistant now live on Google Play. Academically exceptional: Gold Medalist and Rank 1 in M.Tech CSE at IIT BHU with a perfect 10.00 CGPA; AIR 270 in GATE CS out of 100,000+ candidates. Has a solid foundation in vector DBs and RAG from personal projects and is actively transitioning toward Applied AI roles. Will need some ramp-up on production LLM infrastructure depth but brings the right fundamentals and a strong track record of shipping.",
+    "photo_url": null,
+    "resume_filename": "Binit_Singh_Backend_SDE_Resume.pdf",
+    "resume_url": null,
+    "resume_key": null,
+    "total_years_experience": 3.1,
+    "raw_text": "Software Development Engineer with 3+ years building scalable microservices, event-driven systems, and AI-powered products in production. Delivered measurable business outcomes including Rs. 30L annual SaaS savings, 24% revenue uplift, 43% reduction in manual effort, and 60% reduction in database footprint. M.Tech CSE Gold Medalist, IIT BHU."
+  },
+
+  "candidate_education": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "school": "IIT (BHU) Varanasi",
+      "degree": "M.Tech",
+      "field": "Computer Science & Engineering",
+      "year": "2023"
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "school": "GTBIT, Delhi (GGSIPU)",
+      "degree": "B.Tech",
+      "field": "Computer Science & Engineering",
+      "year": "2021"
+    }
+  ],
+
+  "candidate_experiences": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "title": "Application Developer Intern",
+      "company": "E-Health Solutions",
+      "start_date": "Jun 2019",
+      "end_date": "Jul 2019",
+      "description": "Built a KYC automation tool using Python and Tesseract-OCR to extract and validate user identity data from national ID cards, significantly reducing manual verification effort.",
+      "context": "Internship",
+      "tag_kind": null,
+      "tag_label": null,
+      "note": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "title": "Software Development Engineer",
+      "company": "BlueStone Jewellery & Lifestyle",
+      "start_date": "Jun 2023",
+      "end_date": null,
+      "description": "Engineered TrueCRM, an in-house retail CRM ecosystem replacing external FreshSales SaaS — saving Rs. 30L annually and increasing customer turnover by 24%. Built an AI-driven call analysis microservice using Kafka and Gemini LLM, reducing manual post-call effort by 43%. Designed two native Android system apps (Dialer + RAT) integrated with Android Management API. Engineered a reusable Spring Boot archival framework adopted across 4+ services, reducing active DB footprint by ~60%. Set up end-to-end observability with Grafana, Prometheus, Tempo, Loki, and OpenTelemetry.",
+      "context": "Consumer Startup",
+      "tag_kind": "transition",
+      "tag_label": "Academia → Industry",
+      "note": "First full-time role post M.Tech; broad ownership across CRM, AI, mobile, and infra"
+    }
+  ],
+
+  "candidate_skill_groups": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "label": "Languages",
+      "skills": ["Java", "Kotlin", "Python", "C++", "JavaScript"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "label": "Backend",
+      "skills": ["Spring Boot", "FastAPI", "REST APIs", "Microservices", "Event-Driven Architecture"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 2,
+      "label": "Messaging & Async",
+      "skills": ["Apache Kafka", "RabbitMQ", "Asynchronous Processing", "Message Queues"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 3,
+      "label": "Cloud & DevOps",
+      "skills": ["AWS S3", "AWS EC2", "GCP", "Azure", "Docker", "Jenkins", "CI/CD", "OpenTelemetry"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 4,
+      "label": "Databases",
+      "skills": ["MySQL", "PostgreSQL", "MongoDB", "Redis", "AWS S3", "ObjectBox", "Room"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 5,
+      "label": "AI / ML",
+      "skills": ["PyTorch", "LLMs", "RAG", "Gemini API", "BERT", "FastAPI inference"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 6,
+      "label": "Frontend & Mobile",
+      "skills": ["ReactJS", "Next.js", "Android (Native)"]
+    }
+  ],
+
+  "candidate_projects": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "name": "Manga Colorizer Pro",
+      "kind": "SaaS",
+      "summary": "AI-powered manga colorization and super-resolution SaaS platform with browser-based reading workflows. Independently launched and monetized — scaled to 2,000+ users and 100+ paid subscribers via subscription model.",
+      "tech": ["Python", "AI/ML", "SaaS", "Subscription"],
+      "href": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "name": "AARA — Android Multi-Agent AI Assistant",
+      "kind": "Google Play",
+      "summary": "Personalized hands-free Android AI assistant with multi-LLM routing and full on-device flow: Gemma LiteRT, Gemma embeddings, Piper/Sherpa-ONNX TTS, ObjectBox vector DB for RAG. Live on Google Play.",
+      "tech": ["Kotlin", "Gemma", "RAG", "ObjectBox", "TTS", "Android"],
+      "href": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 2,
+      "name": "Wireless Intrusion Detection System",
+      "kind": "Research",
+      "summary": "Real-time wireless attack detection using GRU-based sequence modeling, achieving 98% accuracy on live traffic.",
+      "tech": ["Python", "PyTorch", "GRU", "Deep Learning"],
+      "href": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 3,
+      "name": "Feedback Decentralized Application",
+      "kind": "Research",
+      "summary": "Blockchain-based anonymous feedback platform with fine-tuned BERT deployed on Azure, React frontend, and Ethereum smart contract on Ropsten testnet.",
+      "tech": ["BERT", "Azure", "React", "Ethereum", "Solidity"],
+      "href": null
+    }
+  ],
+
+  "candidate_external_sources": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "category": "LinkedIn",
+      "label": "Binit Singh",
+      "href": "https://www.linkedin.com/in/binit-57-singh/",
+      "subtitle": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "category": "GitHub",
+      "label": "BinitDOX",
+      "href": "https://github.com/BinitDOX",
+      "subtitle": null
+    }
+  ],
+
+  "evaluations": {
+    "id": "gen_random_uuid()",
+    "org_id": "<org_id>",
+    "role_id": "<role_id>",
+    "candidate_id": "<candidate_id>",
+    "overall_score": 70,
+    "recommendation": "possible_match",
+    "decision": null,
+    "model": "claude-sonnet-4-6"
+  },
+
+  "evaluation_readiness": [
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "ownership",
+      "score": 78,
+      "summary": "Strong ownership signals at work and in personal projects — independently launched and monetized a SaaS product alongside full-time employment.",
+      "evidence": [
+        "Engineered TrueCRM end-to-end — replaced a paid SaaS product, saving Rs. 30L annually",
+        "Independently launched Manga Colorizer Pro — monetized SaaS with 2,000+ users and 100+ paid subscribers",
+        "Built AARA, a fully on-device Android AI assistant, now live on Google Play",
+        "Designed and shipped Android Dialer + RAT system apps integrated with enterprise device policy",
+        "Drove archival framework adopted across 4+ internal services"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "ambition",
+      "score": 68,
+      "summary": "Academic excellence at IIT BHU signals strong drive; personal projects show hunger beyond the day job, but career has been single-company post-graduation.",
+      "evidence": [
+        "Gold Medal and Rank 1 in M.Tech CSE at IIT BHU — perfect 10.00 CGPA across all semesters",
+        "AIR 270 in GATE CS out of 100,000+ candidates",
+        "3 research publications (IEEE TNNLS, Expert Systems, ICPR 2024)",
+        "Launched two independent products (SaaS + mobile app) while employed full-time",
+        "Actively seeking transition into Applied AI — signal of intentional career evolution"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "execution",
+      "score": 76,
+      "summary": "Quantified impact across all major work deliverables; shipped independently monetized products with real users.",
+      "evidence": [
+        "Rs. 30L annual SaaS savings from TrueCRM — replacing FreshSales",
+        "24% revenue uplift across physical retail operations post-CRM deployment",
+        "43% reduction in manual post-call effort via AI call-analysis microservice",
+        "60% reduction in active database footprint via archival framework",
+        "Scaled Manga Colorizer Pro to 2,000+ users and 100+ paid subscribers independently"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "learnability",
+      "score": 72,
+      "summary": "Crosses backend, mobile, AI/ML, and DevOps domains; actively upskilling into Applied AI with on-device LLM and RAG work in personal projects.",
+      "evidence": [
+        "Built across Java/Spring Boot backend, native Android, ReactJS frontend, and AI inference in a single role",
+        "Implemented on-device RAG with Gemma embeddings and ObjectBox vector DB in AARA",
+        "Added Gemini LLM + Kafka event-driven AI pipeline to production stack at BlueStone",
+        "Research publications span deep learning (GRU), NLP (BERT), and blockchain",
+        "Set up full observability stack (Grafana, Prometheus, Tempo, Loki, OpenTelemetry) independently"
+      ]
+    }
+  ]
+}

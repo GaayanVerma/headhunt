@@ -86,19 +86,22 @@ async def detect_rate_limit(page: Page) -> None:
     except Exception:
         pass
     
-    # Check for rate limit messages
+    # Check for rate limit messages (only on non-profile pages to avoid false positives)
     try:
         body_text = await page.locator('body').text_content(timeout=1000)
         if body_text:
             body_lower = body_text.lower()
-            if any(phrase in body_lower for phrase in [
-                'too many requests',
-                'rate limit',
-                'slow down',
-                'try again later'
-            ]):
+            # 'try again later' is too broad; require more specific signals
+            specific_phrases = ['too many requests', 'rate limit exceeded', 'slow down']
+            # 'try again later' only triggers if paired with a short page (actual error page)
+            is_short_page = len(body_lower) < 5000
+            if any(phrase in body_lower for phrase in specific_phrases) or (
+                is_short_page and 'try again later' in body_lower
+            ):
+                logger.warning(f"Rate limit page URL: {page.url}")
+                logger.warning(f"Page content snippet: {body_lower[:500]}")
                 raise RateLimitError(
-                    "Rate limit message detected on page.",
+                    f"Rate limit message detected on page (url={page.url}).",
                     suggested_wait_time=1800  # 30 minutes
                 )
     except PlaywrightTimeoutError:

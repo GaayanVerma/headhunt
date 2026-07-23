@@ -1,0 +1,265 @@
+{
+  "candidates": {
+    "id": "gen_random_uuid()",
+    "org_id": "<org_id>",
+    "name": "Tushar Jain",
+    "headline": "AI / Backend Engineer · Pixis AI",
+    "location": "Bengaluru, Karnataka, India",
+    "summary": "AI engineer with 3+ years building production RAG systems and fintech infrastructure across early-stage startups. Founding engineer background, strong ownership signals, BITS Pilani CS + ACM ICPC Asia Regionalist.",
+    "narrative": "Backend and AI engineer with three years of experience building production RAG systems, agentic workflows, and financial infrastructure across early-stage and growth startups. Started at Amazon AWS and InMobi, then made a deliberate move to Senu as the founding engineer — shipping a satellite imagery tool and executing a full healthcare pivot in under six weeks. At Dexif, led backend for a bond trading platform handling INR 5,000+ Cr in annual transactions and automated KYC for 200,000+ clients. Now at Pixis AI, building PRISM's AI layer — scoped RAG, prompt libraries, and campaign intelligence serving 50+ enterprise brands. Technically deep in LLM infrastructure: demonstrates retrieval discipline (RRF, reflection loops, grounding without citation), production data hygiene, and end-to-end ownership from design to deployment. ACM ICPC Asia Regionalist (AIR 97) and KVPY Fellow signal foundational problem-solving ability. Optimizes for ownership and complexity of the problem over title or stability — a consistent thread across every career move.",
+    "photo_url": null,
+    "resume_filename": "Resume_Tushar_AI.pdf",
+    "resume_url": null,
+    "resume_key": null,
+    "total_years_experience": 3.0,
+    "raw_text": "AI Engineer with 3+ years of experience building production RAG systems, agentic workflows, and backend infrastructure. Currently at Pixis AI on PRISM. Previously built a bond trading platform at Dexif, was Founding Engineer at Senu, and interned at Amazon AWS. ACM ICPC Asia Regionalist (AIR 97)."
+  },
+
+  "candidate_education": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "school": "BITS Pilani, Pilani Campus",
+      "degree": "B.E. (Hons.)",
+      "field": "Computer Science",
+      "year": "2023"
+    }
+  ],
+
+  "candidate_experiences": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "title": "Research Intern",
+      "company": "DeepBlink",
+      "start_date": "Jun 2021",
+      "end_date": "Dec 2021",
+      "description": "Research internship at a US-based lab.",
+      "context": "Research",
+      "tag_kind": null,
+      "tag_label": null,
+      "note": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "title": "SDE Intern",
+      "company": "Amazon AWS",
+      "start_date": "Jun 2022",
+      "end_date": "Aug 2022",
+      "description": "Automated Jenkins pipeline for daily TPC-DS benchmarking on Presto — surfaced regressions 5 days earlier. Built Python utility comparing 100+ benchmark runs, reducing divergence investigation from hours to minutes for the EMR Presto team.",
+      "context": "Big Tech",
+      "tag_kind": null,
+      "tag_label": null,
+      "note": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 2,
+      "title": "Analyst Intern",
+      "company": "InMobi",
+      "start_date": "Jan 2023",
+      "end_date": "Jun 2023",
+      "description": "Analyst internship at InMobi, a growth-stage ad tech company.",
+      "context": "Growth Startup",
+      "tag_kind": null,
+      "tag_label": null,
+      "note": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 3,
+      "title": "Founding Engineer",
+      "company": "Senu",
+      "start_date": "Jun 2023",
+      "end_date": "Jan 2024",
+      "description": "First engineering hire. Built satellite-imagery analysis tool using SAM-based custom segmentation across 10+ geospatial workflows (Figma to cloud deployment). Drove healthcare pivot in under 6 weeks: shipped longevity mobile app with LLM personalization, 2 EHR integrations, 3 health tracker devices, 50+ beta users.",
+      "context": "Pre-Seed",
+      "tag_kind": "transition",
+      "tag_label": "Big Tech → 0-to-1",
+      "note": "First engineering hire; built product from Figma to cloud"
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 4,
+      "title": "Software Engineer",
+      "company": "Dexif",
+      "start_date": "Feb 2024",
+      "end_date": "Aug 2025",
+      "description": "Led backend for bond trading platform: 30,000+ bonds, INR 5,000+ Cr annual transactions. Automated KYC onboarding for 200,000+ clients. Built real-time broker/RM chat over WebSockets for 1,000+ active brokers. Shipped financial modules eliminating 30 hrs/week of manual reconciliation.",
+      "context": "Fintech Startup",
+      "tag_kind": "pivot",
+      "tag_label": "Domain Pivot",
+      "note": "Startup → Fintech; led full backend"
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 5,
+      "title": "Software Engineer",
+      "company": "Pixis AI",
+      "start_date": "Aug 2025",
+      "end_date": null,
+      "description": "Built PRISM's Prompt Library: versioned repo of 200+ prompts with semantic search (OpenAI embeddings + pgvector) across 9 ad-platform integrations. Built Campaign Portfolio tracking system — 2.5M+ campaign records, 70% reduction in manual reporting time. Implemented scoped RAG layer for brand/account context supporting 50+ enterprise brands.",
+      "context": "AI Platform / Growth",
+      "tag_kind": "transition",
+      "tag_label": "Fintech → AI Platform",
+      "note": null
+    }
+  ],
+
+  "candidate_skill_groups": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "label": "AI / LLM",
+      "skills": ["LangChain", "LangGraph", "RAG", "Agentic Workflows", "LangSmith", "OpenAI API", "MCP", "PyTorch", "Prompt Engineering"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "label": "Languages",
+      "skills": ["Python", "SQL", "TypeScript", "JavaScript", "Java"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 2,
+      "label": "Backend",
+      "skills": ["FastAPI", "Django", "Node.js", "Express.js", "REST APIs", "Microservices", "Distributed Systems", "Kafka"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 3,
+      "label": "Frontend",
+      "skills": ["React", "Next.js"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 4,
+      "label": "Databases",
+      "skills": ["MySQL", "PostgreSQL", "MongoDB", "Redis", "pgvector"]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 5,
+      "label": "Cloud & Infra",
+      "skills": ["AWS", "Docker", "Kubernetes", "CI/CD"]
+    }
+  ],
+
+  "candidate_projects": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "name": "AgentLens",
+      "kind": "GitHub",
+      "summary": "LangGraph agentic RAG with hybrid retrieval, RRF fusion, reflection-based gap recovery, claim verification, and SSE streaming. Includes semantic query caching, prompt-injection guardrails, and LangSmith tracing for observability.",
+      "tech": ["Python", "LangGraph", "FastAPI", "pgvector", "LangSmith", "React"],
+      "href": null
+    },
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 1,
+      "name": "CodeSentinel",
+      "kind": "GitHub",
+      "summary": "Multi-agent PR review system with GitHub webhook orchestration, structured review outputs, QLoRA fine-tuning, and vLLM-compatible model serving. Custom eval harness tracking precision, recall, F1, latency, and GPT-4o-as-judge scores.",
+      "tech": ["Python", "QLoRA", "vLLM", "LangGraph", "FastAPI"],
+      "href": null
+    }
+  ],
+
+  "candidate_external_sources": [
+    {
+      "id": "gen_random_uuid()",
+      "candidate_id": "<candidate_id>",
+      "sort_order": 0,
+      "category": "LinkedIn",
+      "label": "Tushar Jain",
+      "href": "https://www.linkedin.com/in/tushar-jain-1003/",
+      "subtitle": null
+    }
+  ],
+
+  "evaluations": {
+    "id": "gen_random_uuid()",
+    "org_id": "<org_id>",
+    "role_id": "<role_id>",
+    "candidate_id": "<candidate_id>",
+    "overall_score": 79,
+    "recommendation": "strong_match",
+    "decision": null,
+    "model": "claude-sonnet-4-6"
+  },
+
+  "evaluation_readiness": [
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "ownership",
+      "score": 82,
+      "summary": "Consistent pattern of building from scratch and owning end-to-end delivery across every role.",
+      "evidence": [
+        "Founding Engineer at Senu — first engineering hire, took product from Figma to cloud deployment solo",
+        "Led full healthcare pivot in under 6 weeks with zero ramp time",
+        "Built PRISM Prompt Library independently — identified the pain point, designed and shipped it",
+        "Built CodeSentinel and AgentLens with production-grade architecture including eval harnesses and fine-tuning pipelines",
+        "Led backend for Dexif bond platform handling INR 5,000+ Cr annual transactions"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "ambition",
+      "score": 74,
+      "summary": "Repeatedly chose harder, higher-ownership environments over safer paths; willingness to join 0-to-1 companies post Big Tech is a strong signal.",
+      "evidence": [
+        "Left Amazon AWS / InMobi to join Senu as Founding Engineer (pre-seed, zero safety net)",
+        "KVPY Fellowship — Top 1,000 out of 150,000 candidates",
+        "NTSE Scholarship — Top 1,000 out of 1,000,000 candidates",
+        "ACM ICPC Asia Regionalist AIR 97 — serious competitive programming background",
+        "Each job hop increases ownership scope, not just compensation"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "execution",
+      "score": 78,
+      "summary": "Ships measurable outcomes — quantified impact across every role, fast ramp times, complex systems in compressed timelines.",
+      "evidence": [
+        "Healthcare pivot shipped in <6 weeks with 2 EHR integrations, 3 health devices, 50+ beta users",
+        "2.5M+ campaign records processed; 70% reduction in manual reporting time at Pixis",
+        "Eliminated 30 hrs/week of manual reconciliation at Dexif",
+        "Automated Jenkins pipeline at AWS surfaced regressions 5 days earlier",
+        "KYC onboarding automated for 200,000+ clients"
+      ]
+    },
+    {
+      "id": "gen_random_uuid()",
+      "evaluation_id": "<evaluation_id>",
+      "dimension": "learnability",
+      "score": 80,
+      "summary": "Successfully transitioned across domains, tech stacks, and company stages; strong AI adoption signal with cutting-edge tooling.",
+      "evidence": [
+        "Moved from big tech (AWS) → analyst (InMobi) → 0-to-1 startup → fintech → AI platform",
+        "Adopted cutting-edge AI stack: LangGraph, pgvector, vLLM, QLoRA, MCP — not just API wrappers",
+        "Executed full domain pivot (geospatial → healthcare) in under 6 weeks",
+        "Research background (DeepBlink) → product engineering → infra → AI platform"
+      ]
+    }
+  ]
+}

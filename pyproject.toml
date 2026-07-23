@@ -38,6 +38,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+export = [
+    "openpyxl>=3.1.0",
+]
 dev = [
     "pytest>=7.0.0",
     "pytest-asyncio>=0.21.0",
@@ -45,6 +48,7 @@ dev = [
     "build>=1.0.0",
     "twine>=4.0.0",
     "wheel>=0.40.0",
+    "openpyxl>=3.1.0",
 ]
 
 [project.urls]
@@ -55,12 +59,3 @@ Issues = "https://github.com/joeyism/linkedin_scraper/issues"
 
 [tool.setuptools]
 packages = ["linkedin_scraper", "linkedin_scraper.core", "linkedin_scraper.models", "linkedin_scraper.scrapers"]
-
-[tool.pytest.ini_options]
-minversion = "7.0"
-addopts = "-ra -q --strict-markers"
-testpaths = ["tests"]
-markers = [
-    "unit: Unit tests that don't require external services",
-    "integration: Integration tests that require LinkedIn session",
-]

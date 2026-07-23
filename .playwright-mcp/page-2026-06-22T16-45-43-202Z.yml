@@ -1,0 +1,346 @@
+- generic [ref=e2]:
+  - heading "0 notifications" [level=2] [ref=e3]
+  - generic [ref=e4]:
+    - generic:
+      - generic "Skip navigation menu":
+        - button "Close jump menu" [ref=e6] [cursor=pointer]
+    - generic [ref=e9]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - button [ref=e15] [cursor=pointer]
+          - generic [ref=e17]:
+            - status [ref=e18]
+            - search [ref=e19]:
+              - textbox "Search" [ref=e23]
+          - generic [ref=e25]:
+            - navigation [ref=e29]:
+              - list [ref=e30]:
+                - listitem [ref=e31]:
+                  - button "Home, 1 new notification" [ref=e32] [cursor=pointer]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Home
+                - listitem [ref=e38]:
+                  - link "My Network, 0 new notifications" [ref=e39] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/mynetwork
+                    - img [ref=e41]
+                    - generic [ref=e44]: My Network
+                - listitem [ref=e45]:
+                  - link "Jobs, 0 new notifications" [ref=e46] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/jobs/
+                    - img [ref=e48]
+                    - generic [ref=e51]: Jobs
+                - listitem [ref=e52]:
+                  - link "Messaging, 0 new notifications" [ref=e53] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/messaging/
+                    - img [ref=e55]
+                    - generic [ref=e58]: Messaging
+                - listitem [ref=e59]:
+                  - link "Notifications, 18 new notifications" [ref=e60] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/notifications/
+                    - generic [ref=e61]:
+                      - img [ref=e62]
+                      - generic [ref=e64]: "18"
+                    - generic [ref=e66]: Notifications
+                - listitem [ref=e67]:
+                  - button "Me" [ref=e68] [cursor=pointer]:
+                    - figure [ref=e70]
+                    - generic [ref=e72]: Me
+            - generic [ref=e75]:
+              - navigation [ref=e76]:
+                - list [ref=e77]:
+                  - listitem [ref=e78]:
+                    - button "For Business" [ref=e79] [cursor=pointer]:
+                      - img [ref=e81]
+                      - generic [ref=e84]: For Business
+              - link "Try Premium for ₹0" [ref=e87] [cursor=pointer]:
+                - /url: https://www.linkedin.com/
+                - paragraph [ref=e91]: Try Premium for ₹0
+      - generic [ref=e92]:
+        - toolbar [ref=e93]
+        - main [ref=e107]:
+          - generic [ref=e112]:
+            - region "Primary content" [ref=e113]:
+              - generic [ref=e116]:
+                - list [ref=e119]:
+                  - listitem [ref=e121]:
+                    - generic [ref=e122]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/pavanbaddi/
+                      - generic [ref=e123]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/pavanbaddi/
+                        - generic [ref=e124]:
+                          - link [ref=e125] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/pavanbaddi/
+                            - figure [ref=e126]
+                          - generic [ref=e127]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/pavanbaddi/
+                            - paragraph [ref=e128]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/pavanbaddi/
+                              - link "Pavan Baddi" [ref=e129] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/pavanbaddi/
+                              - generic [ref=e130]: • 3rd+
+                            - paragraph [ref=e132]: Senior UI Engineer @ Impetus | React JS, Node Js, Typescript, Azure and GenAI
+                            - paragraph [ref=e134]: Bengaluru, Karnataka, India
+                        - paragraph [ref=e141]:
+                          - link "539 followers" [ref=e143] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/search/results/people/?origin=SHARED_FOLLOWERS_CANNED_SEARCH&followerOf=%5B%22ACoAAAkaoBUB1s618A_crS6Nf9S6SR5-wMv763M%22%5D
+                  - listitem [ref=e145]:
+                    - generic [ref=e146]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/gaurav-ghadge-genai-agenticai-developer/
+                      - generic [ref=e147]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/gaurav-ghadge-genai-agenticai-developer/
+                        - generic [ref=e148]:
+                          - link [ref=e149] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/gaurav-ghadge-genai-agenticai-developer/
+                            - figure [ref=e150]
+                          - generic [ref=e151]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/gaurav-ghadge-genai-agenticai-developer/
+                            - paragraph [ref=e152]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/gaurav-ghadge-genai-agenticai-developer/
+                              - link "Gaurav G. Verified" [ref=e153] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/gaurav-ghadge-genai-agenticai-developer/
+                                - text: Gaurav G.
+                                - img "Verified" [ref=e154]
+                              - generic [ref=e156]: • 3rd+
+                            - paragraph [ref=e158]: Agentic AI Engineer @ Indegene | Generative AI Systems | 5+ Yrs AI Experience | LLMs • RAG • LangGraph
+                            - paragraph [ref=e160]: Bengaluru, Karnataka, India
+                  - generic [ref=e171]:
+                    - paragraph [ref=e173]: Easily find people who are actively hiring
+                    - paragraph [ref=e174]: Search more efficiently with advanced search filters
+                    - link "Try Premium for ₹0" [ref=e175] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/premium/products/?upsellOrderOrigin=Tracking%3Av1%3Apremium_advanced_people_search_filter_inline_result_jobseeker_upsell%3AJob+Seeker%3AIn-Product&utype=job_marketing&referenceId=EQcg5xosQj%2BPjGQ62jMiqw%3D%3D&isSS=false&upsellSlotId=ADVANCED_PEOPLE_SEARCH_FILTER_INLINE_RESULT
+                      - generic [ref=e177]: Try Premium for ₹0
+                    - paragraph [ref=e178]: 1-month free trial. Easy to cancel. We’ll remind you 7 days before your trial ends.
+                  - listitem [ref=e180]:
+                    - generic [ref=e181]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/jatingupta1992/
+                      - generic [ref=e182]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/jatingupta1992/
+                        - generic [ref=e183]:
+                          - link [ref=e184] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/jatingupta1992/
+                            - figure [ref=e185]
+                          - generic [ref=e186]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/jatingupta1992/
+                            - paragraph [ref=e187]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/jatingupta1992/
+                              - link "JATIN GUPTA, GenAI Certified and SAFe®-Scrum Master Verified" [ref=e188] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/jatingupta1992/
+                                - text: JATIN GUPTA, GenAI Certified and SAFe®-Scrum Master
+                                - img "Verified" [ref=e189]
+                              - generic [ref=e191]: • 3rd+
+                            - paragraph [ref=e193]: Gen AI & LLM Engineer | SAFe®-Scrum Master | Machine Learning | Business and Data Analyst | Agile Leadership
+                            - paragraph [ref=e195]: Bengaluru, Karnataka, India
+                  - listitem [ref=e201]:
+                    - generic [ref=e202]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/shabber-maheboob-pmp-itil-azure-genai-47580015/
+                      - generic [ref=e203]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/shabber-maheboob-pmp-itil-azure-genai-47580015/
+                        - generic [ref=e204]:
+                          - link [ref=e205] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/shabber-maheboob-pmp-itil-azure-genai-47580015/
+                            - figure [ref=e206]
+                          - generic [ref=e207]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/shabber-maheboob-pmp-itil-azure-genai-47580015/
+                            - paragraph [ref=e208]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/shabber-maheboob-pmp-itil-azure-genai-47580015/
+                              - link "Shabber Maheboob, PMP, ITIL, Azure, GenAI" [ref=e209] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/shabber-maheboob-pmp-itil-azure-genai-47580015/
+                              - generic [ref=e210]: • 3rd+
+                            - paragraph [ref=e212]: Senior Program Manager at Kyndry | AI & Digital Transformation | GenAI Strategy | Cloud Transformation | Portfolio Leadership| Delivery Manager | Engagement Manager| Scrum Master| PMP®| ITIL®| Microsoft ®|
+                            - paragraph [ref=e214]: Bengaluru, Karnataka, India
+                  - listitem [ref=e220]:
+                    - generic [ref=e221]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/remesh-c-k-gen-ai-datascientist-aws-solution-architecture-7b529014/
+                      - generic [ref=e222]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/remesh-c-k-gen-ai-datascientist-aws-solution-architecture-7b529014/
+                        - generic [ref=e223]:
+                          - link [ref=e224] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/remesh-c-k-gen-ai-datascientist-aws-solution-architecture-7b529014/
+                            - figure [ref=e225]
+                          - generic [ref=e226]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/remesh-c-k-gen-ai-datascientist-aws-solution-architecture-7b529014/
+                            - paragraph [ref=e227]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/remesh-c-k-gen-ai-datascientist-aws-solution-architecture-7b529014/
+                              - link "remesh c k (Gen AI,DataScientist, AWS Solution Architecture)" [ref=e228] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/remesh-c-k-gen-ai-datascientist-aws-solution-architecture-7b529014/
+                              - generic [ref=e229]: • 3rd+
+                            - paragraph [ref=e231]: Data Scientist
+                            - paragraph [ref=e233]: Bengaluru, Karnataka, India
+                  - listitem [ref=e239]:
+                    - generic [ref=e240]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/jagannaths2020/
+                      - generic [ref=e241]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/jagannaths2020/
+                        - generic [ref=e242]:
+                          - link [ref=e243] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/jagannaths2020/
+                            - figure [ref=e244]
+                          - generic [ref=e245]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/jagannaths2020/
+                            - paragraph [ref=e246]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/jagannaths2020/
+                              - link "Jagannath Sahoo,AWS Solutions Arch®,AI Generalist ,AIOps,Azure Cloud Architect®,DevOps,K8S,Terraform Verified" [ref=e247] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/jagannaths2020/
+                                - text: Jagannath Sahoo,AWS Solutions Arch®,AI Generalist ,AIOps,Azure Cloud Architect®,DevOps,K8S,Terraform
+                                - img "Verified" [ref=e248]
+                              - generic [ref=e250]: • 3rd+
+                            - paragraph [ref=e252]: SR LEAD SOLUTION ARCHITECT AT LUMEN(AI & Cloud Practice)
+                            - paragraph [ref=e254]: Bengaluru, Karnataka, India
+                  - listitem [ref=e260]:
+                    - generic [ref=e261]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/hemanthdc/
+                      - generic [ref=e262]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/hemanthdc/
+                        - generic [ref=e263]:
+                          - link [ref=e264] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/hemanthdc/
+                            - figure [ref=e265]
+                          - generic [ref=e266]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/hemanthdc/
+                            - paragraph [ref=e267]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/hemanthdc/
+                              - link "Hemanth Kumar DC, PMP®, CSM®, PMI-GenAI® Verified" [ref=e268] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/hemanthdc/
+                                - text: Hemanth Kumar DC, PMP®, CSM®, PMI-GenAI®
+                                - img "Verified" [ref=e269]
+                              - generic [ref=e271]: • 3rd+
+                            - paragraph [ref=e273]: PMP® | CSM® | PMI-GenAI® | Digital Transformation Leader | 18+ Years IT Program/Product Management | ex-IBM | ex-Oracle Health | ex-TechM | Gen AI Solutions | Strategic Planning | Agile Expert | Cross Functional Leader
+                            - paragraph [ref=e275]: Bengaluru, Karnataka, India
+                  - listitem [ref=e281]:
+                    - generic [ref=e282]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/er-alok-shukla/
+                      - generic [ref=e283]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/er-alok-shukla/
+                        - generic [ref=e284]:
+                          - link [ref=e285] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/er-alok-shukla/
+                            - figure [ref=e286]
+                          - generic [ref=e287]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/er-alok-shukla/
+                            - paragraph [ref=e288]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/er-alok-shukla/
+                              - link "Alok Shukla -Manager SDET /Test Automation/DevOps Java /Python /Selenium /Appium /Cucumber/API/Agile Premium" [ref=e289] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/er-alok-shukla/
+                                - text: Alok Shukla -Manager SDET /Test Automation/DevOps Java /Python /Selenium /Appium /Cucumber/API/Agile
+                                - img "Premium" [ref=e290]
+                              - generic [ref=e292]: • 3rd+
+                            - paragraph [ref=e294]: Technical Manager at HCL Tech
+                            - paragraph [ref=e296]: Bengaluru, Karnataka, India
+                  - listitem [ref=e302]:
+                    - generic [ref=e303]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/vinod-genai-078576348/
+                      - generic [ref=e304]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/vinod-genai-078576348/
+                        - generic [ref=e305]:
+                          - link [ref=e306] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/vinod-genai-078576348/
+                            - figure [ref=e307]
+                          - generic [ref=e308]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/vinod-genai-078576348/
+                            - paragraph [ref=e309]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/vinod-genai-078576348/
+                              - link "Vinod GenAI" [ref=e310] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/vinod-genai-078576348/
+                              - generic [ref=e311]: • 3rd+
+                            - paragraph [ref=e313]: Engineer at NA
+                            - paragraph [ref=e315]: Bengaluru, Karnataka, India
+                  - listitem [ref=e321]:
+                    - generic [ref=e322]:
+                      - link:
+                        - /url: https://www.linkedin.com/in/m-l-jubin-leo-csm%C2%AE-itil%C2%AE-pmi-genai-b9a76948/
+                      - generic [ref=e323]:
+                        - link:
+                          - /url: https://www.linkedin.com/in/m-l-jubin-leo-csm%C2%AE-itil%C2%AE-pmi-genai-b9a76948/
+                        - generic [ref=e324]:
+                          - link [ref=e325] [cursor=pointer]:
+                            - /url: https://www.linkedin.com/in/m-l-jubin-leo-csm%C2%AE-itil%C2%AE-pmi-genai-b9a76948/
+                            - figure [ref=e326]
+                          - generic [ref=e327]:
+                            - link:
+                              - /url: https://www.linkedin.com/in/m-l-jubin-leo-csm%C2%AE-itil%C2%AE-pmi-genai-b9a76948/
+                            - paragraph [ref=e328]:
+                              - link:
+                                - /url: https://www.linkedin.com/in/m-l-jubin-leo-csm%C2%AE-itil%C2%AE-pmi-genai-b9a76948/
+                              - link "M L Jubin Leo CSM® ITIL® PMI-GenAI" [ref=e329] [cursor=pointer]:
+                                - /url: https://www.linkedin.com/in/m-l-jubin-leo-csm%C2%AE-itil%C2%AE-pmi-genai-b9a76948/
+                              - generic [ref=e330]: • 3rd+
+                            - paragraph [ref=e332]: Portfolio/ Program/ Project management - IT projects.Domains - networking, healthcare, banking, insurance, telecom, Airports.
+                            - paragraph [ref=e334]: Bengaluru, Karnataka, India
+                - generic [ref=e341]:
+                  - generic [ref=e342]:
+                    - paragraph [ref=e343]: Are these results helpful?
+                    - paragraph [ref=e344]: Your feedback helps us improve search results
+                  - generic [ref=e345]:
+                    - button "Are these results helpful? Yes, these search results are helpful" [ref=e346] [cursor=pointer]
+                    - button "Are these results helpful? No, these search results are not helpful" [ref=e349] [cursor=pointer]
+                - generic [ref=e353]:
+                  - list [ref=e354]:
+                    - listitem [ref=e355]:
+                      - button "Page 1" [ref=e356] [cursor=pointer]:
+                        - generic [ref=e357]: "1"
+                    - listitem [ref=e358]:
+                      - button "Page 2" [ref=e359] [cursor=pointer]:
+                        - generic [ref=e360]: "2"
+                    - listitem [ref=e361]:
+                      - button "Page 3" [ref=e362] [cursor=pointer]:
+                        - generic [ref=e363]: "3"
+                    - listitem [ref=e364]:
+                      - button "Page 4" [ref=e365] [cursor=pointer]:
+                        - generic [ref=e366]: "4"
+                    - listitem [ref=e367]:
+                      - button "Page 5" [ref=e368] [cursor=pointer]:
+                        - generic [ref=e369]: "5"
+                    - listitem [ref=e370]:
+                      - button "Page 6" [ref=e371] [cursor=pointer]:
+                        - generic [ref=e372]: "6"
+                    - listitem [ref=e373]:
+                      - button "Page 7" [ref=e374] [cursor=pointer]:
+                        - generic [ref=e375]: "7"
+                    - listitem [ref=e376]:
+                      - button "Page 8" [ref=e377] [cursor=pointer]:
+                        - generic [ref=e378]: "8"
+                    - listitem [ref=e379]:
+                      - button "Page 9" [ref=e380] [cursor=pointer]:
+                        - generic [ref=e381]: "9"
+                    - listitem [ref=e382]:
+                      - button "Page 10" [ref=e383] [cursor=pointer]:
+                        - generic [ref=e384]: "10"
+                  - button "Next" [ref=e385] [cursor=pointer]:
+                    - generic [ref=e388]: Next
+            - complementary "Aside" [ref=e389]

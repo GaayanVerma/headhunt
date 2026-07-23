@@ -1,0 +1,269 @@
+{
+  "name": "Achintya Shankhdhar",
+  "headline": "Lead ML Engineer",
+  "location": "Delhi, India",
+  "summary": "I am Machine Learning Engineer, with expertise in the area of Natural Language Processing and Speech Processing.\nI am interested in solving business problems and building scalable ML systems",
+  "totalYearsExperience": 9.0,
+  "experiences": [
+    {
+      "title": "Undergraduate Researcher, Advance Process Control Lab",
+      "company": "Netaji Subhas Institute of Technology",
+      "startDate": "May 2018",
+      "endDate": "Jul 2018",
+      "context": "Education",
+      "tag": {
+        "kind": "function",
+        "label": "Functional pivot"
+      },
+      "note": "Into academic research"
+    },
+    {
+      "title": "Intern",
+      "company": "LeanTrack: Student Startup Community",
+      "startDate": "Oct 2017",
+      "endDate": "Sep 2018",
+      "context": "Seed",
+      "tag": {
+        "kind": "transition",
+        "label": "Stage transition"
+      },
+      "note": "Student startup community"
+    },
+    {
+      "title": "Autonomous Driving Software Engineer",
+      "company": "ARES Robotics Mars Rover NSIT",
+      "startDate": "Aug 2019",
+      "endDate": "Feb 2020",
+      "context": "Education",
+      "tag": {
+        "kind": "function",
+        "label": "Functional pivot"
+      },
+      "note": "Into autonomous systems engineering"
+    },
+    {
+      "title": "Senior Executive Member",
+      "company": "Debating Society of NSIT",
+      "startDate": "2018",
+      "endDate": "May 2020",
+      "context": "Education",
+      "tag": {
+        "kind": "pivot",
+        "label": "Industry pivot"
+      },
+      "note": "Student leadership role, non-technical"
+    },
+    {
+      "title": "Data Science Intern",
+      "company": "OYO",
+      "startDate": "May 2020",
+      "endDate": "Jun 2020",
+      "tag": {
+        "kind": "transition",
+        "label": "Stage transition"
+      },
+      "note": "Into hospitality tech"
+    },
+    {
+      "title": "Machine Learning Intern, JIO AI Center Of Excellence",
+      "company": "Jio",
+      "startDate": "Jun 2020",
+      "endDate": "Jul 2020",
+      "tag": {
+        "kind": "function",
+        "label": "Functional pivot"
+      },
+      "note": "Concurrent internship during research role"
+    },
+    {
+      "title": "Research Assistant",
+      "company": "IBM",
+      "startDate": "Jan 2020",
+      "endDate": "Feb 2021",
+      "tag": {
+        "kind": "transition",
+        "label": "Career start"
+      }
+    },
+    {
+      "title": "Machine Learning Engineer",
+      "company": "Skit (previously Vernacular.ai)",
+      "startDate": "May 2021",
+      "endDate": "Jun 2022",
+      "tag": {
+        "kind": "transition",
+        "label": "Stage transition"
+      },
+      "note": "Into voice AI startup"
+    },
+    {
+      "title": "Senior Data Scientist",
+      "company": "Simpplr",
+      "startDate": "Oct 2024",
+      "endDate": "Oct 2025",
+      "tag": {
+        "kind": "promotion",
+        "label": "Promotion"
+      },
+      "note": "Promoted internally from Data Scientist, per resume"
+    },
+    {
+      "title": "Lead ML Engineer",
+      "company": "Sprinklr",
+      "startDate": "Oct 2025",
+      "tag": {
+        "kind": "transition",
+        "label": "Stage transition"
+      },
+      "note": "Into enterprise SaaS from prior roles"
+    }
+  ],
+  "education": [
+    {
+      "school": "Delhi Public School, DwarkaHigh School Diploma2015 – 2017",
+      "degree": "Delhi Public School, DwarkaHigh School Diploma"
+    },
+    {
+      "school": "Netaji Subhas Institute of TechnologyBachelor of Engineering, Instrumentation and Control Engineering2017 – 2021",
+      "degree": "Netaji Subhas Institute of TechnologyBachelor of Engineering, Instrumentation and Control Engineering"
+    }
+  ],
+  "skillGroups": [
+    {
+      "label": "Skills (Resume)",
+      "skills": [
+        "Well  versed  with",
+        "Data  Structures",
+        "Python",
+        "Sklearn",
+        "Pandas",
+        "Numpy",
+        "NLTK",
+        "SQL",
+        "PyTorch",
+        "Tensorﬂow"
+      ]
+    },
+    {
+      "label": "Languages (GitHub)",
+      "skills": [
+        "Jupyter Notebook",
+        "Java",
+        "JavaScript",
+        "HTML",
+        "MATLAB",
+        "C",
+        "CSS"
+      ]
+    },
+    {
+      "label": "Frameworks (GitHub)",
+      "skills": [
+        "torch",
+        "scikit-learn",
+        "scipy",
+        "pytest",
+        "Flask",
+        "tensorflow"
+      ]
+    },
+    {
+      "label": "Topics (GitHub)",
+      "skills": [
+        "audio",
+        "sentiment-analysis",
+        "distilbert-model",
+        "deepspeech-model",
+        "named-entity-recognition",
+        "machine-learning-algorithms",
+        "automatic-speech-recognition",
+        "emotion-detection",
+        "voice-analytics",
+        "hacktoberfest"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "SIH-19",
+      "kind": "GitHub",
+      "summary": "a web application for supply chain management for Smart India Hackathon 2019 ",
+      "tech": [
+        "Python"
+      ],
+      "href": "https://github.com/AchintyaX/SIH-19",
+      "sourceType": "github_repo"
+    },
+    {
+      "name": "NumpyStack",
+      "kind": "GitHub",
+      "summary": "Basics of the mathematical and visualization libraries required to learn machine learning",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "href": "https://github.com/AchintyaX/NumpyStack",
+      "sourceType": "github_repo"
+    },
+    {
+      "name": "Twitter_Data_Retrieval",
+      "kind": "GitHub",
+      "summary": "A Python script to get tweet data like text , user name, creation date if a user has a file containing the tweet ids",
+      "tech": [
+        "Python"
+      ],
+      "href": "https://github.com/AchintyaX/Twitter_Data_Retrieval",
+      "sourceType": "github_repo"
+    },
+    {
+      "name": "klang.ai",
+      "kind": "GitHub",
+      "summary": "A Deep Learning Based Voice Analytics toolkit",
+      "tech": [
+        "Python"
+      ],
+      "href": "https://github.com/AchintyaX/klang.ai",
+      "sourceType": "github_repo"
+    },
+    {
+      "name": "XLNet_Classification_tuning",
+      "kind": "GitHub",
+      "summary": "Fine tuning the worlds best transfer learning model for NLP to perform text classification",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "href": "https://github.com/AchintyaX/XLNet_Classification_tuning",
+      "sourceType": "github_repo"
+    },
+    {
+      "name": "Brain_tumor_segmentation",
+      "kind": "GitHub",
+      "summary": "GitHub repository (Jupyter Notebook).",
+      "tech": [
+        "Jupyter Notebook"
+      ],
+      "href": "https://github.com/AchintyaX/Brain_tumor_segmentation",
+      "sourceType": "github_repo"
+    }
+  ],
+  "externalSources": [
+    {
+      "category": "GitHub",
+      "label": "AchintyaX",
+      "href": "https://github.com/AchintyaX",
+      "sourceType": "resume_link"
+    },
+    {
+      "category": "LinkedIn",
+      "label": "achintya-shankhdhar",
+      "href": "https://www.linkedin.com/in/achintya-shankhdhar",
+      "sourceType": "resume_link"
+    },
+    {
+      "category": "Other",
+      "label": "3442442.3452315",
+      "href": "https://dl.acm.org/doi/abs/10.1145/3442442.3452315",
+      "sourceType": "resume_link"
+    }
+  ],
+  "narrative": "Achintya is a machine learning engineer with 4+ years of experience spanning NLP research, production ML systems, and LLM infrastructure. Currently leading inference engineering at Sprinklr, optimizing GPU/MIG/TPU serving and building org-wide observability for LLM deployments. Maintains an active GitHub presence focused on agentic AI infrastructure, building tools like Coach.ai (portable fitness coaching agent) and OpenCodeMemory (persistent memory for AI coding assistants) in emerging ecosystems like MCP and LlamaIndex."
+}

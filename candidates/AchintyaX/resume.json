@@ -1,0 +1,60 @@
+{
+  "raw_text": " Achintya  Shankhdhar  achintyashankhdhar@gmail.com       Phone:  +91  8178139182                     https://github.com/AchintyaX                  https://www.linkedin.com/in/achintya-shankhdhar/ \nExperience   \u25cf  Sprinklr  -  Lead  Machine  Learning  Engineer  (  Oct  2025  -  Present)  \u25cb  Leading  inference  engineering  for  LLM  and  embedding  deployments,  optimizing  serving  across  \nNVIDIA\n \nGPUs,\n \nMIGs,\n \nand\n \nTPUs\n \nto\n \nminimize\n \ncost\n \nper\n \nrequest\n \u25cb  Built  org-wide  observability  for  GPU  utilization  (GPU/SM/VRAM)  and  LLM  performance  (pre\ufb01x  cache  \nhit\n \nrate,\n \nTTFT,\n \ninter-token\n \nlatency,\n \nKV\n \ncache\n \nusage),\n \ndriving\n \noptimization\n \nacross\n \nlive\n \ndeployments.\n \u25cb  Reduced  LLM  serving  costs  by  up  to  65%  with  no  quality  regression  via  quantization-aware  training,  \npre\ufb01x\n \ncaching,\n \nspeculative\n \ndecoding,\n \nand\n \nbatching.\n \u25cb  Re-engineered  embedding  serving  for  a  ~200x  throughput  gain  using  continuous  batching  and  kernel  \nfusion\n.\n \u25cf  Simpplr  -  Senior  Data  Scientist  (  Oct  2024  -  Oct  2025))  \u25cb  Leading  Data  Science  and  product  development  for  Simpplr\u2019s   AI  assistant  and  ListenerSuite  Products  \u25cb  Architected  a  multi-step  planning  Agent  System  for  Simpplr\u2019s  enterprise  Assistant  to  plan  and  perform  \nactions\n \ninvolving\n \nmultiple\n \nread\n \nand\n \nwrite\n \ntools,\n \nincorporating\n \nRAG\n \nand\n \nquery\n \nplanning\n \nacross\n \nstructured\n \nand\n \nunstructured\n \nknowledge\n \nbases.\n \n \u25cb  Built  and  shipped  Actions  Service  to  recommend,  AI  actions  based  on  search  queries.  Developed  the  \nAction\n \nexecution\n \nmodule\n \nto\n \nextract\n \nparameters\n \nfrom\n \nuser\n \nqueries\n \nand\n \nexecute\n \nactions.\n \u25cb  Developing  Survey  AI  assistant  and  Survey  AI  analytics  using  ReAct  agents  and  RAG  for  ListenerSuite  \nto\n \nhelp\n \norg\n \ngenerate\n \nsurveys\n \nand\n \nget\n \nanswers\n \non\n \nboth\n \nstatistical\n \nand\n \ncontent-based\n \nquestions\n \nfrom\n \nSurvey\n \ndata\n \u25cf  Simpplr  -  Data  Scientist  (  June  2022  -  Sept  2024)  \u25cb  Joined  as  the  5th  data  science  team  member,  establishing  code  quality  guidelines  and  tools  for  \ne\ufb03cient\n \ndata\n \nannotation\n \nand\n \nbenchmark\n \ndataset\n \nmanagement,\n \n \u25cb  E\ufb00ectively  reduced  content  moderation  latency  by  50%  while  achieving  a  10%  improvement  in  model  \nperformance,\n \nresulting\n \nin\n \na\n \nsmoother\n \nand\n \nmore\n \ne\ufb03cient\n \nuser\n \nexperience.\n \u25cb  Spearheaded  the  development  and  deployment  of  a  RAPTOR-based  query  engine  to  perform  RAG  \non\n \nlong-form\n \ndocuments,\n \nachieving\n \n92%\n \nanswer\n \nrelevancy\n \nfor\n \nboth\n \nlow\n \nand\n \nhigh-context\n \nquestions.\n \u25cf   Skit  (  Previously  Vernacular.ai)  -  Machine  Learning  Engineer  (  May  2021  -  June  2022))  \u25cb  Worked  in  the  Spoken  Language  Understanding  team,  developing  user  intent  recognition  and  \ninformation\n \nextraction\n \nmodels\n \nfor\n \nVIVA\n \n(Vernacular\n \nIntelligent\n \nVoice\n \nAgent).\n \n \u25cb  Designed  and  Developed  New  Intent  Discovery  system  from  live  data  to  enhance  user  intent  \nrecognition\n \nof\n \nvoice\n \nbots\n \nby\n \n5.2\n \n%.\n \n \u25cb  Developed  ASR  Noise  tolerant  NER  parser  from  voice  input,  for  English  and  4  Indian  languages.  with  \nan\n \naccuracy\n \nof\n \n85%,\n \n \u25cb  Built  a   Python  Package  and  Microservice  for  trainable  Multimodal  Language  Identi\ufb01cation  from  audio  \ninput\n \nwhich\n \nhad\n \na\n \nprecision\n \nof\n \n95%\n \u25cf  IBM  Research,  India  -  Remote  Research  Assistant  (  January  2020  -  February  2021)  \u25cb  Designed  State  of  the  art  model  for  sarcasm  and  hate  speech  prediction  from  tweets,  along  with  \nretweet\n \ncount\n \nprediction\n \nusing\n \nShared-Private\n  \nMultitask\n \nDeep\n \nNeural\n \nNetwork\n \nwith\n \nText\n \nand\n \nMetaData\n \ninput.\n \u25cb  Research  paper  on  the  results  obtained  titled  \u201cA\ufb00ect  Classi\ufb01cation  in  Tweets  using  Multi-task  Deep  \nNeural\n \nNetworks\u201d\n \naccepted\n \nat\n \nSocialNLP\n \n2021,\n \n30th\n \nWeb\n \nConference\n \n \u25cf  Jio  AI  Centre  of  Excellence  -  Machine  Learning  Intern   (  June  2020  -  July  2020)  \u25cb  Build  a  Sentiment  Analysis  system  for  Indian  languages  using  lexicon  polarity  and  K-means  clustering  \u25cb  Build  Aspect  Based  Sentiment  Analysis  model  for  English  and  19  Indian  languages  using  Neural  \nDependency\n \nparsing\n \nand\n \nKnowledge\n \ngraphs.\n \nSkills\n \n Well  versed  with,  Data  Structures,  Python,  Sklearn,  Pandas,  Numpy,  NLTK,  SQL,  PyTorch,  Tensor\ufb02ow,  Pyaudio,  \ntransformers,\n \nMilvus,\n \nLLMs,\n \nAWS,\n \nSagemaker,\n \nAir\ufb02ow,\n \nPrefect,\n \nLLMs,\n \nMLOps,\n \nAzure,\n \npostgres,\n \ngenAI,\n \nLLamaIndex\n \nPublications   \u25cf  Seema  Nagar,  Achintya  Shankhdhar ,  Ferdous  Ahmed  Barbhuiya,  and  Kuntal  Dey:  A\ufb00ect  Classi\ufb01cation  in  Tweets  using  Multi-task  Deep  Neural  Networks,  accepted  at  SocialNLP  2021  at  The  30th  Web  conference  \nProjects   \u25cf  Klang.ai  -  A  voice  analytics  tool  kit  for  English,  which  can  perform  sentiment  analysis,  NER,  emotion  detection  from  audio  \ufb01les  and  live  audio  using  DeepSpeech  Model  trained  on  common  voice  dataset  and  DistillBert  model  \nusing\n \npython\n \nTensorFlow,\n \npyaudio.\n \u25cf  Brain  Tumor  Segmentation -  Using  the  BRATS  2013  dataset  to  build  a  brain  tumor  segmentation  model,  we  created  2D  slices  from  the  MRI  scan  and  designed  a  2  path  CNN  model  for  Segmentation  using  TensorFlow.  \u25cf  Speech  Emotion  Classi\ufb01cation -  Extracted  MFCC  values  from  audio  samples  and  used  Convolutional  Neural   \nNetworks\n \nto\n \ndetect\n \nthe\n \nemotional\n \nsentiment\n \nof\n \nthe\n \naudio\n \nfrom\n \nthe\n \nMELD\n \ndataset.\n \n   Education   \n INSTITUTE  COURSE  GRADE  \nNetaji  Subhas  Institute  of  \nTechnology\n \n(NSIT)\n,\n \nDelhi\n \nInstrumentation  and  Control  Engineering  (2017-2021)  \n7.3  CGPA  \nDelhi  Public  School,  Dwarka  PCM  +  Computer  Science  (2015-2017)  \n91.8%  \n Achievements\n \u25cf  Grand  Finalist  at  Smart  India  Hackathon ,  organized  by  the  Ministry  of  Human  Resource  Development.  The  \nhackathon\n \nhad\n \na\n \nparticipation\n \nof\n \nover\n \n75000\n \nteams\n \nof\n \nwhich\n \n1200\n \nmade\n \nto\n \n\ufb01nals\n \u25cf  Harvard  National  Model  United  Nations  2018,  represented  India  and  the  Delhi  University  at  the  Harvard  \nNational\n \nModel\n \nUnited\n \nNations\n \n2018,\n \nheld\n \nin\n \nBoston.\n \nWas\n \npart\n \nof\n \nthe\n \nhighest\n \naward-winning\n \ndelegation\n \nfrom\n \nAsia\n \n  ",
+  "links": [
+    "https://github.com/AchintyaX",
+    "https://www.linkedin.com/in/achintya-shankhdhar",
+    "https://dl.acm.org/doi/abs/10.1145/3442442.3452315",
+    "https://github.com/AchintyaX/klang.ai",
+    "https://github.com/AchintyaX/Brain_tumor_segmentation",
+    "https://github.com/AchintyaX/Speech_emotion_detection"
+  ],
+  "linkedin_url": "https://www.linkedin.com/in/achintya-shankhdhar",
+  "github_url": "https://github.com/AchintyaX",
+  "other_urls": [
+    "https://dl.acm.org/doi/abs/10.1145/3442442.3452315"
+  ],
+  "email": "achintyashankhdhar@gmail.com",
+  "phone": "8178139182",
+  "skills": [
+    "Well  versed  with",
+    "Data  Structures",
+    "Python",
+    "Sklearn",
+    "Pandas",
+    "Numpy",
+    "NLTK",
+    "SQL",
+    "PyTorch",
+    "Tensor\ufb02ow",
+    "Pyaudio",
+    "transformers",
+    "Milvus",
+    "LLMs",
+    "AWS",
+    "Sagemaker",
+    "Air\ufb02ow",
+    "Prefect",
+    "MLOps",
+    "Azure",
+    "postgres",
+    "genAI",
+    "LLamaIndex"
+  ],
+  "projects": [
+    {
+      "name": "Klang.ai",
+      "description": "A voice analytics tool kit for English, which can perform sentiment analysis, NER, emotion detection from audio \ufb01les and live audio using DeepSpeech Model trained on common voice dataset and DistillBert model using python TensorFlow, pyaudio.",
+      "technologies": []
+    },
+    {
+      "name": "Brain Tumor Segmentation",
+      "description": "Using the BRATS 2013 dataset to build a brain tumor segmentation model, we created 2D slices from the MRI scan and designed a 2 path CNN model for Segmentation using TensorFlow.",
+      "technologies": []
+    },
+    {
+      "name": "Speech Emotion Classi\ufb01cation",
+      "description": "Extracted MFCC values from audio samples and used Convolutional Neural Networks to detect the emotional sentiment of the audio from the MELD dataset.",
+      "technologies": []
+    }
+  ]
+}

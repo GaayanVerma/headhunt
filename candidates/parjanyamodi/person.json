@@ -1,0 +1,138 @@
+{
+  "linkedin_url": "https://www.linkedin.com/in/parjanyamodi/",
+  "name": "Parjanya (Hemantkumar) Modi",
+  "location": "Bengaluru, Karnataka, India",
+  "about": "Founding Engineer at Clueso (YC W23), where I architect and own backend systems and infrastructure. Designed and shipped the CI/CD system that the engineering team runs on today, cutting PR-to-production time and removing deploy friction across environments.\n \nBefore Clueso, I worked on security and reliability at CRED as an SRE intern, on DevOps at Ankercloud, and led end-to-end architecture for ERP and microservice systems at Tejas Technological. I've been shipping production code since 2019, including three years of freelance work building web platforms and Linux/network infrastructure for clients.\n \nI care about distributed systems, developer experience, and the messy reality of building 0\u21921 at an early-stage startup. Comfortable across the stack: Go, Python, TypeScript, PostgreSQL, ClickHouse, RabbitMQ, Redis, and AWS.\n \nReach me here or at parjanyamodi.com .\n\u2026 more",
+  "open_to_work": true,
+  "experiences": [
+    {
+      "position_title": "Founding Engineer",
+      "institution_name": "Clueso (YC W23)",
+      "linkedin_url": "https://www.linkedin.com/company/90607992/",
+      "from_date": "Aug 2024",
+      "to_date": "Present",
+      "duration": "2 yrs",
+      "location": "Highly Distributed Systems \u2192 Architecting and optimizing services to handle scale efficiently.",
+      "description": null,
+      "employment_type": "Full-time"
+    },
+    {
+      "position_title": "Proprietor",
+      "institution_name": "Tejas Technological Co.",
+      "linkedin_url": "https://www.linkedin.com/company/82864913/",
+      "from_date": "Remote",
+      "to_date": "",
+      "duration": null,
+      "location": null,
+      "description": null,
+      "employment_type": null
+    },
+    {
+      "position_title": "Site Reliability Engineer - Security",
+      "institution_name": "CRED",
+      "linkedin_url": "https://www.linkedin.com/company/14485479/",
+      "from_date": "Jan 2023",
+      "to_date": "Aug 2023",
+      "duration": "8 mos",
+      "location": "\u25cf Handled Role based access to federated users and services across all verticals for developers, testers and business users.",
+      "description": null,
+      "employment_type": "Internship"
+    },
+    {
+      "position_title": "DevOps Engineer",
+      "institution_name": "Ankercloud GmbH",
+      "linkedin_url": "https://www.linkedin.com/company/12608271/",
+      "from_date": "Oct 2022",
+      "to_date": "Jan 2023",
+      "duration": "4 mos",
+      "location": "Bengaluru, Karnataka, India",
+      "description": null,
+      "employment_type": "Internship"
+    },
+    {
+      "position_title": "\u25cf\tDeveloped responsive Websites.",
+      "institution_name": "Professional Freelancer",
+      "linkedin_url": null,
+      "from_date": "Oct 2019",
+      "to_date": "Nov 2022",
+      "duration": "3 yrs 2 mos",
+      "location": null,
+      "description": null,
+      "employment_type": "Freelance"
+    },
+    {
+      "position_title": "Dev Team Lead & System Engineer",
+      "institution_name": "Prathibhotsava",
+      "linkedin_url": "https://www.linkedin.com/company/82369777/",
+      "from_date": "May 2022",
+      "to_date": "Sep 2022",
+      "duration": "5 mos",
+      "location": "Bengaluru, Karnataka, India",
+      "description": null,
+      "employment_type": "Part-time"
+    },
+    {
+      "position_title": "Technical Head",
+      "institution_name": "IUCEE BMSCE",
+      "linkedin_url": "https://www.linkedin.com/company/75019609/",
+      "from_date": "Oct 2019",
+      "to_date": "Jun 2022",
+      "duration": "2 yrs 9 mos",
+      "location": "Bengaluru, Karnataka, India",
+      "description": null,
+      "employment_type": "Part-time"
+    },
+    {
+      "position_title": "Ahmedabad, Gujarat, India",
+      "institution_name": "Bullspree",
+      "linkedin_url": "https://www.linkedin.com/in/parjanyamodi/overlay/Position/1801104751/treasury/?profileId=ACoAACvkUi0BcLP1_jdnfkZV_NRgequjqBfI6Sc",
+      "from_date": "Apr 2021",
+      "to_date": "Jun 2021",
+      "duration": "3 mos",
+      "location": null,
+      "description": null,
+      "employment_type": "Internship"
+    },
+    {
+      "position_title": "Graphic Designer",
+      "institution_name": "Team Hasiru",
+      "linkedin_url": "https://www.linkedin.com/company/14544238/",
+      "from_date": "Sep 2020",
+      "to_date": "Mar 2021",
+      "duration": "7 mos",
+      "location": "Bangalore Urban, Karnataka, India",
+      "description": null,
+      "employment_type": "Internship"
+    }
+  ],
+  "educations": [
+    {
+      "institution_name": "B. M. S. College of EngineeringBachelor of Engineering - BE",
+      "degree": null,
+      "linkedin_url": "https://www.linkedin.com/school/15114113/",
+      "from_date": null,
+      "to_date": null,
+      "description": null
+    }
+  ],
+  "interests": [],
+  "accomplishments": [],
+  "contacts": [
+    {
+      "type": "linkedin",
+      "value": "https://www.linkedin.com/in/parjanyamodi/",
+      "label": null
+    },
+    {
+      "type": "website",
+      "value": "https://parjanyamodi.com",
+      "label": "Personal"
+    },
+    {
+      "type": "birthday",
+      "value": "March 11",
+      "label": null
+    }
+  ],
+  "skills": []
+}

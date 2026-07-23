@@ -27,6 +27,13 @@ basic_requirements = [
     'pydantic>=2.0.0',
     'python-dotenv>=1.0.0',
     'aiofiles>=23.0.0',
+    'pypdf>=3.0.0',
+    'httpx>=0.27.0',
+    'anthropic>=0.40.0',
+    # Patches Python's ssl module to use the OS trust store instead of certifi's
+    # bundled roots - works around a CERTIFICATE_VERIFY_FAILED error some macOS
+    # Python installs hit against api.anthropic.com. See DECISIONS.md (2026-07-05).
+    'pip-system-certs>=4.0; sys_platform == "darwin"',
 ]
 
 setup(

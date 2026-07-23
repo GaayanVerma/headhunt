@@ -37,3 +37,14 @@ class NetworkError(LinkedInScraperException):
 class ScrapingError(LinkedInScraperException):
     """Raised when scraping fails for various reasons."""
     pass
+
+
+class LLMError(LinkedInScraperException):
+    """Base exception for LLM-layer failures (repo insight generation, etc.)."""
+    pass
+
+
+class LLMResponseParsingError(LLMError):
+    """Raised when an LLM response can't be parsed into the expected JSON schema
+    after all retries are exhausted."""
+    pass

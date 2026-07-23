@@ -7,6 +7,7 @@ from .auth import (
     is_logged_in,
     wait_for_manual_login,
     load_credentials_from_env,
+    load_github_token_from_env,
     warm_up_browser
 )
 from .exceptions import (
@@ -39,6 +40,7 @@ __all__ = [
     'is_logged_in',
     'wait_for_manual_login',
     'load_credentials_from_env',
+    'load_github_token_from_env',
     'warm_up_browser',
     # Exceptions
     'LinkedInScraperException',

@@ -11,6 +11,7 @@ from .core import (
     is_logged_in,
     wait_for_manual_login,
     load_credentials_from_env,
+    load_github_token_from_env,
     # Exceptions
     LinkedInScraperException,
     AuthenticationError,
@@ -27,6 +28,7 @@ from .scrapers import (
     CompanyScraper,
     JobScraper,
     JobSearchScraper,
+    PeopleSearchScraper,
     CompanyPostsScraper,
 )
 
@@ -42,6 +44,7 @@ from .callbacks import (
 # Models
 from .models import (
     Person,
+    PersonSearchResult,
     Experience,
     Education,
     Contact,
@@ -52,7 +55,15 @@ from .models import (
     Employee,
     Job,
     Post,
+    ResumeData,
+    ResumeProject,
 )
+
+# Resume parser
+from .resume import ResumeParser
+
+# GitHub analyzer
+from .github import GitHubAnalyzer, resolve_github_username, GitHubClient
 
 __all__ = [
     # Version
@@ -64,11 +75,13 @@ __all__ = [
     "is_logged_in",
     "wait_for_manual_login",
     "load_credentials_from_env",
+    "load_github_token_from_env",
     # Scrapers
     "PersonScraper",
     "CompanyScraper",
     "JobScraper",
     "JobSearchScraper",
+    "PeopleSearchScraper",
     "CompanyPostsScraper",
     # Exceptions
     "LinkedInScraperException",
@@ -86,6 +99,7 @@ __all__ = [
     "MultiCallback",
     # Models
     "Person",
+    "PersonSearchResult",
     "Experience",
     "Education",
     "Contact",
@@ -96,4 +110,12 @@ __all__ = [
     "Employee",
     "Job",
     "Post",
+    "ResumeData",
+    "ResumeProject",
+    # Resume parser
+    "ResumeParser",
+    # GitHub analyzer
+    "GitHubAnalyzer",
+    "resolve_github_username",
+    "GitHubClient",
 ]
