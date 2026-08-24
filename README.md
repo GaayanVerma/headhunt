@@ -131,6 +131,8 @@ cd frontend && npm run dev
 ```
 Then open http://localhost:5173 — `/` is the classic search form, `/chat` is the AI assistant. This is a **local-only app** by design: classic LinkedIn scraping needs a real, visible browser window, which only works reliably headed and only makes sense on the machine you're sitting at.
 
+**Non-technical setup (macOS):** skip steps 1–6 above and double-click **`Start Console.command`** at the repo root instead (first run: right-click → Open, since it's from an unidentified developer). It installs Homebrew/Python/Node/dependencies/Chromium if missing, prompts you to fill in `.env`, then starts both servers and opens the app in your browser. Safe to re-run any time. See `scripts/start_console.sh` for what it does.
+
 **Tests:**
 ```bash
 pytest -m unit          # no network/session required
