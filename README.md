@@ -1,10 +1,12 @@
-# LinkedIn Scraper
+# LinkedIn Scraper & Candidate Sourcing Console
 
 [![PyPI version](https://badge.fury.io/py/linkedin-scraper.svg)](https://badge.fury.io/py/linkedin-scraper)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Async LinkedIn scraper built with Playwright for extracting profile, company, and job data from LinkedIn.
+Async LinkedIn scraper built with Playwright for extracting profile, company, and job data from LinkedIn — plus a candidate-sourcing pipeline built on top of it: Google X-ray search via Serper.dev, a CrewAI multi-agent search-and-review crew (a LinkedIn Searcher agent, a Google Searcher agent, and an Authority Reviewer agent that merges/dedupes/shortlists their output), and a local web console (FastAPI + React) with a classic search form and an AI chat assistant. Everything is also drivable from the CLI (`samples/*.py`) without the web app. See [CLAUDE.md](CLAUDE.md) for the full architecture.
+
+**New here?** Jump to [Setup](#setup) for the full install process, or straight to [Web Console Setup](#web-console-setup-backend--frontend) if you just want the backend/frontend running.
 
 ## ⚠️ Breaking Changes in v3.0.0
 
@@ -46,21 +48,126 @@ asyncio.run(main())
 ```bash
 pip install linkedin-scraper==2.11.2
 ```
-## Quick Testing
+## Setup
 
-To test that this works, you can clone this repo, install dependencies with
+These steps get the whole project running: the core scraper library, the X-ray/CrewAI candidate-sourcing pipeline, and (optionally) the web console. Skip whatever you don't need — none of the pieces below require the others.
+
+### 1. Prerequisites
+
+- Python 3.10+ (3.11 recommended)
+- Node.js 18+ and npm — only needed for the web console's frontend
+- A LinkedIn account, for session-based scraping
+- API keys for whichever features you want (step 3)
+
+### 2. Clone and install Python dependencies
+
+```bash
+git clone https://github.com/GaayanVerma/headhunt.git
+cd headhunt
+pip install -e ".[dev]"
+playwright install chromium
 ```
-git clone https://github.com/joeyism/linkedin_scraper.git
-cd linkedin_scraper
-pip3 install -e .
+
+Add optional extras as needed — they can be combined, e.g. `pip install -e ".[dev,export,crew,web]"`:
+
+| Extra | Adds | Needed for |
+|---|---|---|
+| `export` | `openpyxl` | Excel export of candidate search results |
+| `crew` | `crewai` | The AI chat assistant's candidate search (LinkedIn Searcher + Google Searcher + Authority Reviewer agents) |
+| `web` | `fastapi`, `uvicorn` | The local web console's backend |
+
+### 3. Configure environment variables
+
+```bash
+cp .env.example .env
 ```
-then run
+
+Fill in `.env` with whichever keys the features you want require — see `.env.example` for exact instructions and where to get each one:
+
+| Variable | Needed for |
+|---|---|
+| `LINKEDIN_EMAIL` / `LINKEDIN_USERNAME`, `LINKEDIN_PASSWORD` | Programmatic LinkedIn login (optional — the manual session login in step 4 doesn't need this) |
+| `SERPER_API_KEY` | X-ray candidate discovery (`search_xray_jd.py`) — required, no fallback |
+| `ANTHROPIC_API_KEY` | LLM JD-signal extraction, the CrewAI sourcing crew, GitHub AI insights, and the web console's chat assistant |
+| `GITHUB_TOKEN` | GitHub candidate analysis (optional but strongly recommended — GraphQL requires auth) |
+
+### 4. Create a LinkedIn session
+
+Most scraping (profile/company/job scraping, LinkedIn people search, X-ray's `--enrich-top`) needs an authenticated session:
+
+```bash
+python samples/create_session.py
 ```
-python3 samples/create_session.py
-python3 samples/scrape_company.py
-python3 samples/scrape_person.py
+
+This opens a real, visible browser window — log in manually and it saves `linkedin_session.json` at the repo root. That file is gitignored and never committed; it's your own session, not something to check in or share.
+
+### 5. (Optional) Set up the web console frontend
+
+Only needed for the classic-search-form + AI-chat web UI — skip this if you're driving everything from the CLI:
+
+```bash
+cd frontend
+npm install
 ```
-and you will see the scraping in action.
+
+### 6. Run it
+
+**CLI — X-ray candidate search:**
+```bash
+python samples/search_xray_jd.py --jd-file jd.txt
+```
+
+**CLI — the CrewAI dual-searcher + authority-reviewer crew:**
+```bash
+python samples/run_sourcing_crew.py --jd-file jd.txt
+```
+
+**Web console** (needs the `web` extra installed and the frontend set up):
+```bash
+# terminal 1
+uvicorn backend.main:app --reload --port 8000
+# terminal 2
+cd frontend && npm run dev
+```
+Then open http://localhost:5173 — `/` is the classic search form, `/chat` is the AI assistant. This is a **local-only app** by design: classic LinkedIn scraping needs a real, visible browser window, which only works reliably headed and only makes sense on the machine you're sitting at.
+
+**Tests:**
+```bash
+pytest -m unit          # no network/session required
+pytest -m integration   # requires linkedin_session.json, auto-skipped if missing
+```
+
+---
+
+## Web Console Setup (Backend + Frontend)
+
+The web console is a local-only app: a FastAPI backend and a React (Vite) frontend, run as two separate processes on your own machine. It's local-only by design — classic LinkedIn scraping needs a real, visible browser window, which only works headed and only makes sense on the machine you're sitting at.
+
+### Backend (`backend/`, FastAPI)
+
+```bash
+pip install -e ".[web]"          # or combine with other extras, e.g. ".[dev,web,crew,export]"
+uvicorn backend.main:app --reload --port 8000
+```
+
+- Serves the API at `http://127.0.0.1:8000` — interactive docs at `http://127.0.0.1:8000/docs`
+- Requires `.env` to be configured (see [Setup](#setup) step 3) — `SERPER_API_KEY` for the classic search's X-ray discovery, `ANTHROPIC_API_KEY` for the chat assistant, and the `crew` extra installed for the chat's candidate-search tool
+- CORS is scoped to `http://localhost:5173` (the Vite dev server) only — not open to arbitrary origins
+- Layout: `backend/main.py` (app + router registration), `backend/jobs.py` (the in-memory background-job store every long-running operation goes through), `backend/routers/` (`xray.py` classic search, `session.py` LinkedIn login/status, `chat.py` AI assistant), `backend/services/` (`scraping.py` classic scrape wrappers, `crew_search.py` wraps `linkedin_scraper/crew/`, `chat_agent.py`/`chat_tools.py` the chat's tool-use loop)
+
+### Frontend (`frontend/`, React + Vite)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+- Opens at `http://localhost:5173` — `vite.config.ts` proxies `/api` and `/files` to the backend at `127.0.0.1:8000`, so the backend must already be running
+- `npm run build` produces a production build in `frontend/dist/` (not committed — see `.gitignore`)
+- Layout: `src/pages/ClassicSearch.tsx` (the flag-driven form), `src/pages/ChatAssistant.tsx` (the AI chat), `src/components/` (shared `CandidateTable`, `JobProgress` job-polling, `SessionStatusBadge`), `src/api/client.ts` (typed fetch wrapper mirroring the backend's schemas), `src/hooks/useChat.ts` (chat state + job-completion polling)
+
+Run both together (backend in one terminal, frontend in another) and open `http://localhost:5173` — `/` is the classic search form, `/chat` is the AI assistant.
 
 ---
 
@@ -92,7 +199,21 @@ and you will see the scraping in action.
 - **Progress Callbacks** - Track scraping progress
 - **Session Management** - Reuse authenticated sessions
 
+## Candidate Sourcing (X-ray Search, CrewAI Crew, Web Console)
+
+Built on top of the scraper library above, `sourcing/` turns a job description into a ranked candidate list without needing LinkedIn's own (rate-limited, checkpoint-prone) people-search UI:
+
+- **X-ray search** (`samples/search_xray_jd.py`) — free-text JD → LLM-extracted `JDSignals` → `site:linkedin.com/in/` Google boolean queries run through Serper.dev → scored, ranked, exported to Excel. No LinkedIn session needed for discovery itself.
+- **CrewAI sourcing crew** (`samples/run_sourcing_crew.py`, `linkedin_scraper/crew/`) — a LinkedIn Searcher agent and a Google Searcher agent search independently, and an Authority Reviewer agent merges, dedupes, quality-bars, and shortlists their combined output before it reaches you.
+- **Web console** (`backend/` + `frontend/`) — a local FastAPI + React app with two views: a classic form exposing every X-ray flag, and an AI chat assistant (native Claude tool-use) that runs the same crew conversationally, asks clarifying questions before an expensive search, and answers only from what the tools actually returned.
+
+See the [Setup](#setup) section above to get any of these running, and [CLAUDE.md](CLAUDE.md) for the full architecture writeup.
+
 ## Installation
+
+For local development of this repo, use the editable install from [Setup](#setup) above (`pip install -e ".[dev]"`), not the PyPI package — this fork adds the sourcing pipeline, crew, and web console on top of the published `linkedin-scraper` package.
+
+If you only want the base scraper library as a dependency in another project:
 
 ```bash
 pip install linkedin-scraper
@@ -399,11 +520,12 @@ except ProfileNotFoundError:
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.8+ (3.10+ for the sourcing pipeline; 3.11 recommended)
 - Playwright
 - Pydantic 2.0+
 - aiofiles
 - python-dotenv (optional, for credentials)
+- Optional, per feature (see [Setup](#setup)): `openpyxl` (Excel export), `crewai` (sourcing crew), `fastapi`/`uvicorn` (web console backend), Node.js 18+/npm (web console frontend)
 
 ## License
 
@@ -419,6 +541,6 @@ This tool is for educational purposes only. Make sure to comply with LinkedIn's 
 
 ## Links
 
-- [GitHub Repository](https://github.com/joeyism/linkedin_scraper)
-- [Issue Tracker](https://github.com/joeyism/linkedin_scraper/issues)
+- [This repository](https://github.com/GaayanVerma/headhunt) — candidate-sourcing pipeline, CrewAI crew, and web console
+- [Upstream scraper library](https://github.com/joeyism/linkedin_scraper) — the base Playwright/async LinkedIn scraper this project builds on
 - [PyPI Package](https://pypi.org/project/linkedin-scraper/)
