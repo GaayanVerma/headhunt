@@ -1,0 +1,577 @@
+/* Design system: this is an operator's console for X-ray candidate search,
+   not a marketing page. The visual language leans on the product's own
+   metaphor - a scan that reveals matches - rather than generic SaaS
+   gradients. Ink-slate base (not pure black), two accents: a cool "scan"
+   cyan for structure/activity, a warm "match" amber for found candidates. */
+
+:root {
+  --bg: #10131c;
+  --bg-panel: #171b27;
+  --bg-panel-raised: #1d2230;
+  --ink: #edeff2;
+  --ink-dim: #8b93a7;
+  --ink-faint: #565f74;
+  --line: #2a2f3d;
+  --accent-scan: #5eead4;
+  --accent-scan-dim: #2f6c64;
+  --accent-match: #f5b754;
+  --accent-match-dim: #7a5c2a;
+  --danger: #f0728a;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  color-scheme: dark;
+}
+
+/* This app renders inside a dark-themed operator console by design, not a
+   marketing surface, so it commits to one look rather than following the
+   viewer's OS theme. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-scan-dim);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-scan);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent-scan);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rail {
+  border-right: 1px solid var(--line);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rail-brand {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+
+.rail-brand small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-scan);
+  margin-top: 2px;
+}
+
+.rail-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rail-nav a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.rail-nav a:hover {
+  background: var(--bg-panel);
+  color: var(--ink);
+}
+
+.rail-nav a.active {
+  background: var(--bg-panel-raised);
+  color: var(--ink);
+  box-shadow: inset 2px 0 0 var(--accent-scan);
+}
+
+.main {
+  padding: 32px 40px 80px;
+  max-width: 980px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-scan);
+  margin-bottom: 6px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+}
+
+.page-header p {
+  color: var(--ink-dim);
+  margin-top: 8px;
+  max-width: 60ch;
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 14px;
+}
+
+/* Signature element: while a panel represents an active/running search, a
+   thin cyan line sweeps across it - a literal scan, tied to the product's
+   own name, used exactly once rather than as ambient decoration. */
+.panel.scanning::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  top: 0;
+  background: linear-gradient(90deg, transparent, var(--accent-scan), transparent);
+  animation: scan-sweep 1.8s linear infinite;
+}
+
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(240px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel.scanning::before {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-dim);
+}
+
+.field .hint {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--ink);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent-scan);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.checkbox-field {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-field label {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-panel-raised);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.tag-pill button {
+  background: none;
+  border: none;
+  color: var(--ink-faint);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.tag-pill button:hover {
+  color: var(--danger);
+}
+
+.tag-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.tag-input-row input {
+  flex: 1;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.05s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--accent-match);
+  color: #1a1200;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent-scan);
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.progress-track {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  height: 6px;
+  overflow: hidden;
+  margin: 10px 0 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-scan);
+  transition: width 0.3s ease;
+}
+
+.progress-message {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+}
+
+.status-dot.ok {
+  background: var(--accent-scan);
+  box-shadow: 0 0 0 3px var(--accent-scan-dim);
+}
+
+.status-dot.warn {
+  background: var(--accent-match);
+  box-shadow: 0 0 0 3px var(--accent-match-dim);
+}
+
+.status-dot.error {
+  background: var(--danger);
+}
+
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.candidate-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.candidate-table td {
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.candidate-table tr:hover td {
+  background: var(--bg-panel-raised);
+}
+
+.fit-score {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--accent-match);
+}
+
+.fit-bar-track {
+  width: 46px;
+  height: 4px;
+  background: var(--bg);
+  border-radius: 999px;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.fit-bar-fill {
+  height: 100%;
+  background: var(--accent-match);
+}
+
+.fit-indicators {
+  color: var(--ink-dim);
+  font-size: 11.5px;
+}
+
+.download-row {
+  display: flex;
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+
+.error-box {
+  background: rgba(240, 114, 138, 0.08);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
+
+.summary-strip {
+  display: flex;
+  gap: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-dim);
+  margin: 4px 0 16px;
+}
+
+.summary-strip strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.chat-shell {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  max-height: 900px;
+}
+
+.chat-transcript {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 4px 2px 20px;
+}
+
+.chat-empty {
+  color: var(--ink-faint);
+  font-size: 13px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.chat-msg {
+  max-width: 78%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.chat-msg.user {
+  align-self: flex-end;
+  background: var(--accent-match-dim);
+  color: var(--ink);
+  border-bottom-right-radius: 2px;
+}
+
+.chat-msg.assistant {
+  align-self: flex-start;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 2px;
+}
+
+.chat-msg.error {
+  align-self: flex-start;
+  background: rgba(240, 114, 138, 0.08);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.chat-msg-job {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.chat-input-row textarea {
+  flex: 1;
+  min-height: 44px;
+  max-height: 160px;
+}

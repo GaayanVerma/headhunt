@@ -4,8 +4,15 @@ Search LinkedIn for full stack developer candidates and export to Excel.
 
 Tailored for the Dhrupra Services Pvt. Ltd. Full Stack Developer JD (React 18 +
 TypeScript, Node.js/Express, SQL + NoSQL, 1-3 YOE). Location is not filtered or
-scored — candidates from anywhere are considered. Runs multiple LinkedIn people
-searches, deduplicates, scores by JD fit, and writes a ranked Excel spreadsheet.
+scored — candidates from anywhere are considered.
+
+Instead of generic keyword searches, this script is seeded from a set of
+REFERENCE_PROFILES: real LinkedIn profiles that are a good match for the role.
+It scrapes each reference profile once (caching the result), derives common
+titles/skills/companies/schools across them, builds LinkedIn people-search
+queries from that signal, and gives candidates a scoring bonus for sharing a
+company or title cluster with the reference set — on top of the existing JD
+keyword fit score.
 
 Prerequisites:
     1. Create a LinkedIn session:
@@ -17,6 +24,7 @@ Usage:
     python samples/search_fullstack_dhrupra.py
     python samples/search_fullstack_dhrupra.py --limit 300 --output candidates/dhrupra_fullstack.xlsx
     python samples/search_fullstack_dhrupra.py --min-score 20
+    python samples/search_fullstack_dhrupra.py --refresh-references
 """
 import argparse
 import asyncio
@@ -31,18 +39,47 @@ from linkedin_scraper import BrowserManager, ConsoleCallback
 from linkedin_scraper.export import export_candidates_to_excel
 from linkedin_scraper.models.person_search import PersonSearchResult
 from linkedin_scraper.scrapers.people_search import PeopleSearchScraper
+from linkedin_scraper.sourcing.reference_profiles import (
+    ReferenceSignal,
+    build_similarity_signals,
+    derive_reference_signal,
+    load_or_scrape_reference_profiles,
+)
 
-# Search queries tuned to the Dhrupra Services Full Stack Developer JD.
-DEFAULT_SEARCHES = [
-    {"keywords": "full stack developer react node"},
-    {"keywords": "react developer typescript"},
-    {"keywords": "node.js developer express"},
-    {"keywords": "frontend developer react typescript"},
-    {"keywords": "backend developer node express postgresql"},
-    {"keywords": "full stack engineer react node mongodb"},
-    {"keywords": "javascript developer react node express"},
-    {"keywords": "software engineer react node sql"},
+# Real LinkedIn profiles that are a good match for the role. Search queries and
+# scoring bonuses are derived from what's common across these profiles.
+REFERENCE_PROFILES = [
+    "https://www.linkedin.com/in/prateek-banga-324b64141/",
+    "https://www.linkedin.com/in/parjanyamodi/",
+    "https://www.linkedin.com/in/shreyas-dayal/",
+    "https://www.linkedin.com/in/shreyashkgupta/",
+    "https://www.linkedin.com/in/akshat-gupta-401675192/",
+    "https://www.linkedin.com/in/avivashishta/",
+    "https://www.linkedin.com/in/rathimanit/",
+    "https://www.linkedin.com/in/teknicus/",
+    "https://www.linkedin.com/in/msameermalik/",
 ]
+
+DEFAULT_REFERENCE_CACHE = "candidates/reference_profiles_cache.json"
+
+# Anchors the one broad, stack-precise search query to the JD's unchanged core stack.
+CORE_STACK_TERMS = "react node typescript"
+
+# Lighter single-term anchor for title/company/school/skill queries. AND-ing
+# the full CORE_STACK_TERMS onto those already-narrow clauses repeatedly
+# collapsed to 0 results live (LinkedIn's people-search index for the literal
+# 3-way AND is small to begin with); a single anchor keeps queries scoped to
+# the JD's #1 must-have without starving results.
+ANCHOR_TERM = "react"
+
+# Rotated across skill/company/school queries to grow the unique candidate
+# pool - a "node X" query and a "react X" query for the same X return
+# overlapping but non-identical result sets on LinkedIn's search.
+EXTRA_ANCHOR_TERMS = ["react", "node"]
+
+# Skills already implied by CORE_STACK_TERMS — excluded from the "extra skills"
+# search query so it surfaces differentiating signal instead of repeating itself.
+_CORE_SKILL_TERMS = {"react", "react.js", "reactjs", "node", "node.js", "nodejs", "typescript", "javascript", "js"}
 
 # Weighted keyword groups for the Dhrupra Services Full Stack Developer JD.
 JD_SIGNALS: Dict[str, Tuple[int, List[str]]] = {
@@ -77,9 +114,103 @@ def _normalize(text: str) -> str:
     return " ".join(text.lower().split())
 
 
-def score_candidate_for_jd(candidate: PersonSearchResult) -> PersonSearchResult:
+def _with_boolean_clause(keywords: Optional[str], terms: List[str]) -> Optional[str]:
     """
-    Score a search result against the Dhrupra full stack developer JD.
+    Append a boolean OR clause to a keyword string.
+
+    LinkedIn's keyword search matches against a candidate's whole profile
+    (including sections not shown on the search card), so folding terms in
+    here filters at the search stage instead of guessing from headline text
+    after the fact.
+    """
+    if not terms:
+        return keywords
+    sanitized = [_sanitize_boolean_term(t) for t in terms]
+    sanitized = [t for t in sanitized if t]
+    if not sanitized:
+        return keywords
+    clause = "(" + " OR ".join(sanitized) + ")"
+    return f"{keywords} {clause}" if keywords else clause
+
+
+def _sanitize_boolean_term(term: str) -> str:
+    """
+    Clean a term before folding it into a boolean OR clause.
+
+    Strips parenthetical suffixes (e.g. "Clueso (YC W23)" -> "Clueso") which
+    otherwise unbalance the outer "(...)" grouping, and quotes multi-word
+    phrases (e.g. institution names) so LinkedIn's parser treats them as one
+    phrase instead of implicitly ANDing each word.
+    """
+    cleaned = re.sub(r"\s*\([^)]*\)", "", term).strip()
+    if not cleaned:
+        return ""
+    return f'"{cleaned}"' if " " in cleaned else cleaned
+
+
+# Backwards-compatible alias — colleges are just one kind of boolean clause.
+def _with_college_boolean(keywords: Optional[str], colleges: List[str]) -> Optional[str]:
+    return _with_boolean_clause(keywords, colleges)
+
+
+def build_reference_searches(signal: ReferenceSignal) -> List[Dict[str, str]]:
+    """
+    Build LinkedIn people-search queries from the reference-profile signal.
+
+    Live testing (multiple runs today) showed a consistent pattern: a simple
+    2-3 word AND query ("<title> react", "react IIT") reliably returns a
+    couple of hits, but bundling a whole category into one boolean OR-clause
+    ("react (Dock OR Clueso OR ...)") returned 0 results every time,
+    regardless of anchor term, term count, or quoting - LinkedIn's basic
+    people-search doesn't seem to handle multi-term OR-groups the way
+    Recruiter/Sales Navigator's boolean search does. So instead of one query
+    per category, this emits one query PER title/skill/company/school - more
+    total queries, each using the "known good" simple-AND pattern, to
+    maximize total unique candidates within LinkedIn's per-query cap.
+    """
+    searches: List[Dict[str, str]] = []
+
+    # One broad query anchored on the full JD stack, mirroring the original
+    # generic searches.
+    searches.append({"keywords": CORE_STACK_TERMS})
+
+    for title in signal.titles[:6]:
+        searches.append({"keywords": f"{title} {ANCHOR_TERM}"})
+
+    extra_skills = [
+        skill for skill in signal.skills if skill.lower() not in _CORE_SKILL_TERMS
+    ][:12]
+    # Rotate through multiple anchors for skill/company/school terms - each
+    # anchor surfaces a partly-different set of people (a "node X" query and
+    # a "react X" query for the same X overlap but aren't identical), so this
+    # meaningfully grows the unique pool beyond a single fixed anchor.
+    for skill in extra_skills:
+        term = _sanitize_boolean_term(skill)
+        if term:
+            for anchor in EXTRA_ANCHOR_TERMS:
+                searches.append({"keywords": f"{anchor} {term}"})
+
+    for company in signal.companies[:10]:
+        term = _sanitize_boolean_term(company)
+        if term:
+            for anchor in EXTRA_ANCHOR_TERMS:
+                searches.append({"keywords": f"{anchor} {term}"})
+
+    for school in signal.schools[:10]:
+        term = _sanitize_boolean_term(school)
+        if term:
+            for anchor in EXTRA_ANCHOR_TERMS:
+                searches.append({"keywords": f"{anchor} {term}"})
+
+    return searches
+
+
+def score_candidate_for_jd(
+    candidate: PersonSearchResult, signals: Dict[str, Tuple[int, List[str]]]
+) -> PersonSearchResult:
+    """
+    Score a search result against the given weighted signal groups (JD signals
+    plus any reference-profile similarity bonuses).
 
     Mutates and returns the candidate with fit_score and fit_indicators set.
     """
@@ -94,7 +225,7 @@ def score_candidate_for_jd(candidate: PersonSearchResult) -> PersonSearchResult:
     score = 0
     indicators: List[str] = []
 
-    for label, (weight, keywords) in JD_SIGNALS.items():
+    for label, (weight, keywords) in signals.items():
         if any(keyword.lower() in haystack for keyword in keywords):
             score += weight
             indicators.append(label.replace("_", " "))
@@ -112,50 +243,36 @@ def score_candidate_for_jd(candidate: PersonSearchResult) -> PersonSearchResult:
     return candidate
 
 
-def rank_candidates(candidates: List[PersonSearchResult]) -> List[PersonSearchResult]:
+def rank_candidates(
+    candidates: List[PersonSearchResult], signals: Dict[str, Tuple[int, List[str]]]
+) -> List[PersonSearchResult]:
     """Score and sort candidates by fit (descending), then name."""
-    scored = [score_candidate_for_jd(candidate) for candidate in candidates]
+    scored = [score_candidate_for_jd(candidate, signals) for candidate in candidates]
     return sorted(scored, key=lambda c: (-c.fit_score, c.name.lower()))
 
 
-def _with_college_boolean(keywords: Optional[str], colleges: List[str]) -> Optional[str]:
-    """
-    Append a boolean OR clause for colleges to a keyword string.
-
-    LinkedIn's keyword search matches against a candidate's whole profile
-    (including the education section), not just what's shown on the search
-    card, so folding colleges in here filters at the search stage instead of
-    guessing from headline text after the fact.
-    """
-    if not colleges:
-        return keywords
-    college_clause = "(" + " OR ".join(colleges) + ")"
-    return f"{keywords} {college_clause}" if keywords else college_clause
-
-
 async def run_searches(
-    session_path: str,
+    browser: BrowserManager,
     searches: List[Dict[str, str]],
     per_query_limit: int,
     max_pages: int,
     query_delay: float,
     colleges: Optional[List[str]] = None,
 ) -> List[PersonSearchResult]:
-    """Run all search queries and return deduplicated results."""
+    """Run all search queries (on an already-open, session-loaded browser) and return deduplicated results."""
     all_results: Dict[str, PersonSearchResult] = {}
 
-    async with BrowserManager(headless=False) as browser:
-        await browser.load_session(session_path)
-        print("Session loaded")
+    scraper = PeopleSearchScraper(browser.page, ConsoleCallback())
 
-        scraper = PeopleSearchScraper(browser.page, ConsoleCallback())
+    for index, query in enumerate(searches, start=1):
+        keywords = _with_boolean_clause(query.get("keywords"), colleges or [])
+        location = query.get("location")
+        label = " | ".join(part for part in (keywords, location) if part)
 
-        for index, query in enumerate(searches, start=1):
-            keywords = _with_college_boolean(query.get("keywords"), colleges or [])
-            location = query.get("location")
-            label = " | ".join(part for part in (keywords, location) if part)
-
-            print(f"\n[{index}/{len(searches)}] Searching: {label}")
+        print(f"\n[{index}/{len(searches)}] Searching: {label}")
+        results: List[PersonSearchResult] = []
+        max_attempts = 3
+        for attempt in range(1, max_attempts + 1):
             try:
                 results = await scraper.search(
                     keywords=keywords,
@@ -164,20 +281,29 @@ async def run_searches(
                     max_pages=max_pages,
                     page_delay=2.0,
                 )
+                break
             except Exception as exc:
-                print(f"  Search failed: {exc}")
-                continue
+                if attempt < max_attempts:
+                    # Transient network blips (e.g. ERR_NAME_NOT_RESOLVED) have
+                    # been observed to sink an otherwise-successful run - a
+                    # short backoff and retry rides through those instead of
+                    # losing this query's results entirely.
+                    wait_time = 5.0 * attempt
+                    print(f"  Search failed (attempt {attempt}/{max_attempts}): {exc}. Retrying in {wait_time:.0f}s...")
+                    await asyncio.sleep(wait_time)
+                else:
+                    print(f"  Search failed after {max_attempts} attempts: {exc}")
 
-            new_count = 0
-            for result in results:
-                if result.linkedin_url not in all_results:
-                    all_results[result.linkedin_url] = result
-                    new_count += 1
+        new_count = 0
+        for result in results:
+            if result.linkedin_url not in all_results:
+                all_results[result.linkedin_url] = result
+                new_count += 1
 
-            print(f"  Found {len(results)} profiles ({new_count} new, {len(all_results)} total unique)")
+        print(f"  Found {len(results)} profiles ({new_count} new, {len(all_results)} total unique)")
 
-            if index < len(searches):
-                await asyncio.sleep(query_delay)
+        if index < len(searches):
+            await asyncio.sleep(query_delay)
 
     return list(all_results.values())
 
@@ -280,7 +406,18 @@ def parse_args() -> argparse.Namespace:
         default="",
         help="Comma-separated college names/abbreviations, ANDed as a boolean OR clause onto "
         "each search query (e.g. 'IIT,IIIT,NSIT,DTU,BITS' -> keywords + '(IIT OR IIIT OR ...)'). "
-        "Matches LinkedIn's full profile text, including education, not just the search card.",
+        "Matches LinkedIn's full profile text, including education, not just the search card. "
+        "Applied on top of the reference-profile school clause, not instead of it.",
+    )
+    parser.add_argument(
+        "--reference-cache",
+        default=DEFAULT_REFERENCE_CACHE,
+        help=f"Path to cache scraped reference-profile data (default: {DEFAULT_REFERENCE_CACHE})",
+    )
+    parser.add_argument(
+        "--refresh-references",
+        action="store_true",
+        help="Re-scrape REFERENCE_PROFILES instead of using the cache",
     )
     return parser.parse_args()
 
@@ -301,22 +438,42 @@ async def main() -> int:
     print("Dhrupra Services — Full Stack Developer LinkedIn Candidate Search")
     print("=" * 60)
     print(f"Target candidates: {args.limit}")
-    print(f"Search queries: {len(DEFAULT_SEARCHES)}")
+    print(f"Reference profiles: {len(REFERENCE_PROFILES)}")
     print(f"Output: {output_path}")
     print("=" * 60)
 
     colleges = [c.strip() for c in args.colleges.split(",") if c.strip()]
 
-    raw_candidates = await run_searches(
-        session_path=str(session_path),
-        searches=DEFAULT_SEARCHES,
-        per_query_limit=args.per_query,
-        max_pages=args.max_pages,
-        query_delay=args.query_delay,
-        colleges=colleges,
-    )
+    async with BrowserManager(headless=False) as browser:
+        await browser.load_session(str(session_path))
+        print("Session loaded")
 
-    ranked = rank_candidates(raw_candidates)
+        reference_people = await load_or_scrape_reference_profiles(
+            browser.page,
+            REFERENCE_PROFILES,
+            args.reference_cache,
+            args.refresh_references,
+        )
+        signal = derive_reference_signal(reference_people)
+        searches = build_reference_searches(signal)
+        signals = {**JD_SIGNALS, **build_similarity_signals(signal)}
+
+        print(f"\nDerived {len(signal.titles)} titles, {len(signal.skills)} skills, "
+              f"{len(signal.companies)} companies, {len(signal.schools)} schools from reference profiles")
+        print(f"Search queries: {len(searches)}")
+        for query in searches:
+            print(f"  - {query['keywords']}")
+
+        raw_candidates = await run_searches(
+            browser=browser,
+            searches=searches,
+            per_query_limit=args.per_query,
+            max_pages=args.max_pages,
+            query_delay=args.query_delay,
+            colleges=colleges,
+        )
+
+    ranked = rank_candidates(raw_candidates, signals)
     filtered = [c for c in ranked if c.fit_score >= args.min_score]
     after_score = len(filtered)
 

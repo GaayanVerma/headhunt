@@ -61,6 +61,45 @@ def validate_repo_insight_json(parsed: dict) -> None:
             raise ValueError(f"code_quality.{field}={value!r} with zero evidence entries")
 
 
+_VALID_SENIORITY = {"junior", "mid", "senior", "staff+"}
+_VALID_COMPANY_STAGE = {"startup", "growth", "enterprise"}
+
+_JD_SIGNALS_LIST_FIELDS = (
+    "titles", "must_have_skills", "nice_to_have_skills", "locations", "excluded_terms",
+)
+
+
+def validate_jd_signals_json(parsed: dict) -> None:
+    """Raises ValueError on missing/invalid fields. Looser than
+    validate_repo_insight_json - structured extraction, not a claims-with-evidence
+    task, so there's no evidence-citation requirement."""
+    required = (
+        "titles", "must_have_skills", "nice_to_have_skills", "seniority",
+        "min_years", "max_years", "locations", "company_stage", "excluded_terms",
+    )
+    for key in required:
+        if key not in parsed:
+            raise ValueError(f"missing required key: {key}")
+
+    for field in _JD_SIGNALS_LIST_FIELDS:
+        value = parsed[field]
+        if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
+            raise ValueError(f"{field} must be a list of strings")
+
+    seniority = parsed.get("seniority")
+    if seniority is not None and seniority not in _VALID_SENIORITY:
+        raise ValueError(f"invalid seniority: {seniority!r}")
+
+    company_stage = parsed.get("company_stage")
+    if company_stage is not None and company_stage not in _VALID_COMPANY_STAGE:
+        raise ValueError(f"invalid company_stage: {company_stage!r}")
+
+    for field in ("min_years", "max_years"):
+        value = parsed.get(field)
+        if value is not None and not isinstance(value, int):
+            raise ValueError(f"{field} must be an int or null")
+
+
 async def complete_with_json_retry(
     llm: LLMClient,
     system_prompt: str,

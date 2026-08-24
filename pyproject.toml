@@ -41,6 +41,13 @@ dependencies = [
 export = [
     "openpyxl>=3.1.0",
 ]
+crew = [
+    "crewai>=0.80.0",
+]
+web = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+]
 dev = [
     "pytest>=7.0.0",
     "pytest-asyncio>=0.21.0",
@@ -58,4 +65,11 @@ Repository = "https://github.com/joeyism/linkedin_scraper"
 Issues = "https://github.com/joeyism/linkedin_scraper/issues"
 
 [tool.setuptools]
-packages = ["linkedin_scraper", "linkedin_scraper.core", "linkedin_scraper.models", "linkedin_scraper.scrapers"]
+packages = [
+    "linkedin_scraper",
+    "linkedin_scraper.core",
+    "linkedin_scraper.models",
+    "linkedin_scraper.scrapers",
+    "linkedin_scraper.crew",
+    "linkedin_scraper.crew.tools",
+]

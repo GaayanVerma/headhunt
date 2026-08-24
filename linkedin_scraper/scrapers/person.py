@@ -1,6 +1,7 @@
 """Person/Profile scraper for LinkedIn."""
 
 import logging
+import re
 from typing import Optional
 from urllib.parse import urljoin
 from playwright.async_api import Page
@@ -565,19 +566,23 @@ class PersonScraper(BaseScraper):
         """Parse a single education item."""
         try:
             links = await item.locator('a, link').all()
+
+            # LinkedIn's current server-driven-UI education page renders
+            # institution/degree/dates as separate top-level <p> elements, in
+            # that order (a trailing "Skills: ..." <p> may follow - ignored).
+            # There are no aria-hidden markers on this page to disambiguate
+            # nested wrapper text, so reading top-level <p>s directly is far
+            # more reliable than descending into spans/divs.
+            p_texts = [t.strip() for t in await item.locator('p').all_text_contents() if t.strip()]
+            unique_texts = [t for t in p_texts if not t.lower().startswith("skills:")]
+
             if len(links) >= 1:
                 institution_url = await links[0].get_attribute('href')
-                
-                detail_link = links[1] if len(links) >= 2 else links[0]
-                generics = await detail_link.locator('generic, span, div').all()
-                texts = []
-                for g in generics:
-                    text = await g.text_content()
-                    if text and text.strip() and len(text.strip()) < 200:
-                        texts.append(text.strip())
-                
-                unique_texts = list(dict.fromkeys(texts))
-                
+
+                if not unique_texts:
+                    detail_link = links[1] if len(links) >= 2 else links[0]
+                    unique_texts = await self._extract_unique_texts_from_element(detail_link)
+
                 if unique_texts:
                     institution_name = unique_texts[0]
                     degree = None
@@ -588,7 +593,10 @@ class PersonScraper(BaseScraper):
                         times = unique_texts[2]
                     elif len(unique_texts) == 2:
                         second = unique_texts[1]
-                        if " - " in second or second.isdigit() or any(c.isdigit() for c in second):
+                        # A bare " - " isn't a reliable date signal - degree
+                        # abbreviations use the same separator (e.g. "Bachelor
+                        # of Engineering - BE"). A 4-digit year is unambiguous.
+                        if re.search(r"\d{4}", second):
                             times = second
                         else:
                             degree = second
@@ -830,6 +838,17 @@ class PersonScraper(BaseScraper):
             if nothing_to_see > 0:
                 return skills
 
+            try:
+                # The entity-collection-item cards render asynchronously; without
+                # this explicit wait, a slow page can fall through to the broad
+                # fallback selector below and pick up unrelated page chrome
+                # ("More profiles for you" names, footer links) instead.
+                await self.page.wait_for_selector(
+                    'main [componentkey^="entity-collection-item"]', timeout=5000
+                )
+            except Exception:
+                pass
+
             items = await self.page.locator(
                 'main [componentkey^="entity-collection-item"]'
             ).all()
@@ -850,9 +869,18 @@ class PersonScraper(BaseScraper):
                     else:
                         span = item.locator('span[aria-hidden="true"]').first
 
-                    if await span.count() == 0:
-                        continue
-                    name = await span.text_content()
+                    name = await span.text_content() if await span.count() > 0 else None
+
+                    if not name:
+                        # LinkedIn's newer server-driven-UI skills page has no
+                        # aria-hidden spans / profile-component-entity wrapper
+                        # at all - the skill name is just the item's first <p>
+                        # (endorsement/assessment rows follow in a later
+                        # role="list" sibling, so they're never picked up here).
+                        p_first = item.locator('p').first
+                        if await p_first.count() > 0:
+                            name = await p_first.text_content()
+
                     if not name:
                         continue
                     name = name.strip()

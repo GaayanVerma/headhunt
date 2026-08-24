@@ -1,7 +1,7 @@
 """Anthropic implementation of the provider-agnostic LLMClient interface."""
 
 import logging
-from typing import Optional
+from typing import Any, Dict, List, Optional
 
 import anthropic
 
@@ -50,4 +50,43 @@ class AnthropicLLMClient(LLMClient):
             temperature=temperature,
             system=system_prompt,
             messages=[{"role": "user", "content": user_prompt}],
+        )
+
+    async def create_tool_turn(
+        self,
+        system_prompt: str,
+        messages: List[Dict[str, Any]],
+        tools: List[Dict[str, Any]],
+        max_tokens: int = 4096,
+    ) -> anthropic.types.Message:
+        """One turn of a multi-turn, tool-using conversation.
+
+        Unlike complete(), this is stateful (caller-managed message history)
+        and can return tool_use content blocks. Returns the raw SDK message
+        so the caller drives the tool_use -> dispatch -> tool_result loop
+        itself - tool execution here has real side effects (headed browser
+        windows, a whole CrewAI crew run) that need per-call routing to a
+        job store, so a black-box agentic loop isn't the right fit.
+        """
+        try:
+            return await self._create_tool_turn(system_prompt, messages, tools, max_tokens)
+        except anthropic.RateLimitError as e:
+            raise LLMRateLimitError(str(e)) from e
+        except anthropic.APIError as e:
+            raise LLMError(str(e)) from e
+
+    @retry_async(max_attempts=3, backoff=2.0, exceptions=_RETRYABLE_EXCEPTIONS)
+    async def _create_tool_turn(
+        self,
+        system_prompt: str,
+        messages: List[Dict[str, Any]],
+        tools: List[Dict[str, Any]],
+        max_tokens: int,
+    ):
+        return await self.client.messages.create(
+            model=self.model,
+            max_tokens=max_tokens,
+            system=system_prompt,
+            messages=messages,
+            tools=tools,
         )

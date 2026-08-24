@@ -86,6 +86,18 @@ def load_anthropic_key_from_env() -> Optional[str]:
     return os.getenv('ANTHROPIC_API_KEY')
 
 
+def load_serper_key_from_env() -> Optional[str]:
+    """
+    Load a Serper.dev API key from .env, if present.
+
+    Returns:
+        Key string, or None if not configured (X-ray candidate discovery has
+        no fallback search backend and cannot run without one).
+    """
+    load_dotenv()
+    return os.getenv('SERPER_API_KEY')
+
+
 async def login_with_credentials(
     page: Page,
     email: Optional[str] = None,

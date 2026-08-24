@@ -2,6 +2,7 @@
 
 from .person import Person, Experience, Education, Contact, Accomplishment, Interest
 from .person_search import PersonSearchResult
+from .jd_signals import JDSignals
 from .company import Company, CompanySummary, Employee
 from .job import Job
 from .post import Post
@@ -43,6 +44,7 @@ from .readiness import (
 __all__ = [
     "Person",
     "PersonSearchResult",
+    "JDSignals",
     "Experience",
     "Education",
     "Contact",

@@ -66,6 +66,14 @@ Two entry points, deliberately separate:
 
 Provider-agnostic `LLMClient` ABC (`llm/base.py`) with `AnthropicLLMClient` (`llm/anthropic_client.py`) as the only implementation; swap providers via constructor injection into `GitHubAIAnalyzer(llm_client=...)`. `llm/prompts.py` holds the repo-insight prompt templates (evidence-citation required, banded fields only, no verdicts). `llm/json_parsing.py` validates and retries malformed/schema-invalid LLM JSON responses once before raising `LLMResponseParsingError`.
 
+### Candidate discovery via X-ray search (`sourcing/`)
+
+LinkedIn's own people-search UI (`PeopleSearchScraper`) is rate-limited and checkpoint-prone, so candidate discovery instead goes through Google X-ray search: `site:linkedin.com/in/` boolean queries run through Serper.dev (a real SERP API — scraping Google's HTML directly gets blocked/CAPTCHA'd fast) rather than a browser session. Flow: free-text JD → `JDSignals` (`models/jd_signals.py`, LLM-extracted via `sourcing/jd_parser.py::extract_jd_signals`, or built manually via `jd_signals_from_flags` if `ANTHROPIC_API_KEY` is unavailable) → `sourcing/xray.py::build_xray_queries` generates queries → `sourcing/serp_client.py::SerperClient` runs them → `parse_xray_results` turns hits back into `PersonSearchResult` objects → scored via the generalized `sourcing/scoring.py::score_candidate_for_jd`/`rank_candidates` (now signals-parameterized, not pinned to one JD) plus a reference-profile similarity bonus (`sourcing/reference_profiles.py`, generalized from `samples/search_fullstack_dhrupra.py`'s pattern of scoring candidates against known-good-fit LinkedIn profiles). Entry point: `samples/search_xray_jd.py`. No LinkedIn session is needed for discovery itself — only the optional `--enrich-top` step (deep-scraping top candidates via the existing `PersonScraper`) requires one.
+
+### Multi-agent sourcing crew (`crew/`, optional)
+
+CrewAI orchestration over the same backends: **LinkedIn Searcher** (`PeopleSearchScraper` tool) + **Google Searcher** (Serper X-ray tool) → **Authority Reviewer** (dedupes, prefers dual-source hits, emits shortlist/maybe/reject JSON). Install with `pip install -e ".[crew]"`. Entry point: `samples/run_sourcing_crew.py` (`--process sequential|hierarchical`, `--skip-linkedin` if no session). Agents use Anthropic via CrewAI/litellm (`ANTHROPIC_API_KEY`); Google tool still needs `SERPER_API_KEY`.
+
 ### Tests
 
 Tests are split by marker:
@@ -86,7 +94,8 @@ Tests are split by marker:
 |---|---|---|---|
 | `LINKEDIN_EMAIL` / `LINKEDIN_USERNAME`, `LINKEDIN_PASSWORD` | `load_credentials_from_env()` | LinkedIn login | Required for LinkedIn scraping |
 | `GITHUB_TOKEN` | `load_github_token_from_env()` | `GitHubAnalyzer`, `GitHubAIAnalyzer` | Optional but strongly recommended — GraphQL requires auth (401 unauthenticated); without it, both analyzers fall back to unauthenticated REST at 60 req/hr and `GitHubAIAnalyzer`'s contribution analysis is skipped entirely (`contributionsCollection` is GraphQL-only) |
-| `ANTHROPIC_API_KEY` | `load_anthropic_key_from_env()` | `GitHubAIAnalyzer` (repo insight generation only) | Optional — without it, repo insight generation is skipped but `github_facts`/contribution analysis still run |
+| `ANTHROPIC_API_KEY` | `load_anthropic_key_from_env()` | `GitHubAIAnalyzer` (repo insight generation only); `sourcing/jd_parser.py` (JD signal extraction); CrewAI agents in `crew/` | Optional for scrapers — without it, `GitHubAIAnalyzer` skips repo insight generation, and `samples/search_xray_jd.py` falls back to manual `--title`/`--must-have`/etc. flags; **required** for `samples/run_sourcing_crew.py` |
+| `SERPER_API_KEY` | `load_serper_key_from_env()` | `SerperClient` (`sourcing/serp_client.py`) — X-ray candidate discovery; Google searcher crew tool | Required for `samples/search_xray_jd.py` and `samples/run_sourcing_crew.py` discovery — no fallback search backend without it |
 
 Run `python samples/scrape_person.py --github <url>` (optionally with `--resume`/`--url`) to exercise the full pipeline end to end; use `--no-repo-insights` / `--no-contributions` to isolate stages.
 

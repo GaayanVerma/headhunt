@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/api/client.ts","./src/components/candidatetable.tsx","./src/components/chattext.tsx","./src/components/jobprogress.tsx","./src/components/sessionstatusbadge.tsx","./src/components/taglistinput.tsx","./src/hooks/usechat.ts","./src/pages/chatassistant.tsx","./src/pages/classicsearch.tsx"],"version":"5.9.3"}

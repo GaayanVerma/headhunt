@@ -154,3 +154,88 @@ pipeline can work around in code — `GitHubAIAnalyzer` already degrades a faile
 (`tests/test_timeline_builder.py`, `tests/test_github_candidate_summary.py`,
 `tests/test_headhunt_adapter.py`, `tests/test_sourcing_skills.py`, `tests/test_evaluator.py`,
 `tests/test_person_scraper.py`).
+
+---
+
+## 2026-08-17 — X-ray (Google SERP) candidate discovery, replacing LinkedIn-native search reliance
+
+**Problem:** Candidate sourcing went entirely through `PeopleSearchScraper` driving LinkedIn's own
+people-search UI — rate-limited, checkpoint-prone, and inconsistent. Each JD also required a hand-written
+sample script with a manually-authored keyword dict (`samples/search_fullstack_dhrupra.py`,
+`samples/search_founding_engineer_bangalore.py`), and there was no reusable, JD-parameterized scoring
+function — each script defined its own local copy.
+
+**Decisions:**
+- Candidate discovery now goes through Google X-ray search (`site:linkedin.com/in/` boolean queries) run
+  through Serper.dev — a real SERP API, since scraping Google's HTML directly gets blocked/CAPTCHA'd fast.
+  New `SerperClient`/`SerpResult`/`SerpSearchError` (`linkedin_scraper/sourcing/serp_client.py`), following
+  `github/client.py`'s async-client + `retry_async` pattern. New `SERPER_API_KEY` env var
+  (`load_serper_key_from_env()` in `core/auth.py`) — required for discovery, no fallback backend if missing.
+- New `linkedin_scraper/sourcing/xray.py`: `build_xray_queries()` generates queries from a `JDSignals` object,
+  chunking titles/skills (not one giant OR clause) and fanning out across multiple queries so every title is
+  guaranteed coverage; `parse_xray_result(s)()` turns Serper hits back into `PersonSearchResult` objects by
+  parsing Google's `"Name - Headline | LinkedIn"` title convention.
+- New `models/jd_signals.py::JDSignals` — the structured signal shape (titles, must/nice-to-have skills,
+  seniority, YOE band, locations, company_stage, excluded_terms) produced either by LLM extraction or manual
+  CLI flags. New `sourcing/jd_parser.py`: `extract_jd_signals()` (LLM-backed, via a new JD-signal-extraction
+  prompt pair in `llm/prompts.py` + `validate_jd_signals_json()` in `llm/json_parsing.py`, reusing the
+  existing `complete_with_json_retry()` retry/validation loop) and `jd_signals_from_flags()` (deterministic,
+  zero-network fallback). JD-signal extraction is the entire pipeline input, not an optional enrichment, so a
+  missing `ANTHROPIC_API_KEY`/parsing failure raises explicitly rather than silently threading through `None`
+  — callers must catch it and fall back to manual flags.
+- Generalized `sourcing/scoring.py`: `score_candidate_for_jd`/`rank_candidates` now take a required `signals`
+  dict parameter instead of assuming one hardcoded JD (the old module-level `JD_SIGNALS` constant, renamed
+  `DEFAULT_JD_SIGNALS`, is now just an example/test fixture). Location scoring defaults to the original
+  Delhi-NCR/Bangalore behavior when no `location_terms` override is given, for exact backward compatibility.
+  Added `signals_from_jd()` (the deterministic seam turning `JDSignals` into the scorer's weighted-group
+  shape — must-have skills weighted above nice-to-have) and moved the YOE-regex helpers
+  (`_extract_max_years`/`passes_years_filter`) here from being duplicated in both sample scripts.
+- New `sourcing/reference_profiles.py` — moved `ReferenceSignal`, `derive_reference_signal`,
+  `load_or_scrape_reference_profiles`, and `build_similarity_signals` out of
+  `samples/search_fullstack_dhrupra.py` (which now imports them) into a shared module. This is the existing
+  "not just keyword match" precedent — score candidates higher for sharing a title/company/school cluster
+  with a set of known-good-fit reference profiles — generalized for reuse by the new x-ray flow.
+- New `samples/search_xray_jd.py` — the JD-in entrypoint: free-text JD → `JDSignals` → x-ray queries →
+  Serper.dev search → scored candidates → Excel/JSON export (`export_candidates_to_excel`, unchanged). No
+  `BrowserManager`/LinkedIn session is opened unless `--enrich-top N` is passed (deep-scraping the top N
+  candidates via the existing `PersonScraper`) — session-free discovery is the core point of the feature.
+
+**Files changed:** `linkedin_scraper/sourcing/serp_client.py` (new), `linkedin_scraper/sourcing/xray.py`
+(new), `linkedin_scraper/sourcing/reference_profiles.py` (new), `linkedin_scraper/sourcing/jd_parser.py`
+(new), `linkedin_scraper/models/jd_signals.py` (new), `linkedin_scraper/sourcing/scoring.py` (generalized),
+`linkedin_scraper/core/auth.py` (+`load_serper_key_from_env`), `linkedin_scraper/llm/prompts.py`
+(+JD-signal-extraction prompt), `linkedin_scraper/llm/json_parsing.py` (+`validate_jd_signals_json`),
+`linkedin_scraper/sourcing/__init__.py` / `linkedin_scraper/models/__init__.py` (exports),
+`samples/search_xray_jd.py` (new), `samples/search_fullstack_dhrupra.py` (imports moved reference-profile
+logic instead of defining it locally), `.env.example`, `CLAUDE.md`, plus new tests
+(`tests/test_sourcing_xray.py`, `tests/test_sourcing_serp_client.py`, `tests/test_sourcing_jd_parser.py`,
+`tests/test_llm_json_parsing.py`, `tests/test_sourcing_reference_profiles.py`,
+`tests/test_sourcing_scoring.py` updated).
+
+---
+
+## 2026-08-23 — CrewAI multi-agent sourcing (LinkedIn + Google → Authority)
+
+**Problem:** Discovery was a single procedural pipeline (`search_xray_jd.py` or LinkedIn-native
+samples). We wanted a multi-agent layout where separate searcher agents cast nets and a
+high-authority agent reviews both lists before a shortlist ships.
+
+**Decisions:**
+- New optional package `linkedin_scraper/crew/` behind `pip install -e ".[crew]"` (CrewAI is heavy and
+  typically wants Python ≥3.10; keep it out of the core install).
+- Two worker agents with real tools wrapping existing backends — not reimplemented search:
+  - **LinkedIn Searcher** → `LinkedInPeopleSearchTool` → `PeopleSearchScraper` + session file.
+  - **Google Searcher** → `GoogleXraySearchTool` → `build_xray_queries` + `SerperClient` + scoring.
+- **Authority Reviewer** is the high bar: dedupe by `linkedin_url`, prefer dual-source overlap,
+  emit `AuthorityReview` JSON (`shortlist` / `maybe` / counts / summary). Default process is
+  `sequential` (LinkedIn → Google → Authority with task context). `hierarchical` makes Authority
+  the `manager_agent` that delegates to searchers then owns the review task.
+- Tools are sync CrewAI `BaseTool`s that bridge to async backends via `crew/async_utils.run_sync`
+  (works both outside and inside a running event loop).
+- Agents use Anthropic through CrewAI/litellm (`anthropic/claude-sonnet-4-5-20250929` by default),
+  matching the repo's existing LLM provider rather than introducing OpenAI as a new default.
+- Entry point: `samples/run_sourcing_crew.py`. `--skip-linkedin` when no session is available.
+
+**Files changed:** `linkedin_scraper/crew/` (new), `samples/run_sourcing_crew.py` (new),
+`pyproject.toml` (`[crew]` extra + packages), `CLAUDE.md`, `.env.example`,
+`tests/test_crew_models.py`, `tests/test_crew_async_utils.py`.

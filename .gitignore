@@ -39,6 +39,12 @@ linkedin_session.json
 MANIFEST
 MANIFEST.ini
 .pytest_cache/
+.coverage
+.playwright-mcp/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
 
 # Basic package build artifacts
 build-basic/
